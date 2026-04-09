@@ -1,10 +1,11 @@
 "use client";
-import { useState, useMemo } from "react";
+import { use, useState, useMemo } from "react";
 import Link from "next/link";
 import { unified, stateList } from "@/data/all-mechanics";
 
-export default function StatePage({ params }: { params: { state: string } }) {
-  const stateInfo = stateList.find((s) => s.slug === params.state);
+export default function StatePage({ params }: { params: Promise<{ state: string }> }) {
+  const { state } = use(params);
+  const stateInfo = stateList.find((s) => s.slug === state);
   const shops = useMemo(() => stateInfo ? unified.filter((s) => s.state === stateInfo.code) : [], [stateInfo]);
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
 
