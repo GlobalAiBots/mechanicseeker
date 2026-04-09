@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-mechanic: #2C3E50;
+  --color-orange: #E67E22;
+  --color-cream: #FAF8F5;
+  --color-charcoal: #1A1A1A;
+}
