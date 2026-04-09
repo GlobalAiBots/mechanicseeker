@@ -1,42 +1,45 @@
-import mechanicsData from "./mechanics.json";
+import indexData from "./mechanics-index.json";
 
-export interface Shop {
+export interface ShopIndex {
   id: string;
-  name: string;
   slug: string;
-  lat: number;
-  lng: number;
+  name: string;
   state: string;
   city: string;
+  shopType: string;
+  brand: string;
+  lat: number;
+  lng: number;
+}
+
+export interface Shop extends ShopIndex {
   address: string;
   zip: string;
   phone: string;
   email: string;
   website: string;
   hours: string;
-  brand: string;
   services: string[];
-  shopType: string;
 }
 
-export const unified: Shop[] = (mechanicsData as Record<string, unknown>[]).map((m) => ({
-  id: (m.id as string) || "",
-  name: (m.name as string) || "",
-  slug: (m.slug as string) || "",
-  lat: (m.lat as number) || 0,
-  lng: (m.lng as number) || 0,
-  state: (m.state as string) || "",
-  city: (m.city as string) || "",
-  address: (m.address as string) || "",
-  zip: (m.zip as string) || "",
-  phone: (m.phone as string) || "",
-  email: (m.email as string) || "",
-  website: (m.website as string) || "",
-  hours: (m.hours as string) || "",
-  brand: (m.brand as string) || "",
-  services: (m.services as string[]) || [],
-  shopType: (m.shopType as string) || "general_repair",
-}));
+export const unified: ShopIndex[] = indexData as ShopIndex[];
+
+export function getShopsByState(stateCode: string): Shop[] {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const data = require(`./states/${stateCode.toLowerCase()}.json`);
+    return data as Shop[];
+  } catch {
+    return [];
+  }
+}
+
+export function getShopById(id: string): Shop | null {
+  const entry = unified.find((s) => s.id === id);
+  if (!entry) return null;
+  const stateShops = getShopsByState(entry.state);
+  return stateShops.find((s) => s.id === id) || null;
+}
 
 export const serviceLabels: Record<string, { icon: string; label: string }> = {
   general_repair: { icon: "\u{1F527}", label: "General Repair" },

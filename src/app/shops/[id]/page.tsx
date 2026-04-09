@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { unified, stateList, serviceLabels } from "@/data/all-mechanics";
+import { unified, getShopById, stateList, serviceLabels } from "@/data/all-mechanics";
 import ShopMapWrapper from "@/components/ShopMapWrapper";
 import type { Metadata } from "next";
 
+export const dynamicParams = true;
+export const revalidate = 86400;
+
 export function generateStaticParams() {
-  return unified.slice(0, 10000).map((s) => ({ id: s.id }));
+  // Pre-build top 1000 shops (rest generated on-demand via ISR)
+  return unified.slice(0, 1000).map((s) => ({ id: s.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -22,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function ShopPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const shop = unified.find((s) => s.id === id);
+  const shop = getShopById(id);
   if (!shop) notFound();
 
   const stateName = stateList.find((s) => s.code === shop.state)?.name || shop.state;

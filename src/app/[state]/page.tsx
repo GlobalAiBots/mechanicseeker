@@ -46,7 +46,7 @@ export default function StatePage({ params }: { params: { state: string } }) {
           {filtered.slice(0, 100).map((s) => (
             <Link key={s.id} href={`/shops/${s.id}`} className="group bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md transition-all">
               <h3 className="font-[Cabin] font-bold text-[#1A1A1A] group-hover:text-[#E67E22] transition">{s.name}</h3>
-              <p className="text-gray-500 text-sm mt-1">{s.city}{s.address ? ` \u2014 ${s.address}` : ""}</p>
+              <p className="text-gray-500 text-sm mt-1">{s.city}, {s.state}</p>
               {s.brand && <span className="inline-block mt-1 text-xs bg-[#E67E22]/10 text-[#E67E22] px-2 py-0.5 rounded">{s.brand}</span>}
               <span className="text-sm font-semibold text-[#E67E22] mt-2 inline-block">View Details &rarr;</span>
             </Link>
