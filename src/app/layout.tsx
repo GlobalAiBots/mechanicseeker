@@ -86,8 +86,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-['Source_Sans_3'] antialiased min-h-screen flex flex-col" style={{ background: "#FAF8F5" }}>
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4822220549367368" crossOrigin="anonymous" strategy="afterInteractive" />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />
-        <Script id="ga" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');`}</Script>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-VGQRDXWZXJ" strategy="afterInteractive" />
+        <Script id="ga" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VGQRDXWZXJ');`}</Script>
         <a href="/shops" className="block w-full bg-[#E67E22] text-white text-center py-2 text-xs sm:text-sm font-medium hover:bg-[#d35400] transition">
           {"🆕"} MechanicSeeker just launched! Find trusted auto repair shops near you &rarr;
         </a>
