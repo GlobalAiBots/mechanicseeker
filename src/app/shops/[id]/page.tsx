@@ -45,6 +45,15 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
+          { "@type": "ListItem", position: 2, name: stateName, item: `https://mechanicseeker.com/${stateSlug}` },
+          ...(shop.city ? [{ "@type": "ListItem", position: 3, name: shop.city }] : []),
+          { "@type": "ListItem", position: shop.city ? 4 : 3, name: shop.name },
+        ],
+      }) }} />
       <div className="max-w-4xl mx-auto px-4 py-8">
         <nav className="text-sm text-gray-400 mb-6 flex flex-wrap gap-2">
           <Link href="/" className="hover:text-[#E67E22] transition">Home</Link><span>/</span>
