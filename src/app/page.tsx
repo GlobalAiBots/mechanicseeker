@@ -46,7 +46,9 @@ export default function Home() {
       }) }} />
 
       {/* HERO */}
-      <section className="relative py-20 md:py-32 text-center px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #1A2332 0%, #2C3E50 40%, #3D5166 70%, #1A2332 100%)" }}>
+      <section className="relative py-20 md:py-32 text-center px-4 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero-mechanic.jpg')" }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1A2332]/85 via-[#1A2332]/70 to-[#1A2332]/85" />
         <div className="relative z-10">
           <p className="text-white/60 text-sm font-semibold tracking-widest uppercase mb-4">Auto Repair Directory</p>
           <h1 className="font-[Cabin] text-5xl md:text-7xl font-bold text-white leading-tight max-w-3xl mx-auto">Find Auto Repair Shops Near You</h1>
