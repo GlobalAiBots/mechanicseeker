@@ -1,0 +1,1506 @@
+[
+  {
+    "slug": "general-repair",
+    "title": "General Auto Repair Shops",
+    "description": "Full-service auto repair shops that handle everything from oil changes to engine rebuilds.",
+    "totalCount": 16134,
+    "states": [
+      {
+        "code": "PA",
+        "name": "Pennsylvania",
+        "slug": "pennsylvania",
+        "count": 1470
+      },
+      {
+        "code": "TX",
+        "name": "Texas",
+        "slug": "texas",
+        "count": 1354
+      },
+      {
+        "code": "NY",
+        "name": "New York",
+        "slug": "new-york",
+        "count": 1207
+      },
+      {
+        "code": "CA",
+        "name": "California",
+        "slug": "california",
+        "count": 1190
+      },
+      {
+        "code": "AZ",
+        "name": "Arizona",
+        "slug": "arizona",
+        "count": 839
+      },
+      {
+        "code": "NC",
+        "name": "North Carolina",
+        "slug": "north-carolina",
+        "count": 642
+      },
+      {
+        "code": "CO",
+        "name": "Colorado",
+        "slug": "colorado",
+        "count": 615
+      },
+      {
+        "code": "IL",
+        "name": "Illinois",
+        "slug": "illinois",
+        "count": 599
+      },
+      {
+        "code": "WA",
+        "name": "Washington",
+        "slug": "washington",
+        "count": 590
+      },
+      {
+        "code": "MI",
+        "name": "Michigan",
+        "slug": "michigan",
+        "count": 576
+      },
+      {
+        "code": "VA",
+        "name": "Virginia",
+        "slug": "virginia",
+        "count": 568
+      },
+      {
+        "code": "OH",
+        "name": "Ohio",
+        "slug": "ohio",
+        "count": 514
+      },
+      {
+        "code": "FL",
+        "name": "Florida",
+        "slug": "florida",
+        "count": 400
+      },
+      {
+        "code": "MD",
+        "name": "Maryland",
+        "slug": "maryland",
+        "count": 386
+      },
+      {
+        "code": "OR",
+        "name": "Oregon",
+        "slug": "oregon",
+        "count": 386
+      },
+      {
+        "code": "NJ",
+        "name": "New Jersey",
+        "slug": "new-jersey",
+        "count": 323
+      },
+      {
+        "code": "CT",
+        "name": "Connecticut",
+        "slug": "connecticut",
+        "count": 313
+      },
+      {
+        "code": "MN",
+        "name": "Minnesota",
+        "slug": "minnesota",
+        "count": 283
+      },
+      {
+        "code": "MA",
+        "name": "Massachusetts",
+        "slug": "massachusetts",
+        "count": 282
+      },
+      {
+        "code": "WI",
+        "name": "Wisconsin",
+        "slug": "wisconsin",
+        "count": 268
+      },
+      {
+        "code": "IN",
+        "name": "Indiana",
+        "slug": "indiana",
+        "count": 265
+      },
+      {
+        "code": "GA",
+        "name": "Georgia",
+        "slug": "georgia",
+        "count": 260
+      },
+      {
+        "code": "AL",
+        "name": "Alabama",
+        "slug": "alabama",
+        "count": 196
+      },
+      {
+        "code": "UT",
+        "name": "Utah",
+        "slug": "utah",
+        "count": 194
+      },
+      {
+        "code": "ME",
+        "name": "Maine",
+        "slug": "maine",
+        "count": 188
+      },
+      {
+        "code": "MO",
+        "name": "Missouri",
+        "slug": "missouri",
+        "count": 185
+      },
+      {
+        "code": "NH",
+        "name": "New Hampshire",
+        "slug": "new-hampshire",
+        "count": 180
+      },
+      {
+        "code": "SC",
+        "name": "South Carolina",
+        "slug": "south-carolina",
+        "count": 156
+      },
+      {
+        "code": "OK",
+        "name": "Oklahoma",
+        "slug": "oklahoma",
+        "count": 154
+      },
+      {
+        "code": "TN",
+        "name": "Tennessee",
+        "slug": "tennessee",
+        "count": 152
+      },
+      {
+        "code": "IA",
+        "name": "Iowa",
+        "slug": "iowa",
+        "count": 139
+      },
+      {
+        "code": "VT",
+        "name": "Vermont",
+        "slug": "vermont",
+        "count": 113
+      },
+      {
+        "code": "KS",
+        "name": "Kansas",
+        "slug": "kansas",
+        "count": 113
+      },
+      {
+        "code": "NE",
+        "name": "Nebraska",
+        "slug": "nebraska",
+        "count": 111
+      },
+      {
+        "code": "ID",
+        "name": "Idaho",
+        "slug": "idaho",
+        "count": 110
+      },
+      {
+        "code": "NM",
+        "name": "New Mexico",
+        "slug": "new-mexico",
+        "count": 105
+      },
+      {
+        "code": "NV",
+        "name": "Nevada",
+        "slug": "nevada",
+        "count": 89
+      },
+      {
+        "code": "LA",
+        "name": "Louisiana",
+        "slug": "louisiana",
+        "count": 86
+      },
+      {
+        "code": "KY",
+        "name": "Kentucky",
+        "slug": "kentucky",
+        "count": 79
+      },
+      {
+        "code": "WY",
+        "name": "Wyoming",
+        "slug": "wyoming",
+        "count": 56
+      },
+      {
+        "code": "MS",
+        "name": "Mississippi",
+        "slug": "mississippi",
+        "count": 50
+      },
+      {
+        "code": "WV",
+        "name": "West Virginia",
+        "slug": "west-virginia",
+        "count": 48
+      },
+      {
+        "code": "DE",
+        "name": "Delaware",
+        "slug": "delaware",
+        "count": 45
+      },
+      {
+        "code": "HI",
+        "name": "Hawaii",
+        "slug": "hawaii",
+        "count": 43
+      },
+      {
+        "code": "MT",
+        "name": "Montana",
+        "slug": "montana",
+        "count": 40
+      },
+      {
+        "code": "RI",
+        "name": "Rhode Island",
+        "slug": "rhode-island",
+        "count": 39
+      },
+      {
+        "code": "AR",
+        "name": "Arkansas",
+        "slug": "arkansas",
+        "count": 39
+      },
+      {
+        "code": "SD",
+        "name": "South Dakota",
+        "slug": "south-dakota",
+        "count": 35
+      },
+      {
+        "code": "AK",
+        "name": "Alaska",
+        "slug": "alaska",
+        "count": 25
+      },
+      {
+        "code": "DC",
+        "name": "DC",
+        "slug": "dc",
+        "count": 21
+      },
+      {
+        "code": "ND",
+        "name": "North Dakota",
+        "slug": "north-dakota",
+        "count": 13
+      }
+    ]
+  },
+  {
+    "slug": "tire-shops",
+    "title": "Tire Shops",
+    "description": "Shops specializing in tires, wheels, alignment, and balancing services.",
+    "totalCount": 4103,
+    "states": [
+      {
+        "code": "TX",
+        "name": "Texas",
+        "slug": "texas",
+        "count": 599
+      },
+      {
+        "code": "NC",
+        "name": "North Carolina",
+        "slug": "north-carolina",
+        "count": 267
+      },
+      {
+        "code": "AZ",
+        "name": "Arizona",
+        "slug": "arizona",
+        "count": 256
+      },
+      {
+        "code": "NY",
+        "name": "New York",
+        "slug": "new-york",
+        "count": 252
+      },
+      {
+        "code": "CA",
+        "name": "California",
+        "slug": "california",
+        "count": 252
+      },
+      {
+        "code": "PA",
+        "name": "Pennsylvania",
+        "slug": "pennsylvania",
+        "count": 248
+      },
+      {
+        "code": "WA",
+        "name": "Washington",
+        "slug": "washington",
+        "count": 163
+      },
+      {
+        "code": "VA",
+        "name": "Virginia",
+        "slug": "virginia",
+        "count": 144
+      },
+      {
+        "code": "CO",
+        "name": "Colorado",
+        "slug": "colorado",
+        "count": 137
+      },
+      {
+        "code": "FL",
+        "name": "Florida",
+        "slug": "florida",
+        "count": 128
+      },
+      {
+        "code": "OH",
+        "name": "Ohio",
+        "slug": "ohio",
+        "count": 117
+      },
+      {
+        "code": "IL",
+        "name": "Illinois",
+        "slug": "illinois",
+        "count": 104
+      },
+      {
+        "code": "MI",
+        "name": "Michigan",
+        "slug": "michigan",
+        "count": 97
+      },
+      {
+        "code": "UT",
+        "name": "Utah",
+        "slug": "utah",
+        "count": 83
+      },
+      {
+        "code": "OR",
+        "name": "Oregon",
+        "slug": "oregon",
+        "count": 83
+      },
+      {
+        "code": "MD",
+        "name": "Maryland",
+        "slug": "maryland",
+        "count": 82
+      },
+      {
+        "code": "OK",
+        "name": "Oklahoma",
+        "slug": "oklahoma",
+        "count": 81
+      },
+      {
+        "code": "IN",
+        "name": "Indiana",
+        "slug": "indiana",
+        "count": 79
+      },
+      {
+        "code": "GA",
+        "name": "Georgia",
+        "slug": "georgia",
+        "count": 73
+      },
+      {
+        "code": "MN",
+        "name": "Minnesota",
+        "slug": "minnesota",
+        "count": 61
+      },
+      {
+        "code": "NJ",
+        "name": "New Jersey",
+        "slug": "new-jersey",
+        "count": 54
+      },
+      {
+        "code": "MO",
+        "name": "Missouri",
+        "slug": "missouri",
+        "count": 53
+      },
+      {
+        "code": "ID",
+        "name": "Idaho",
+        "slug": "idaho",
+        "count": 51
+      },
+      {
+        "code": "SC",
+        "name": "South Carolina",
+        "slug": "south-carolina",
+        "count": 47
+      },
+      {
+        "code": "WI",
+        "name": "Wisconsin",
+        "slug": "wisconsin",
+        "count": 46
+      },
+      {
+        "code": "CT",
+        "name": "Connecticut",
+        "slug": "connecticut",
+        "count": 44
+      },
+      {
+        "code": "NV",
+        "name": "Nevada",
+        "slug": "nevada",
+        "count": 44
+      },
+      {
+        "code": "IA",
+        "name": "Iowa",
+        "slug": "iowa",
+        "count": 40
+      },
+      {
+        "code": "ME",
+        "name": "Maine",
+        "slug": "maine",
+        "count": 37
+      },
+      {
+        "code": "TN",
+        "name": "Tennessee",
+        "slug": "tennessee",
+        "count": 36
+      },
+      {
+        "code": "NM",
+        "name": "New Mexico",
+        "slug": "new-mexico",
+        "count": 33
+      },
+      {
+        "code": "KY",
+        "name": "Kentucky",
+        "slug": "kentucky",
+        "count": 32
+      },
+      {
+        "code": "KS",
+        "name": "Kansas",
+        "slug": "kansas",
+        "count": 30
+      },
+      {
+        "code": "NH",
+        "name": "New Hampshire",
+        "slug": "new-hampshire",
+        "count": 28
+      },
+      {
+        "code": "AL",
+        "name": "Alabama",
+        "slug": "alabama",
+        "count": 26
+      },
+      {
+        "code": "LA",
+        "name": "Louisiana",
+        "slug": "louisiana",
+        "count": 26
+      },
+      {
+        "code": "MA",
+        "name": "Massachusetts",
+        "slug": "massachusetts",
+        "count": 25
+      },
+      {
+        "code": "NE",
+        "name": "Nebraska",
+        "slug": "nebraska",
+        "count": 20
+      },
+      {
+        "code": "MT",
+        "name": "Montana",
+        "slug": "montana",
+        "count": 17
+      },
+      {
+        "code": "AR",
+        "name": "Arkansas",
+        "slug": "arkansas",
+        "count": 16
+      },
+      {
+        "code": "VT",
+        "name": "Vermont",
+        "slug": "vermont",
+        "count": 15
+      },
+      {
+        "code": "SD",
+        "name": "South Dakota",
+        "slug": "south-dakota",
+        "count": 15
+      },
+      {
+        "code": "DE",
+        "name": "Delaware",
+        "slug": "delaware",
+        "count": 12
+      },
+      {
+        "code": "MS",
+        "name": "Mississippi",
+        "slug": "mississippi",
+        "count": 12
+      },
+      {
+        "code": "WY",
+        "name": "Wyoming",
+        "slug": "wyoming",
+        "count": 11
+      },
+      {
+        "code": "WV",
+        "name": "West Virginia",
+        "slug": "west-virginia",
+        "count": 10
+      },
+      {
+        "code": "ND",
+        "name": "North Dakota",
+        "slug": "north-dakota",
+        "count": 7
+      },
+      {
+        "code": "RI",
+        "name": "Rhode Island",
+        "slug": "rhode-island",
+        "count": 4
+      },
+      {
+        "code": "DC",
+        "name": "DC",
+        "slug": "dc",
+        "count": 3
+      },
+      {
+        "code": "AK",
+        "name": "Alaska",
+        "slug": "alaska",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "slug": "body-shops",
+    "title": "Auto Body & Collision Shops",
+    "description": "Body shops specializing in collision repair, paint, dent removal, and frame straightening.",
+    "totalCount": 2521,
+    "states": [
+      {
+        "code": "NY",
+        "name": "New York",
+        "slug": "new-york",
+        "count": 253
+      },
+      {
+        "code": "TX",
+        "name": "Texas",
+        "slug": "texas",
+        "count": 247
+      },
+      {
+        "code": "PA",
+        "name": "Pennsylvania",
+        "slug": "pennsylvania",
+        "count": 231
+      },
+      {
+        "code": "CA",
+        "name": "California",
+        "slug": "california",
+        "count": 203
+      },
+      {
+        "code": "AZ",
+        "name": "Arizona",
+        "slug": "arizona",
+        "count": 122
+      },
+      {
+        "code": "NC",
+        "name": "North Carolina",
+        "slug": "north-carolina",
+        "count": 107
+      },
+      {
+        "code": "MI",
+        "name": "Michigan",
+        "slug": "michigan",
+        "count": 103
+      },
+      {
+        "code": "WA",
+        "name": "Washington",
+        "slug": "washington",
+        "count": 103
+      },
+      {
+        "code": "IL",
+        "name": "Illinois",
+        "slug": "illinois",
+        "count": 94
+      },
+      {
+        "code": "VA",
+        "name": "Virginia",
+        "slug": "virginia",
+        "count": 79
+      },
+      {
+        "code": "OH",
+        "name": "Ohio",
+        "slug": "ohio",
+        "count": 74
+      },
+      {
+        "code": "CO",
+        "name": "Colorado",
+        "slug": "colorado",
+        "count": 69
+      },
+      {
+        "code": "MD",
+        "name": "Maryland",
+        "slug": "maryland",
+        "count": 66
+      },
+      {
+        "code": "MN",
+        "name": "Minnesota",
+        "slug": "minnesota",
+        "count": 64
+      },
+      {
+        "code": "OR",
+        "name": "Oregon",
+        "slug": "oregon",
+        "count": 64
+      },
+      {
+        "code": "NJ",
+        "name": "New Jersey",
+        "slug": "new-jersey",
+        "count": 54
+      },
+      {
+        "code": "MA",
+        "name": "Massachusetts",
+        "slug": "massachusetts",
+        "count": 51
+      },
+      {
+        "code": "IN",
+        "name": "Indiana",
+        "slug": "indiana",
+        "count": 44
+      },
+      {
+        "code": "WI",
+        "name": "Wisconsin",
+        "slug": "wisconsin",
+        "count": 41
+      },
+      {
+        "code": "CT",
+        "name": "Connecticut",
+        "slug": "connecticut",
+        "count": 40
+      },
+      {
+        "code": "GA",
+        "name": "Georgia",
+        "slug": "georgia",
+        "count": 34
+      },
+      {
+        "code": "FL",
+        "name": "Florida",
+        "slug": "florida",
+        "count": 29
+      },
+      {
+        "code": "OK",
+        "name": "Oklahoma",
+        "slug": "oklahoma",
+        "count": 29
+      },
+      {
+        "code": "UT",
+        "name": "Utah",
+        "slug": "utah",
+        "count": 27
+      },
+      {
+        "code": "SC",
+        "name": "South Carolina",
+        "slug": "south-carolina",
+        "count": 26
+      },
+      {
+        "code": "MO",
+        "name": "Missouri",
+        "slug": "missouri",
+        "count": 23
+      },
+      {
+        "code": "IA",
+        "name": "Iowa",
+        "slug": "iowa",
+        "count": 19
+      },
+      {
+        "code": "KS",
+        "name": "Kansas",
+        "slug": "kansas",
+        "count": 17
+      },
+      {
+        "code": "ID",
+        "name": "Idaho",
+        "slug": "idaho",
+        "count": 16
+      },
+      {
+        "code": "TN",
+        "name": "Tennessee",
+        "slug": "tennessee",
+        "count": 15
+      },
+      {
+        "code": "AL",
+        "name": "Alabama",
+        "slug": "alabama",
+        "count": 15
+      },
+      {
+        "code": "SD",
+        "name": "South Dakota",
+        "slug": "south-dakota",
+        "count": 14
+      },
+      {
+        "code": "NM",
+        "name": "New Mexico",
+        "slug": "new-mexico",
+        "count": 14
+      },
+      {
+        "code": "NH",
+        "name": "New Hampshire",
+        "slug": "new-hampshire",
+        "count": 13
+      },
+      {
+        "code": "ME",
+        "name": "Maine",
+        "slug": "maine",
+        "count": 13
+      },
+      {
+        "code": "KY",
+        "name": "Kentucky",
+        "slug": "kentucky",
+        "count": 12
+      },
+      {
+        "code": "NE",
+        "name": "Nebraska",
+        "slug": "nebraska",
+        "count": 12
+      },
+      {
+        "code": "VT",
+        "name": "Vermont",
+        "slug": "vermont",
+        "count": 11
+      },
+      {
+        "code": "LA",
+        "name": "Louisiana",
+        "slug": "louisiana",
+        "count": 11
+      },
+      {
+        "code": "DE",
+        "name": "Delaware",
+        "slug": "delaware",
+        "count": 10
+      },
+      {
+        "code": "MS",
+        "name": "Mississippi",
+        "slug": "mississippi",
+        "count": 9
+      },
+      {
+        "code": "NV",
+        "name": "Nevada",
+        "slug": "nevada",
+        "count": 8
+      },
+      {
+        "code": "HI",
+        "name": "Hawaii",
+        "slug": "hawaii",
+        "count": 7
+      },
+      {
+        "code": "RI",
+        "name": "Rhode Island",
+        "slug": "rhode-island",
+        "count": 4
+      },
+      {
+        "code": "AR",
+        "name": "Arkansas",
+        "slug": "arkansas",
+        "count": 4
+      },
+      {
+        "code": "DC",
+        "name": "DC",
+        "slug": "dc",
+        "count": 4
+      },
+      {
+        "code": "WV",
+        "name": "West Virginia",
+        "slug": "west-virginia",
+        "count": 4
+      },
+      {
+        "code": "MT",
+        "name": "Montana",
+        "slug": "montana",
+        "count": 4
+      },
+      {
+        "code": "ND",
+        "name": "North Dakota",
+        "slug": "north-dakota",
+        "count": 3
+      },
+      {
+        "code": "WY",
+        "name": "Wyoming",
+        "slug": "wyoming",
+        "count": 3
+      },
+      {
+        "code": "AK",
+        "name": "Alaska",
+        "slug": "alaska",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "slug": "quick-lube",
+    "title": "Quick Lube & Oil Change Shops",
+    "description": "Fast oil change and lube shops that get you in and out in 30 minutes or less.",
+    "totalCount": 1767,
+    "states": [
+      {
+        "code": "TX",
+        "name": "Texas",
+        "slug": "texas",
+        "count": 215
+      },
+      {
+        "code": "IL",
+        "name": "Illinois",
+        "slug": "illinois",
+        "count": 120
+      },
+      {
+        "code": "CA",
+        "name": "California",
+        "slug": "california",
+        "count": 103
+      },
+      {
+        "code": "AZ",
+        "name": "Arizona",
+        "slug": "arizona",
+        "count": 87
+      },
+      {
+        "code": "MI",
+        "name": "Michigan",
+        "slug": "michigan",
+        "count": 86
+      },
+      {
+        "code": "NY",
+        "name": "New York",
+        "slug": "new-york",
+        "count": 84
+      },
+      {
+        "code": "NC",
+        "name": "North Carolina",
+        "slug": "north-carolina",
+        "count": 82
+      },
+      {
+        "code": "WA",
+        "name": "Washington",
+        "slug": "washington",
+        "count": 81
+      },
+      {
+        "code": "OH",
+        "name": "Ohio",
+        "slug": "ohio",
+        "count": 72
+      },
+      {
+        "code": "VA",
+        "name": "Virginia",
+        "slug": "virginia",
+        "count": 68
+      },
+      {
+        "code": "PA",
+        "name": "Pennsylvania",
+        "slug": "pennsylvania",
+        "count": 63
+      },
+      {
+        "code": "OR",
+        "name": "Oregon",
+        "slug": "oregon",
+        "count": 55
+      },
+      {
+        "code": "CO",
+        "name": "Colorado",
+        "slug": "colorado",
+        "count": 44
+      },
+      {
+        "code": "FL",
+        "name": "Florida",
+        "slug": "florida",
+        "count": 42
+      },
+      {
+        "code": "MD",
+        "name": "Maryland",
+        "slug": "maryland",
+        "count": 42
+      },
+      {
+        "code": "UT",
+        "name": "Utah",
+        "slug": "utah",
+        "count": 41
+      },
+      {
+        "code": "IN",
+        "name": "Indiana",
+        "slug": "indiana",
+        "count": 34
+      },
+      {
+        "code": "SC",
+        "name": "South Carolina",
+        "slug": "south-carolina",
+        "count": 32
+      },
+      {
+        "code": "WI",
+        "name": "Wisconsin",
+        "slug": "wisconsin",
+        "count": 31
+      },
+      {
+        "code": "MN",
+        "name": "Minnesota",
+        "slug": "minnesota",
+        "count": 30
+      },
+      {
+        "code": "GA",
+        "name": "Georgia",
+        "slug": "georgia",
+        "count": 28
+      },
+      {
+        "code": "OK",
+        "name": "Oklahoma",
+        "slug": "oklahoma",
+        "count": 27
+      },
+      {
+        "code": "CT",
+        "name": "Connecticut",
+        "slug": "connecticut",
+        "count": 26
+      },
+      {
+        "code": "ID",
+        "name": "Idaho",
+        "slug": "idaho",
+        "count": 25
+      },
+      {
+        "code": "KY",
+        "name": "Kentucky",
+        "slug": "kentucky",
+        "count": 22
+      },
+      {
+        "code": "MO",
+        "name": "Missouri",
+        "slug": "missouri",
+        "count": 21
+      },
+      {
+        "code": "NV",
+        "name": "Nevada",
+        "slug": "nevada",
+        "count": 20
+      },
+      {
+        "code": "TN",
+        "name": "Tennessee",
+        "slug": "tennessee",
+        "count": 17
+      },
+      {
+        "code": "MA",
+        "name": "Massachusetts",
+        "slug": "massachusetts",
+        "count": 15
+      },
+      {
+        "code": "KS",
+        "name": "Kansas",
+        "slug": "kansas",
+        "count": 15
+      },
+      {
+        "code": "NE",
+        "name": "Nebraska",
+        "slug": "nebraska",
+        "count": 14
+      },
+      {
+        "code": "NJ",
+        "name": "New Jersey",
+        "slug": "new-jersey",
+        "count": 13
+      },
+      {
+        "code": "NH",
+        "name": "New Hampshire",
+        "slug": "new-hampshire",
+        "count": 12
+      },
+      {
+        "code": "IA",
+        "name": "Iowa",
+        "slug": "iowa",
+        "count": 12
+      },
+      {
+        "code": "DE",
+        "name": "Delaware",
+        "slug": "delaware",
+        "count": 11
+      },
+      {
+        "code": "NM",
+        "name": "New Mexico",
+        "slug": "new-mexico",
+        "count": 11
+      },
+      {
+        "code": "LA",
+        "name": "Louisiana",
+        "slug": "louisiana",
+        "count": 10
+      },
+      {
+        "code": "ME",
+        "name": "Maine",
+        "slug": "maine",
+        "count": 8
+      },
+      {
+        "code": "MT",
+        "name": "Montana",
+        "slug": "montana",
+        "count": 7
+      },
+      {
+        "code": "SD",
+        "name": "South Dakota",
+        "slug": "south-dakota",
+        "count": 6
+      },
+      {
+        "code": "WY",
+        "name": "Wyoming",
+        "slug": "wyoming",
+        "count": 6
+      },
+      {
+        "code": "RI",
+        "name": "Rhode Island",
+        "slug": "rhode-island",
+        "count": 5
+      },
+      {
+        "code": "VT",
+        "name": "Vermont",
+        "slug": "vermont",
+        "count": 4
+      },
+      {
+        "code": "AL",
+        "name": "Alabama",
+        "slug": "alabama",
+        "count": 4
+      },
+      {
+        "code": "MS",
+        "name": "Mississippi",
+        "slug": "mississippi",
+        "count": 4
+      },
+      {
+        "code": "AR",
+        "name": "Arkansas",
+        "slug": "arkansas",
+        "count": 4
+      },
+      {
+        "code": "WV",
+        "name": "West Virginia",
+        "slug": "west-virginia",
+        "count": 3
+      },
+      {
+        "code": "HI",
+        "name": "Hawaii",
+        "slug": "hawaii",
+        "count": 3
+      },
+      {
+        "code": "AK",
+        "name": "Alaska",
+        "slug": "alaska",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "slug": "transmission",
+    "title": "Transmission Repair Shops",
+    "description": "Shops specializing in transmission repair, rebuilds, and replacement.",
+    "totalCount": 472,
+    "states": [
+      {
+        "code": "TX",
+        "name": "Texas",
+        "slug": "texas",
+        "count": 53
+      },
+      {
+        "code": "PA",
+        "name": "Pennsylvania",
+        "slug": "pennsylvania",
+        "count": 38
+      },
+      {
+        "code": "AZ",
+        "name": "Arizona",
+        "slug": "arizona",
+        "count": 38
+      },
+      {
+        "code": "NY",
+        "name": "New York",
+        "slug": "new-york",
+        "count": 30
+      },
+      {
+        "code": "CA",
+        "name": "California",
+        "slug": "california",
+        "count": 25
+      },
+      {
+        "code": "CO",
+        "name": "Colorado",
+        "slug": "colorado",
+        "count": 23
+      },
+      {
+        "code": "VA",
+        "name": "Virginia",
+        "slug": "virginia",
+        "count": 22
+      },
+      {
+        "code": "FL",
+        "name": "Florida",
+        "slug": "florida",
+        "count": 19
+      },
+      {
+        "code": "OR",
+        "name": "Oregon",
+        "slug": "oregon",
+        "count": 17
+      },
+      {
+        "code": "WA",
+        "name": "Washington",
+        "slug": "washington",
+        "count": 17
+      },
+      {
+        "code": "IL",
+        "name": "Illinois",
+        "slug": "illinois",
+        "count": 16
+      },
+      {
+        "code": "OH",
+        "name": "Ohio",
+        "slug": "ohio",
+        "count": 16
+      },
+      {
+        "code": "MD",
+        "name": "Maryland",
+        "slug": "maryland",
+        "count": 15
+      },
+      {
+        "code": "NC",
+        "name": "North Carolina",
+        "slug": "north-carolina",
+        "count": 13
+      },
+      {
+        "code": "GA",
+        "name": "Georgia",
+        "slug": "georgia",
+        "count": 11
+      },
+      {
+        "code": "NJ",
+        "name": "New Jersey",
+        "slug": "new-jersey",
+        "count": 9
+      },
+      {
+        "code": "IN",
+        "name": "Indiana",
+        "slug": "indiana",
+        "count": 9
+      },
+      {
+        "code": "MI",
+        "name": "Michigan",
+        "slug": "michigan",
+        "count": 9
+      },
+      {
+        "code": "IA",
+        "name": "Iowa",
+        "slug": "iowa",
+        "count": 9
+      },
+      {
+        "code": "MA",
+        "name": "Massachusetts",
+        "slug": "massachusetts",
+        "count": 8
+      },
+      {
+        "code": "MN",
+        "name": "Minnesota",
+        "slug": "minnesota",
+        "count": 8
+      },
+      {
+        "code": "UT",
+        "name": "Utah",
+        "slug": "utah",
+        "count": 8
+      },
+      {
+        "code": "CT",
+        "name": "Connecticut",
+        "slug": "connecticut",
+        "count": 7
+      },
+      {
+        "code": "MO",
+        "name": "Missouri",
+        "slug": "missouri",
+        "count": 6
+      },
+      {
+        "code": "WI",
+        "name": "Wisconsin",
+        "slug": "wisconsin",
+        "count": 5
+      },
+      {
+        "code": "NE",
+        "name": "Nebraska",
+        "slug": "nebraska",
+        "count": 5
+      },
+      {
+        "code": "ID",
+        "name": "Idaho",
+        "slug": "idaho",
+        "count": 4
+      },
+      {
+        "code": "NH",
+        "name": "New Hampshire",
+        "slug": "new-hampshire",
+        "count": 3
+      },
+      {
+        "code": "AL",
+        "name": "Alabama",
+        "slug": "alabama",
+        "count": 3
+      },
+      {
+        "code": "TN",
+        "name": "Tennessee",
+        "slug": "tennessee",
+        "count": 3
+      },
+      {
+        "code": "MS",
+        "name": "Mississippi",
+        "slug": "mississippi",
+        "count": 3
+      },
+      {
+        "code": "OK",
+        "name": "Oklahoma",
+        "slug": "oklahoma",
+        "count": 3
+      },
+      {
+        "code": "NM",
+        "name": "New Mexico",
+        "slug": "new-mexico",
+        "count": 3
+      },
+      {
+        "code": "LA",
+        "name": "Louisiana",
+        "slug": "louisiana",
+        "count": 2
+      },
+      {
+        "code": "KY",
+        "name": "Kentucky",
+        "slug": "kentucky",
+        "count": 2
+      },
+      {
+        "code": "KS",
+        "name": "Kansas",
+        "slug": "kansas",
+        "count": 2
+      },
+      {
+        "code": "HI",
+        "name": "Hawaii",
+        "slug": "hawaii",
+        "count": 2
+      },
+      {
+        "code": "ME",
+        "name": "Maine",
+        "slug": "maine",
+        "count": 1
+      },
+      {
+        "code": "RI",
+        "name": "Rhode Island",
+        "slug": "rhode-island",
+        "count": 1
+      },
+      {
+        "code": "DE",
+        "name": "Delaware",
+        "slug": "delaware",
+        "count": 1
+      },
+      {
+        "code": "MT",
+        "name": "Montana",
+        "slug": "montana",
+        "count": 1
+      },
+      {
+        "code": "WY",
+        "name": "Wyoming",
+        "slug": "wyoming",
+        "count": 1
+      },
+      {
+        "code": "AK",
+        "name": "Alaska",
+        "slug": "alaska",
+        "count": 1
+      }
+    ]
+  }
+]
