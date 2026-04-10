@@ -42,6 +42,14 @@ export default function CityPage({ params }: { params: Promise<{ slug: string }>
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "FAQPage",
+        mainEntity: [
+          { "@type": "Question", name: `How many auto repair shops are in ${cityInfo.city}, ${cityInfo.stateName}?`, acceptedAnswer: { "@type": "Answer", text: `There are ${shops.length} auto repair shops in ${cityInfo.city}, ${cityInfo.stateName}. Browse them all on MechanicSeeker.` } },
+          { "@type": "Question", name: `Where is the closest mechanic in ${cityInfo.city}?`, acceptedAnswer: { "@type": "Answer", text: `MechanicSeeker lists all ${shops.length} auto repair shops in ${cityInfo.city} with addresses, phone numbers, and services offered.` } },
+          { "@type": "Question", name: `How much does car repair cost in ${cityInfo.city}, ${cityInfo.stateName}?`, acceptedAnswer: { "@type": "Answer", text: `Repair costs in ${cityInfo.city} vary by service. Oil changes run $30-$75, brake jobs $150-$500, and tire replacement $100-$300. Get quotes from multiple shops.` } },
+        ],
+      }) }} />
       <nav className="text-sm text-gray-400 mb-6 flex flex-wrap gap-2">
         <Link href="/" className="hover:text-[#2C3E50] transition">Home</Link><span>/</span>
         <Link href={`/${cityInfo.stateSlug}`} className="hover:text-[#2C3E50] transition">{cityInfo.stateName}</Link><span>/</span>

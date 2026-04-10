@@ -21,6 +21,16 @@ export default function StatePage({ params }: { params: Promise<{ state: string 
 
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "FAQPage",
+        mainEntity: [
+          { "@type": "Question", name: `How many auto repair shops are in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `There are ${shops.length.toLocaleString()} auto repair shops in ${stateInfo.name}. MechanicSeeker lists mechanics, tire shops, body shops, and quick lube locations.` } },
+          { "@type": "Question", name: `How much does an oil change cost in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `Oil changes in ${stateInfo.name} typically cost $30-$75 for conventional oil and $65-$125 for synthetic. Prices vary by shop and vehicle.` } },
+          { "@type": "Question", name: `How do I find a good mechanic in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `Use MechanicSeeker to browse all ${shops.length.toLocaleString()} auto repair shops in ${stateInfo.name}. Look for ASE-certified shops with good reviews and transparent pricing.` } },
+          { "@type": "Question", name: `Are chain mechanics or independent shops better in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `Both have advantages. Chains offer consistency and warranties. Independent shops often provide personalized service and competitive pricing. Browse both on MechanicSeeker.` } },
+          { "@type": "Question", name: `How do I find auto repair shops near me in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `Use MechanicSeeker to browse all ${shops.length.toLocaleString()} shops in ${stateInfo.name} by city. Each listing includes services, hours, and contact info.` } },
+        ],
+      }) }} />
       <section className="py-16 md:py-24 text-center px-4" style={{ background: "#FAF8F5" }}>
         <p className="text-[#E67E22] text-sm font-bold tracking-wider uppercase mb-3 font-[Cabin]">{stateInfo.name} Auto Repair</p>
         <h1 className="font-[Cabin] text-4xl md:text-5xl font-bold text-[#1A1A1A]">Auto Repair Shops in {stateInfo.name}</h1>
