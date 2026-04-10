@@ -97,6 +97,30 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
             </div>
           </section>
         )}
+        {/* Nearby Shops */}
+        {(() => {
+          const nearbyData = (() => {
+            try {
+              // eslint-disable-next-line @typescript-eslint/no-require-imports
+              const data = require("@/data/nearby.json");
+              return (data[shop.id] || []).slice(0, 5);
+            } catch { return []; }
+          })();
+          if (nearbyData.length === 0) return null;
+          return (
+            <section className="mb-8">
+              <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-4">Nearby Auto Repair Shops</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {nearbyData.map((n: { id: string; name: string; distance: number; city: string; state: string }) => (
+                  <Link key={n.id} href={`/shops/${n.id}`} className="group bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all border-l-4 border-l-[#E67E22]">
+                    <p className="font-bold text-[#1A1A1A] group-hover:text-[#E67E22] transition text-sm">{n.name}</p>
+                    <p className="text-gray-500 text-xs">{n.city}{n.city && n.state ? ", " : ""}{n.state} &middot; {n.distance} mi</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
       </div>
     </div>
   );
