@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { unified, stateList } from "@/data/all-mechanics";
+import NearMeButton from "@/components/NearMeButton";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -69,8 +70,12 @@ export default function Home() {
             )}
           </div>
 
+          <div className="flex justify-center mt-4">
+            <NearMeButton label="Find Shops Near Me" color="#E67E22" />
+          </div>
+
           {/* Quick filters */}
-          <div className="flex gap-2 justify-center mt-6 flex-wrap max-w-2xl mx-auto">
+          <div className="flex gap-2 justify-center mt-4 flex-wrap max-w-2xl mx-auto">
             {[
               { label: `General Repair (${(shopTypes.general_repair || 0).toLocaleString()})`, type: "general_repair" },
               { label: `Tire Shops (${(shopTypes.tire_shop || 0).toLocaleString()})`, type: "tire_shop" },
@@ -122,11 +127,14 @@ export default function Home() {
       </section>
 
       {/* EMAIL SIGNUP */}
-      <section className="py-12" style={{ background: "#2C3E50" }}>
+      <section className="py-16" style={{ background: "#2C3E50" }}>
         <div className="max-w-lg mx-auto px-4 text-center">
-          <h2 className="font-[Cabin] text-2xl font-bold text-white mb-2">Find Deals Near You</h2>
-          <p className="text-white/60 text-sm mb-6">Shop specials, maintenance reminders, and new shop openings &mdash; delivered to your inbox.</p>
-          <a href="mailto:admin@globalaibots.com?subject=MechanicSeeker%20Newsletter%20Signup&body=Please%20add%20me%20to%20the%20MechanicSeeker%20email%20list." className="inline-block bg-[#E67E22] hover:bg-[#d35400] text-white font-bold px-8 py-3.5 rounded-xl transition text-sm">Sign Up for Updates</a>
+          <h2 className="font-[Cabin] text-2xl font-bold text-white mb-2">Find Deals Near You &#128295;</h2>
+          <p className="text-white/70 text-sm mb-6">Shop specials, maintenance reminders, and new shop openings &mdash; delivered to your inbox.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <input type="email" placeholder="your@email.com" className="flex-1 px-5 py-3.5 rounded-xl text-sm outline-none bg-white/10 text-white placeholder-white/40 border border-white/10 focus:border-[#E67E22] transition" />
+            <button className="bg-[#E67E22] hover:bg-[#d35400] text-white font-bold px-7 py-3.5 rounded-xl transition text-sm whitespace-nowrap">Subscribe Free</button>
+          </div>
           <p className="text-white/30 text-xs mt-3">No spam, ever. Unsubscribe anytime.</p>
         </div>
       </section>
