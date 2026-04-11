@@ -121,8 +121,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* EMAIL SIGNUP */}
+      <section className="py-12" style={{ background: "#2C3E50" }}>
+        <div className="max-w-lg mx-auto px-4 text-center">
+          <h2 className="font-[Cabin] text-2xl font-bold text-white mb-2">Find Deals Near You</h2>
+          <p className="text-white/60 text-sm mb-6">Shop specials, maintenance reminders, and new shop openings &mdash; delivered to your inbox.</p>
+          <a href="mailto:admin@globalaibots.com?subject=MechanicSeeker%20Newsletter%20Signup&body=Please%20add%20me%20to%20the%20MechanicSeeker%20email%20list." className="inline-block bg-[#E67E22] hover:bg-[#d35400] text-white font-bold px-8 py-3.5 rounded-xl transition text-sm">Sign Up for Updates</a>
+          <p className="text-white/30 text-xs mt-3">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+      </section>
+
       {/* SUBMIT */}
-      <section className="max-w-2xl mx-auto px-4 pb-20">
+      <section className="max-w-2xl mx-auto px-4 pb-20 pt-10">
         <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-sm">
           <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mb-2">Know a shop we&apos;re missing?</h2>
           <p className="text-gray-500 text-sm mb-6">Help us build the most complete auto repair directory in America.</p>
