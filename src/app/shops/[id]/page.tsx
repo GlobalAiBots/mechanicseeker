@@ -130,6 +130,15 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
             </section>
           );
         })()}
+
+        {/* Claim Listing CTA */}
+        <section className="bg-[#F0F4F8] rounded-xl p-6 border border-[#D4D8DD] mb-8">
+          <h3 className="font-[Cabin] text-lg font-bold text-[#1A1A1A] mb-2">Own this shop?</h3>
+          <p className="text-gray-500 text-sm mb-4">Claim your free listing to update your hours, services, contact info, and respond to customers.</p>
+          <Link href={`/claim?shop=${encodeURIComponent(shop.id)}&name=${encodeURIComponent(shop.name)}`} className="inline-block bg-[#E67E22] hover:bg-[#d35400] text-white font-bold px-6 py-3 rounded-lg transition text-sm">
+            Claim This Listing &mdash; It&apos;s Free
+          </Link>
+        </section>
       </div>
     </div>
   );
