@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { unified, getShopById, stateList, serviceLabels } from "@/data/all-mechanics";
 import ShopMapWrapper from "@/components/ShopMapWrapper";
+import FeaturedArticle from "@/components/FeaturedArticle";
 import type { Metadata } from "next";
 
 export const dynamicParams = true;
@@ -207,6 +208,8 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
             </section>
           );
         })()}
+
+        <FeaturedArticle listingSlug={shop.id} />
 
         {/* Claim Listing CTA */}
         <section className="bg-[#F0F4F8] rounded-xl p-6 border border-[#D4D8DD] mb-8">
