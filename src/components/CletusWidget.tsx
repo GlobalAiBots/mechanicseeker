@@ -8,6 +8,7 @@ export default function CletusWidget() {
     script.src = "https://www.globalaibots.com/widget.js";
     script.setAttribute("data-id", "fe1aa7b6-f745-4c92-b353-2589e2599bc3");
     script.setAttribute("data-agent-name", "MechanicSeeker Guide");
+    script.setAttribute("data-business", "MechanicSeeker");
     script.setAttribute("data-color", "#E67E22");
     script.defer = true;
     document.body.appendChild(script);
