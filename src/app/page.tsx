@@ -127,6 +127,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BLOG */}
+      <section className="max-w-5xl mx-auto px-4 py-10">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A]">Car Care Tips &amp; Guides</h2>
+          <Link href="/blog" className="text-sm font-semibold text-[#E67E22] hover:text-[#d35400] transition">All posts &rarr;</Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[
+            { slug: "how-to-find-trustworthy-mechanic", title: "How to Find a Trustworthy Mechanic", category: "Guide", gradient: "linear-gradient(135deg, #2C3E50 0%, #E67E22 100%)" },
+            { slug: "how-much-does-a-brake-job-cost", title: "How Much Does a Brake Job Cost?", category: "Cost Guide", gradient: "linear-gradient(135deg, #E67E22 0%, #F4A261 100%)" },
+            { slug: "car-maintenance-schedule", title: "Car Maintenance Schedule: What to Do and When", category: "Maintenance", gradient: "linear-gradient(135deg, #1A2332 0%, #2C3E50 100%)" },
+          ].map((p) => (
+            <Link key={p.slug} href={`/blog/${p.slug}`} className="group bg-white rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all" style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+              <div className="aspect-[16/9] flex items-center justify-center" style={{ background: p.gradient }}>
+                <span className="text-white/30 text-4xl font-bold font-[Cabin]">{p.category}</span>
+              </div>
+              <div className="p-4">
+                <h3 className="font-[Cabin] font-bold text-[#1A1A1A] group-hover:text-[#E67E22] transition text-sm">{p.title}</h3>
+                <span className="text-[#E67E22] text-xs font-semibold mt-2 inline-block">Read More &rarr;</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* EMAIL SIGNUP */}
       <section className="py-16" style={{ background: "#2C3E50" }}>
         <div className="max-w-lg mx-auto px-4 text-center">
