@@ -165,6 +165,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="max-w-4xl mx-auto px-4 py-10">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org", "@type": "FAQPage",
+          mainEntity: [
+            { "@type": "Question", name: "How many auto repair shops does MechanicSeeker list?", acceptedAnswer: { "@type": "Answer", text: `MechanicSeeker lists ${unified.length.toLocaleString()}+ auto repair shops across all 50 states, including general repair, tire shops, body shops, quick lube, and transmission specialists.` } },
+            { "@type": "Question", name: "Is MechanicSeeker free?", acceptedAnswer: { "@type": "Answer", text: "Yes, completely free. No login, no account, no fees. Just find your mechanic and go." } },
+            { "@type": "Question", name: "How do I find a mechanic near me?", acceptedAnswer: { "@type": "Answer", text: "Click the 'Find Shops Near Me' button on the homepage. MechanicSeeker will use your location to show the closest auto repair shops sorted by distance." } },
+            { "@type": "Question", name: "Can I search by service type?", acceptedAnswer: { "@type": "Answer", text: "Yes. Browse by category including General Repair, Tire Shops, Body Shops, Quick Lube, and Transmission Shops. You can also search by brand like Jiffy Lube, Midas, or Firestone." } },
+            { "@type": "Question", name: "How do I claim my shop listing?", acceptedAnswer: { "@type": "Answer", text: "If you own an auto repair shop, visit our Claim page to update your hours, services, and contact information for free." } },
+          ],
+        }) }} />
+        <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-2">
+          {[
+            { q: `How many auto repair shops does MechanicSeeker list?`, a: `MechanicSeeker lists ${unified.length.toLocaleString()}+ auto repair shops across all 50 states, including general repair, tire shops, body shops, quick lube, and transmission specialists.` },
+            { q: "Is MechanicSeeker free?", a: "Yes, completely free. No login, no account, no fees. Just find your mechanic and go." },
+            { q: "How do I find a mechanic near me?", a: "Click the \"Find Shops Near Me\" button on the homepage. MechanicSeeker will use your location to show the closest auto repair shops sorted by distance." },
+            { q: "Can I search by service type?", a: "Yes. Browse by category including General Repair, Tire Shops, Body Shops, Quick Lube, and Transmission Shops. You can also search by brand like Jiffy Lube, Midas, or Firestone." },
+            { q: "How do I claim my shop listing?", a: "If you own an auto repair shop, visit our Claim page to update your hours, services, and contact information for free." },
+          ].map((f, i) => (
+            <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
+              <summary className="px-5 py-4 cursor-pointer font-semibold text-[#1A1A1A] text-sm hover:text-[#E67E22] transition list-none flex items-center justify-between">{f.q}<svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg></summary>
+              <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <div className="max-w-5xl mx-auto px-4"><CletusAd /></div>
 
       {/* SUBMIT */}
