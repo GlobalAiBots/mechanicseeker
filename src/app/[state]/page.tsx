@@ -2,6 +2,7 @@
 import { use, useState, useMemo } from "react";
 import Link from "next/link";
 import { unified, stateList } from "@/data/all-mechanics";
+import FeaturedArticle from "@/components/FeaturedArticle";
 
 export default function StatePage({ params }: { params: Promise<{ state: string }> }) {
   const { state } = use(params);
@@ -37,15 +38,35 @@ export default function StatePage({ params }: { params: Promise<{ state: string 
         <p className="text-gray-500 mt-4">{shops.length.toLocaleString()} shops. Mechanics, tire shops, body shops, and more.</p>
       </section>
 
+      {/* State intro + tips */}
+      <section className="max-w-4xl mx-auto px-4 pt-10 pb-4">
+        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6">
+          <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-3">Auto Repair in {stateInfo.name}</h2>
+          <p className="text-gray-600 leading-relaxed text-sm">
+            {stateInfo.name} is home to {shops.length.toLocaleString()} auto repair shops listed on MechanicSeeker, from independent mechanics to national chains like Jiffy Lube, Firestone, and Midas. Whether you need an oil change, brake service, tire replacement, or a full engine rebuild, there&apos;s a shop near you. Browse by city below to find trusted mechanics in your area.
+          </p>
+        </div>
+        <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-6">
+          <h3 className="font-[Cabin] font-bold text-[#E67E22] mb-3">Tips for Finding Auto Repair in {stateInfo.name}</h3>
+          <ul className="space-y-2 text-sm text-gray-700">
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> {stateInfo.name} requires shops to provide written estimates before starting work.</li>
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Always ask about warranty on parts and labor before authorizing repairs.</li>
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Get at least 2-3 quotes for major repairs like transmission or engine work.</li>
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Check if the shop is ASE-certified &mdash; it&apos;s a sign of professional standards.</li>
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Read our <Link href="/blog/how-to-find-trustworthy-mechanic" className="text-[#E67E22] hover:underline">guide to finding a trustworthy mechanic</Link>.</li>
+          </ul>
+        </div>
+      </section>
+
       {cityMap.length > 0 && (
         <section className="max-w-6xl mx-auto px-4 pt-8 pb-4">
           <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-4">Browse by City</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
             {cityMap.slice(0, 20).map(([city, count]) => (
-              <button key={city} onClick={() => { setSelectedCity(city === selectedCity ? null : city); document.getElementById("shop-list")?.scrollIntoView({ behavior: "smooth" }); }} className={`text-left bg-white border rounded-lg p-3 hover:border-[#E67E22] transition cursor-pointer ${selectedCity === city ? "border-[#E67E22] bg-orange-50 ring-2 ring-[#E67E22]" : "border-gray-200"}`}>
+              <Link key={city} href={`/cities/${city.toLowerCase().replace(/\s+/g, "-")}-${stateInfo.code.toLowerCase()}`} className={`text-left bg-white border rounded-lg p-3 hover:border-[#E67E22] hover:shadow-sm transition border-gray-200`}>
                 <p className="font-bold text-[#1A1A1A] text-sm">{city}</p>
                 <p className="text-gray-400 text-xs">{count} shop{count !== 1 ? "s" : ""}</p>
-              </button>
+              </Link>
             ))}
           </div>
         </section>
@@ -64,6 +85,29 @@ export default function StatePage({ params }: { params: Promise<{ state: string 
           ))}
         </div>
       </section>
+
+      {/* Visible FAQ */}
+      <section className="max-w-4xl mx-auto px-4 py-8">
+        <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-2">
+          {[
+            { q: `How many auto repair shops are in ${stateInfo.name}?`, a: `There are ${shops.length.toLocaleString()} auto repair shops in ${stateInfo.name} on MechanicSeeker, including mechanics, tire shops, body shops, and quick lube locations.` },
+            { q: `How much does an oil change cost in ${stateInfo.name}?`, a: `Oil changes in ${stateInfo.name} typically cost $30-$75 for conventional oil and $65-$125 for synthetic. Prices vary by shop and vehicle.` },
+            { q: `How do I find a good mechanic in ${stateInfo.name}?`, a: `Browse MechanicSeeker to compare ${shops.length.toLocaleString()} shops in ${stateInfo.name}. Look for ASE-certified shops with transparent pricing and good reviews.` },
+            { q: `Do I need a vehicle inspection in ${stateInfo.name}?`, a: `Vehicle inspection requirements vary by state. Check with your local DMV for ${stateInfo.name}'s specific requirements for annual safety and emissions inspections.` },
+            { q: `Are chain mechanics or independent shops better?`, a: `Both have advantages. Chains offer consistency and nationwide warranties. Independent shops often provide personalized service, competitive pricing, and specialized expertise.` },
+          ].map((f, i) => (
+            <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
+              <summary className="px-5 py-4 cursor-pointer font-semibold text-[#1A1A1A] text-sm hover:text-[#E67E22] transition list-none flex items-center justify-between">{f.q}<svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg></summary>
+              <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <div className="max-w-4xl mx-auto px-4">
+        <FeaturedArticle listingSlug={`state-${state}`} />
+      </div>
     </div>
   );
 }
