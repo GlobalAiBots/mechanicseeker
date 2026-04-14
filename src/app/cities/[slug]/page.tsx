@@ -4,6 +4,7 @@ import { use, useState, useMemo } from "react";
 import Link from "next/link";
 import { unified } from "@/data/all-mechanics";
 import cityPages from "@/data/city-pages.json";
+import FeaturedArticle from "@/components/FeaturedArticle";
 
 interface CityPage { state: string; stateName: string; stateSlug: string; city: string; citySlug: string; count: number; lat: number; lng: number; }
 const allCityPages = cityPages as CityPage[];
@@ -72,6 +73,46 @@ export default function CityPage({ params }: { params: Promise<{ slug: string }>
             <span className="text-sm font-semibold text-[#E67E22] mt-2 inline-block">View Details &rarr;</span>
           </Link>
         ))}
+      </div>
+
+      {/* Intro */}
+      <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6">
+        <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-3">Auto Repair Shops in {cityInfo.city}, {cityInfo.stateName}</h2>
+        <p className="text-gray-600 leading-relaxed text-sm">{cityInfo.city}, {cityInfo.stateName} has {shops.length} auto repair shop{shops.length !== 1 ? "s" : ""} listed on MechanicSeeker. Browse all shops above with services, contact info, and directions to find a trusted mechanic near you.</p>
+      </div>
+
+      {/* Tips */}
+      <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-6">
+        <h3 className="font-[Cabin] font-bold text-[#E67E22] mb-3">Tips for Finding a Mechanic in {cityInfo.city}</h3>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Get written estimates from at least two shops before authorizing major repairs.</li>
+          <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Ask about warranty coverage on parts and labor before work begins.</li>
+          <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Check online reviews and ask for referrals to find a reliable mechanic.</li>
+        </ul>
+      </div>
+
+      {/* Visible FAQ */}
+      <div className="mb-8">
+        <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-2">
+          {[
+            { q: `How many auto repair shops are in ${cityInfo.city}, ${cityInfo.stateName}?`, a: `There are ${shops.length} auto repair shops in ${cityInfo.city}, ${cityInfo.stateName} listed on MechanicSeeker with services and contact info.` },
+            { q: `How much does an oil change cost in ${cityInfo.city}?`, a: `Oil change prices in ${cityInfo.city} typically range from $30 to $75 depending on the vehicle and oil type. Get quotes from multiple shops.` },
+            { q: `How do I find a good mechanic in ${cityInfo.city}?`, a: `Browse shops on MechanicSeeker, check reviews, ask about certifications, and get estimates from multiple shops before committing.` },
+          ].map((f, i) => (
+            <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
+              <summary className="px-5 py-4 cursor-pointer font-semibold text-[#1A1A1A] text-sm hover:text-[#E67E22] transition list-none flex items-center justify-between">{f.q}<svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg></summary>
+              <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      <FeaturedArticle listingSlug={`city-${slug}`} />
+
+      {/* Back to state */}
+      <div className="text-center py-4">
+        <Link href={`/${cityInfo.stateSlug}`} className="text-[#E67E22] hover:underline font-semibold text-sm">Browse all {cityInfo.stateName} auto repair shops &rarr;</Link>
       </div>
 
       {nearbyCities.length > 0 && (
