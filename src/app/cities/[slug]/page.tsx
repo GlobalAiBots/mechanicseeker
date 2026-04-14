@@ -1,10 +1,13 @@
 "use client";
 
 import { use, useState, useMemo } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { unified } from "@/data/all-mechanics";
 import cityPages from "@/data/city-pages.json";
 import FeaturedArticle from "@/components/FeaturedArticle";
+
+const ShopMap = dynamic(() => import("@/components/ShopMap"), { ssr: false, loading: () => <div className="rounded-xl bg-gray-100 flex items-center justify-center" style={{ height: 350 }}><p className="text-gray-400 text-sm">Loading map...</p></div> });
 
 interface CityPage { state: string; stateName: string; stateSlug: string; city: string; citySlug: string; count: number; lat: number; lng: number; }
 const allCityPages = cityPages as CityPage[];
@@ -17,6 +20,9 @@ export default function CityPage({ params }: { params: Promise<{ slug: string }>
     if (!cityInfo) return [];
     return unified.filter((s) => s.state === cityInfo.state && s.city?.trim() === cityInfo.city);
   }, [cityInfo]);
+
+  const mapShops = useMemo(() => shops.map(s => ({ id: s.id, name: s.name, lat: s.lat, lng: s.lng, city: s.city })), [shops]);
+  const center = useMemo<[number, number]>(() => shops.length ? [shops.reduce((s, sh) => s + sh.lat, 0) / shops.length, shops.reduce((s, sh) => s + sh.lng, 0) / shops.length] : [39.8, -98.5], [shops]);
 
   const [search, setSearch] = useState("");
   const filtered = search.length >= 2
@@ -63,6 +69,8 @@ export default function CityPage({ params }: { params: Promise<{ slug: string }>
       {shops.length > 5 && (
         <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search shops in this city..." className="w-full max-w-md px-4 py-2.5 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#E67E22] transition mb-6" />
       )}
+
+      {shops.length > 0 && <div className="mb-8"><ShopMap shops={mapShops} center={center} zoom={12} height="350px" /></div>}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-12">
         {filtered.slice(0, 100).map((s) => (
