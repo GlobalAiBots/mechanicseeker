@@ -106,6 +106,83 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
             </div>
           </section>
         )}
+        {/* About This Shop — unique content */}
+        <section className="mb-8">
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-3">About {shop.name}</h2>
+            <p className="text-gray-600 leading-relaxed text-sm">
+              {shop.name} is {shop.brand ? `a ${shop.brand} location` : "an independent auto repair shop"} in {shop.city ? `${shop.city}, ` : ""}{stateName}. {shop.services.length > 0 ? `Services include ${shop.services.slice(0, 4).map(s => (serviceLabels[s]?.label || s.replace(/_/g, " ")).toLowerCase()).join(", ")}.` : ""} {shop.phone ? `Call ${shop.phone} for an appointment.` : ""}
+            </p>
+          </div>
+        </section>
+
+        {/* Tips */}
+        <section className="mb-8">
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
+            <h3 className="font-[Cabin] font-bold text-[#E67E22] mb-3">What to Know</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Always get a written estimate before authorizing any work.</li>
+              <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Ask about warranty coverage on parts and labor.</li>
+              <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> {stateName} requires shops to provide itemized invoices for all repairs.</li>
+              <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Read our <Link href="/blog/how-to-find-trustworthy-mechanic" className="text-[#E67E22] hover:underline">guide to finding a trustworthy mechanic</Link>.</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Auto Repair in State */}
+        {(() => {
+          const stateCount = unified.filter(s => s.state === shop.state).length;
+          return (
+            <section className="mb-8">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3">Auto Repair in {stateName}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {stateName} has {stateCount.toLocaleString()} auto repair shops on MechanicSeeker, including {shop.brand ? `${shop.brand} and other` : ""} independent mechanics, tire shops, and body shops. {stateSlug && <Link href={`/${stateSlug}`} className="text-[#E67E22] hover:underline">Browse all {stateCount.toLocaleString()} shops in {stateName}</Link>}.
+                </p>
+              </div>
+            </section>
+          );
+        })()}
+
+        {/* FAQ */}
+        <section className="mb-8">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
+            { "@type": "Question", name: `Where is ${shop.name}?`, acceptedAnswer: { "@type": "Answer", text: `${shop.name} is at ${shop.address ? shop.address + ", " : ""}${shop.city ? shop.city + ", " : ""}${stateName}${shop.zip ? " " + shop.zip : ""}.` } },
+            { "@type": "Question", name: `What services does ${shop.name} offer?`, acceptedAnswer: { "@type": "Answer", text: shop.services.length > 0 ? `Services include ${shop.services.map(s => (serviceLabels[s]?.label || s.replace(/_/g, " "))).join(", ")}.` : "Contact the shop directly for a list of services." } },
+            { "@type": "Question", name: `How do I contact ${shop.name}?`, acceptedAnswer: { "@type": "Answer", text: shop.phone ? `Call ${shop.phone} or use the Get Directions link above.` : "Use the Get Directions link above to find the shop." } },
+          ] }) }} />
+          <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-2">
+            {[
+              { q: `Where is ${shop.name}?`, a: `${shop.name} is at ${shop.address ? shop.address + ", " : ""}${shop.city ? shop.city + ", " : ""}${stateName}${shop.zip ? " " + shop.zip : ""}.` },
+              { q: `What services does ${shop.name} offer?`, a: shop.services.length > 0 ? `Services include ${shop.services.map(s => (serviceLabels[s]?.label || s.replace(/_/g, " "))).join(", ")}.` : "Contact the shop directly for a list of services." },
+              { q: `How do I contact ${shop.name}?`, a: shop.phone ? `Call ${shop.phone} or use the Get Directions link above.` : "Use the Get Directions link above to find the shop." },
+            ].map((f, i) => (
+              <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
+                <summary className="px-5 py-4 cursor-pointer font-semibold text-[#1A1A1A] text-sm hover:text-[#E67E22] transition list-none flex items-center justify-between">{f.q}<svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg></summary>
+                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* Related Guides */}
+        <section className="mb-8">
+          <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3">Related Guides</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { href: "/blog/how-to-find-trustworthy-mechanic", title: "Finding a Mechanic", desc: "How to find one you can trust" },
+              { href: "/blog/car-maintenance-schedule", title: "Maintenance Schedule", desc: "Keep your car running right" },
+              { href: "/blog/how-much-does-a-brake-job-cost", title: "Brake Job Costs", desc: "What to expect and how to save" },
+            ].map((g) => (
+              <Link key={g.href} href={g.href} className="group bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <p className="font-bold text-[#1A1A1A] group-hover:text-[#E67E22] transition text-sm">{g.title}</p>
+                <p className="text-gray-400 text-xs mt-1">{g.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Nearby Shops */}
         {(() => {
           const nearbyData = (() => {
