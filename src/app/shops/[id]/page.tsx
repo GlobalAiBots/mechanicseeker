@@ -211,6 +211,37 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
 
         <FeaturedArticle listingSlug={shop.id} />
 
+        {/* Nearby Cities */}
+        {shop.city && (() => {
+          const otherCities = unified.filter(s => s.state === shop.state && s.city && s.city !== shop.city);
+          const uniqueCities = Array.from(new Set(otherCities.map(s => s.city))).slice(0, 6);
+          if (uniqueCities.length === 0) return null;
+          return (
+            <section className="mb-8">
+              <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3">Nearby Cities with Auto Repair</h3>
+              <div className="flex flex-wrap gap-2">
+                {uniqueCities.map(city => (
+                  <Link key={city} href={`/cities/${city.toLowerCase().replace(/\s+/g, "-")}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">
+                    {city}, {shop.state}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
+
+        {/* People Also Search For */}
+        <section className="mb-8 bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3 text-sm">People Also Search For</h3>
+          <div className="flex flex-wrap gap-2">
+            {shop.city && <Link href={`/cities/${shop.city.toLowerCase().replace(/\s+/g, "-")}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Auto repair near {shop.city}</Link>}
+            {stateSlug && <Link href={`/${stateSlug}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Mechanics in {stateName}</Link>}
+            {shop.brand && <Link href={`/brand/${shop.brand.toLowerCase().replace(/\s+/g, "-")}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">{shop.brand} near {shop.city || stateName}</Link>}
+            {shop.city && <Link href={`/cities/${shop.city.toLowerCase().replace(/\s+/g, "-")}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Oil change near {shop.city}</Link>}
+            <Link href="/blog/how-to-find-trustworthy-mechanic" className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">How to find a good mechanic</Link>
+          </div>
+        </section>
+
         {/* Claim Listing CTA */}
         <section className="bg-[#F0F4F8] rounded-xl p-6 border border-[#D4D8DD] mb-8">
           <h3 className="font-[Cabin] text-lg font-bold text-[#1A1A1A] mb-2">Own this shop?</h3>
