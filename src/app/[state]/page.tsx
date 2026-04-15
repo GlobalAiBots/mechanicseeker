@@ -63,7 +63,7 @@ export default function StatePage({ params }: { params: Promise<{ state: string 
           <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-4">Browse by City</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
             {cityMap.slice(0, 20).map(([city, count]) => (
-              <Link key={city} href={`/cities/${city.toLowerCase().replace(/\s+/g, "-")}-${stateInfo.code.toLowerCase()}`} className={`text-left bg-white border rounded-lg p-3 hover:border-[#E67E22] hover:shadow-sm transition border-gray-200`}>
+              <Link key={city} href={`/cities/${stateInfo.slug}-${city.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`} className={`text-left bg-white border rounded-lg p-3 hover:border-[#E67E22] hover:shadow-sm transition border-gray-200`}>
                 <p className="font-bold text-[#1A1A1A] text-sm">{city}</p>
                 <p className="text-gray-400 text-xs">{count} shop{count !== 1 ? "s" : ""}</p>
               </Link>

@@ -223,7 +223,7 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
               <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3">Nearby Cities with Auto Repair</h3>
               <div className="flex flex-wrap gap-2">
                 {nearbyCities.map(c => (
-                  <Link key={c.citySlug} href={`/cities/${c.citySlug}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">
+                  <Link key={c.citySlug} href={`/cities/${c.stateSlug}-${c.citySlug}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">
                     {c.city}, {shop.state}
                   </Link>
                 ))}
@@ -240,8 +240,8 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
               const cityPage = allCities.find(c => c.state === shop.state && c.city === shop.city);
               if (!cityPage) return null;
               return <>
-                <Link href={`/cities/${cityPage.citySlug}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Auto repair near {shop.city}</Link>
-                <Link href={`/cities/${cityPage.citySlug}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Oil change near {shop.city}</Link>
+                <Link href={`/cities/${cityPage.stateSlug}-${cityPage.citySlug}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Auto repair near {shop.city}</Link>
+                <Link href={`/cities/${cityPage.stateSlug}-${cityPage.citySlug}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Oil change near {shop.city}</Link>
               </>;
             })()}
             {stateSlug && <Link href={`/${stateSlug}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Mechanics in {stateName}</Link>}
