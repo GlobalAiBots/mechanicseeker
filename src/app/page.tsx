@@ -113,7 +113,7 @@ export default function Home() {
         <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] text-center mb-8">Why MechanicSeeker</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { icon: "\u{1F50D}", title: "Find Trusted Shops", desc: "51,000+ verified auto repair shops with real addresses and phone numbers." },
+            { icon: "\u{1F50D}", title: "Find Trusted Shops", desc: `${unified.length.toLocaleString()}+ verified auto repair shops with real addresses and phone numbers.` },
             { icon: "\u{1F527}", title: "Service Details", desc: "See what each shop specializes in \u2014 brakes, tires, transmission, body work, and more." },
             { icon: "\u{1F3E2}", title: "Chain or Independent", desc: "Compare national chains like Jiffy Lube and Midas with trusted local independents." },
             { icon: "\u{1F4B0}", title: "Free Forever", desc: "No login. No account. No fees. Just find your mechanic and go." },
