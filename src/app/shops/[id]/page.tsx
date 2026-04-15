@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 import { unified, getShopById, stateList, serviceLabels } from "@/data/all-mechanics";
 import ShopMapWrapper from "@/components/ShopMapWrapper";
 import FeaturedArticle from "@/components/FeaturedArticle";
+import cityPagesData from "@/data/city-pages.json";
 import type { Metadata } from "next";
+
+const allCities = (cityPagesData as { state: string; stateSlug: string; city: string; citySlug: string; count: number }[]);
 
 export const dynamicParams = true;
 export const revalidate = 86400;
@@ -213,16 +216,15 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
 
         {/* Nearby Cities */}
         {shop.city && (() => {
-          const otherCities = unified.filter(s => s.state === shop.state && s.city && s.city !== shop.city);
-          const uniqueCities = Array.from(new Set(otherCities.map(s => s.city))).slice(0, 6);
-          if (uniqueCities.length === 0) return null;
+          const nearbyCities = allCities.filter(c => c.state === shop.state && c.city !== shop.city).slice(0, 6);
+          if (nearbyCities.length === 0) return null;
           return (
             <section className="mb-8">
               <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3">Nearby Cities with Auto Repair</h3>
               <div className="flex flex-wrap gap-2">
-                {uniqueCities.map(city => (
-                  <Link key={city} href={`/cities/${city.toLowerCase().replace(/\s+/g, "-")}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">
-                    {city}, {shop.state}
+                {nearbyCities.map(c => (
+                  <Link key={c.citySlug} href={`/cities/${c.citySlug}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">
+                    {c.city}, {shop.state}
                   </Link>
                 ))}
               </div>
@@ -234,10 +236,16 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
         <section className="mb-8 bg-gray-50 border border-gray-200 rounded-xl p-5">
           <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3 text-sm">People Also Search For</h3>
           <div className="flex flex-wrap gap-2">
-            {shop.city && <Link href={`/cities/${shop.city.toLowerCase().replace(/\s+/g, "-")}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Auto repair near {shop.city}</Link>}
+            {(() => {
+              const cityPage = allCities.find(c => c.state === shop.state && c.city === shop.city);
+              if (!cityPage) return null;
+              return <>
+                <Link href={`/cities/${cityPage.citySlug}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Auto repair near {shop.city}</Link>
+                <Link href={`/cities/${cityPage.citySlug}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Oil change near {shop.city}</Link>
+              </>;
+            })()}
             {stateSlug && <Link href={`/${stateSlug}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Mechanics in {stateName}</Link>}
             {shop.brand && <Link href={`/brand/${shop.brand.toLowerCase().replace(/\s+/g, "-")}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">{shop.brand} near {shop.city || stateName}</Link>}
-            {shop.city && <Link href={`/cities/${shop.city.toLowerCase().replace(/\s+/g, "-")}-${shop.state.toLowerCase()}`} className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">Oil change near {shop.city}</Link>}
             <Link href="/blog/how-to-find-trustworthy-mechanic" className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:text-[#E67E22] hover:border-[#E67E22] transition">How to find a good mechanic</Link>
           </div>
         </section>
