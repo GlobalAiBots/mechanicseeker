@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: { title: "MechanicSeeker | Find Auto Repair Shops Near You", description: "51,000+ auto repair shops across the US. Find trusted mechanics, tire shops, and body shops.", url: "https://mechanicseeker.com", siteName: "MechanicSeeker", type: "website" },
   twitter: { card: "summary", title: "MechanicSeeker | Find Auto Repair Shops", description: "51,000+ auto repair shops across the US." },
   alternates: { canonical: "https://mechanicseeker.com" },
-  other: { "google-adsense-account": "ca-pub-4822220549367368" },
+  other: { "google-adsense-account": "ca-pub-4822220549367368", "impact-site-verification": "5e24b07b-ec3d-4add-8aaf-3b4f2f385422" },
 };
 
 function Nav() {
