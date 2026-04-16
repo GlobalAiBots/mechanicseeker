@@ -77,7 +77,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-white/10 text-center text-xs text-white/30">
-          <span>&copy; {new Date().getFullYear()} MechanicSeeker. All rights reserved. A <a href="https://globalaibots.com" target="_blank" className="text-[#E67E22]/70 hover:text-white transition">Global AI Bots</a> project.</span>
+          <span>Veteran Owned &amp; Operated &#127482;&#127480; &middot; &copy; {new Date().getFullYear()} MechanicSeeker. All rights reserved. A <a href="https://globalaibots.com" target="_blank" className="text-[#E67E22]/70 hover:text-white transition">Global AI Bots</a> project.</span>
         </div>
       </div>
     </footer>
