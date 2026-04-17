@@ -88,15 +88,67 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-center mt-12">
-            {[{ value: unified.length.toLocaleString(), label: "Shops" }, { value: String(statesWithCounts.filter(s => s.count > 0).length), label: "States" }, { value: "Free", label: "& Updated" }, { value: "GPS", label: "Verified" }].map((s) => (
-              <div key={s.label}><p className="font-[Cabin] text-2xl font-bold text-white">{s.value}</p><p className="text-white/50 text-xs mt-0.5">{s.label}</p></div>
+            {[{ value: unified.length.toLocaleString(), label: "Auto Repair Shops" }, { value: String(statesWithCounts.filter(s => s.count > 0).length), label: "States" }, { value: "Free", label: "& Updated" }, { value: "GPS", label: "Verified" }].map((s) => (
+              <div key={s.label}><p className="font-[Cabin] text-3xl md:text-4xl font-bold text-white">{s.value}</p><p className="text-white/50 text-xs uppercase tracking-wider mt-1">{s.label}</p></div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* YOUR COMPLETE AUTO CARE HUB */}
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="font-[Cabin] text-[28px] md:text-[36px] font-extrabold text-[#1A1A1A] text-center mb-3">Your Complete Auto Care Hub</h2>
+        <p className="text-gray-500 text-center mb-10 max-w-lg mx-auto">Everything your car needs &mdash; repair shops, tire services, and maintenance tools.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <Link href="#browse-states" className="group rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ background: 'linear-gradient(135deg, #FFF7ED, #FDE68A)', border: '2px solid rgba(230,126,34,0.2)' }}>
+            <span className="text-5xl block mb-3">&#128295;</span>
+            <h3 className="font-[Cabin] font-extrabold text-[#1A1A1A] text-xl mb-1">Auto Repair Shops</h3>
+            <p className="font-extrabold text-[28px] text-[#E67E22] leading-none mb-2">{unified.length.toLocaleString()}</p>
+            <p className="text-gray-500 text-xs mb-4">Mechanics, body shops, tire shops, and quick lube.</p>
+            <span className="inline-block text-white font-bold text-sm px-5 py-2 rounded-xl" style={{ background: 'linear-gradient(135deg, #F39C12, #E67E22)', boxShadow: '0 4px 12px rgba(230,126,34,0.25)' }}>Find a Shop &rarr;</span>
+          </Link>
+          <div className="group rounded-2xl p-8 text-center opacity-80" style={{ background: 'linear-gradient(135deg, #F0F0F0, #E5E5E5)', border: '2px solid rgba(0,0,0,0.08)' }}>
+            <span className="text-5xl block mb-3">&#128734;</span>
+            <h3 className="font-[Cabin] font-extrabold text-[#1A1A1A] text-xl mb-1">Tire Services</h3>
+            <p className="font-extrabold text-[20px] text-gray-400 leading-none mb-2">Coming Soon</p>
+            <p className="text-gray-400 text-xs mb-4">Tire shops, rotation, alignment, and replacement.</p>
+            <span className="inline-block bg-gray-300 text-white font-bold text-sm px-5 py-2 rounded-xl">SimpleTire Partner &mdash; Soon</span>
+          </div>
+          <div className="group rounded-2xl p-8 text-center opacity-80" style={{ background: 'linear-gradient(135deg, #F0F0F0, #E5E5E5)', border: '2px solid rgba(0,0,0,0.08)' }}>
+            <span className="text-5xl block mb-3">&#129526;</span>
+            <h3 className="font-[Cabin] font-extrabold text-[#1A1A1A] text-xl mb-1">Glass Repair</h3>
+            <p className="font-extrabold text-[20px] text-gray-400 leading-none mb-2">Coming Soon</p>
+            <p className="text-gray-400 text-xs mb-4">Windshield repair and replacement near you.</p>
+            <span className="inline-block bg-gray-300 text-white font-bold text-sm px-5 py-2 rounded-xl">Safelite Partner &mdash; Soon</span>
+          </div>
+        </div>
+      </section>
+
+      {/* AUTO PARTS & TOOLS */}
+      <section className="max-w-5xl mx-auto px-4 py-6">
+        <div className="rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #2C3E50 0%, #E67E22 100%)" }}>
+          <div className="px-6 py-8 md:py-10 flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="flex-1">
+              <h3 className="font-[Cabin] text-xl md:text-2xl font-bold text-white mb-2">DIY Auto Tools &amp; Parts &#128295;</h3>
+              <p className="text-white/80 text-sm max-w-md">Top-rated tools for the jobs you can do yourself.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { href: "https://www.amazon.com/dp/B005NLQAHS?tag=babymydog03-20", label: "OBD2 Scanner" },
+                { href: "https://www.amazon.com/dp/B000CO86BY?tag=babymydog03-20", label: "Floor Jack" },
+                { href: "https://www.amazon.com/dp/B003BYNKWQ?tag=babymydog03-20", label: "Socket Set" },
+                { href: "https://www.amazon.com/dp/B015TKUPIC?tag=babymydog03-20", label: "Jump Starter" },
+              ].map((p) => (
+                <a key={p.label} href={p.href} target="_blank" rel="noopener noreferrer nofollow sponsored" className="bg-white/15 hover:bg-white/25 text-white font-bold text-xs px-4 py-2 rounded-lg transition">{p.label}</a>
+              ))}
+              <a href="https://www.amazon.com/dp/B07NSZMQKZ?tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="bg-white text-[#2C3E50] font-bold text-xs px-4 py-2 rounded-lg hover:shadow-lg transition">Tire Gauge &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* BROWSE BY STATE */}
-      <section className="max-w-5xl mx-auto px-4 pt-14 pb-8">
+      <section id="browse-states" className="max-w-5xl mx-auto px-4 pt-14 pb-8">
         <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mb-6">Browse by State</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
           {statesWithCounts.map((s) => (

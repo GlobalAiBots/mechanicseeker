@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const stateName = stateList.find((s) => s.code === shop.state)?.name || shop.state;
   return {
     title: `${shop.name} \u2014 Auto Repair in ${shop.city ? shop.city + ", " : ""}${stateName} | MechanicSeeker`,
-    description: `${shop.name} is an auto repair shop in ${shop.city ? shop.city + ", " : ""}${stateName}.${shop.rating > 0 ? ` Rated ${shop.rating.toFixed(1)} stars.` : ""} Services, phone, address, and directions. Find auto mechanics near you on MechanicSeeker.`,
+    description: `${shop.name} is an auto repair shop in ${shop.city ? shop.city + ", " : ""}${stateName}. Services, phone, address, hours, and directions. Find auto mechanics near you on MechanicSeeker.`,
     alternates: { canonical: `https://mechanicseeker.com/shops/${shop.id}` },
   };
 }
