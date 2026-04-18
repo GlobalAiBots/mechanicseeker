@@ -54,8 +54,7 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
           { "@type": "ListItem", position: 2, name: stateName, item: `https://mechanicseeker.com/${stateSlug}` },
-          ...(shop.city ? [{ "@type": "ListItem", position: 3, name: shop.city }] : []),
-          { "@type": "ListItem", position: shop.city ? 4 : 3, name: shop.name },
+          { "@type": "ListItem", position: 3, name: shop.name, item: `https://mechanicseeker.com/shops/${shop.id}` },
         ],
       }) }} />
       <div className="max-w-4xl mx-auto px-4 py-8">

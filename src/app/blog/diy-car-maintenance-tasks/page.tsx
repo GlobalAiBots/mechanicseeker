@@ -24,7 +24,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "DIY Car Maintenance Tasks" },
+    { "@type": "ListItem", position: 3, name: "DIY Car Maintenance Tasks", item: "https://mechanicseeker.com/blog/diy-car-maintenance-tasks" },
   ],
 };
 

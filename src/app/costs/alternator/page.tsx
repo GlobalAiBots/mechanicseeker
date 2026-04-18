@@ -16,7 +16,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
     { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://mechanicseeker.com/costs" },
-    { "@type": "ListItem", position: 3, name: "Alternator Replacement Cost" },
+    { "@type": "ListItem", position: 3, name: "Alternator Replacement Cost", item: "https://mechanicseeker.com/costs/alternator" },
   ],
 };
 

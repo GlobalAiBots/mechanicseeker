@@ -24,7 +24,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Used Car Pre-Purchase Inspection" },
+    { "@type": "ListItem", position: 3, name: "Used Car Pre-Purchase Inspection", item: "https://mechanicseeker.com/blog/used-car-inspection" },
   ],
 };
 
