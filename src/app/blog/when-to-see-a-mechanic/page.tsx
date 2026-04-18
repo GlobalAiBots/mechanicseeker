@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Warning Signs You Need a Mechanic ASAP | MechanicSeeker",
@@ -344,6 +345,8 @@ export default function WhenToSeeAMechanic() {
           diagnose and fix the problem before it leaves you stranded.
         </p>
       </div>
+
+      <GearRecommendation section="emergency" />
     </main>
   );
 }

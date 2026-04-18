@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Car Making Strange Noises? Here's What Each Sound Means | MechanicSeeker",
@@ -238,6 +239,8 @@ export default function CarStrangeNoises() {
           problem become a big one.
         </p>
       </div>
+
+      <GearRecommendation section="diy-tools" />
     </main>
   );
 }

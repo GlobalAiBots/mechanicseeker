@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "How Much Does a Brake Job Cost in 2026? | MechanicSeeker",
@@ -257,6 +258,8 @@ export default function BrakeJobCostGuide() {
           keeps you safe on the road.
         </p>
       </div>
+
+      <GearRecommendation section="diy-tools" />
     </main>
   );
 }

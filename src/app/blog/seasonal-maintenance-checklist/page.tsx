@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Seasonal Car Maintenance Checklist: Spring, Summer, Fall, Winter | MechanicSeeker",
@@ -277,6 +278,8 @@ export default function SeasonalMaintenanceChecklist() {
           to find a trusted service provider in your area.
         </p>
       </div>
+
+      <GearRecommendation section="maintenance" />
     </main>
   );
 }

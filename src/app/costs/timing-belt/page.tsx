@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Timing Belt Replacement Cost by Vehicle in 2026 | MechanicSeeker",
@@ -171,6 +172,8 @@ export default function TimingBeltCostGuide() {
           piston-to-valve contact you were trying to prevent. Unless you are an
           experienced home mechanic, this job is best left to a professional.
         </p>
+
+        <GearRecommendation section="diy-tools" />
 
         <h2 className="text-2xl font-bold text-[#1A1A1A] mt-10 mb-4 font-[Cabin]">
           Find a Timing Belt Specialist Near You

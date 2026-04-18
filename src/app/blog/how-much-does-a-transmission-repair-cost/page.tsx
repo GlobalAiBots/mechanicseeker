@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Transmission Repair Cost: What to Expect in 2026 | MechanicSeeker",
@@ -232,6 +233,8 @@ export default function TransmissionRepairCostGuide() {
           and give you time to make an informed decision.
         </p>
       </div>
+
+      <GearRecommendation section="diy-tools" />
     </main>
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import GearRecommendation from "@/components/GearRecommendation";
 
 const schedule = [
   { service: "Oil Change", interval: 5000, icon: "🛢️", cost: "$30-75", diy: "Easy", slug: "/services/oil-change" },
@@ -235,6 +236,8 @@ export default function CalculatorPage() {
           complexity and the risk of costly mistakes.
         </p>
       </div>
+
+      <GearRecommendation section="maintenance" />
 
       <div className="mt-12 text-center bg-[#2C3E50] rounded-lg p-8">
         <h2 className="text-2xl font-bold text-white mb-3 font-[Cabin]">

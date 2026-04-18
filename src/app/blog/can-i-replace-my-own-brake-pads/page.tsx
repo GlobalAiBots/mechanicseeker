@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Can I Replace My Own Brake Pads? Complete Guide | MechanicSeeker",
@@ -291,6 +292,8 @@ export default function CanIReplaceMyOwnBrakePads() {
           who will do the job right at a fair price.
         </p>
       </div>
+
+      <GearRecommendation section="diy-tools" />
     </main>
   );
 }

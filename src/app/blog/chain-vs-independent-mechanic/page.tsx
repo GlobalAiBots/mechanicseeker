@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Chain vs Independent Mechanic: Which Is Better for Your Car?",
@@ -212,6 +213,8 @@ export default function ChainVsIndependentMechanic() {
           vehicle&apos;s needs.
         </p>
       </div>
+
+      <GearRecommendation section="emergency" />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Used Car Pre-Purchase Inspection: What to Check | MechanicSeeker",
@@ -246,6 +247,8 @@ export default function UsedCarInspection() {
           away with confidence.
         </p>
       </div>
+
+      <GearRecommendation section="diy-tools" />
     </main>
   );
 }

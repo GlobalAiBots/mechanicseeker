@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "How Much Does an Oil Change Cost in 2026? | MechanicSeeker",
@@ -225,6 +226,8 @@ export default function OilChangeCostGuide() {
           on your next oil change service.
         </p>
       </div>
+
+      <GearRecommendation section="maintenance" />
     </main>
   );
 }

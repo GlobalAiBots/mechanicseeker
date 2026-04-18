@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Brake Pad Replacement Cost: What to Expect in 2026 | MechanicSeeker",
@@ -195,6 +196,8 @@ export default function BrakePadsCostGuide() {
           calipers, brake lines, and fluid condition &mdash; issues a novice DIYer
           might miss.
         </p>
+
+        <GearRecommendation section="diy-tools" />
 
         <h2 className="text-2xl font-bold text-[#1A1A1A] mt-10 mb-4 font-[Cabin]">
           Find a Brake Shop Near You

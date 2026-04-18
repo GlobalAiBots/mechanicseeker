@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "How Much Does an Oil Change Cost in 2026? | MechanicSeeker",
@@ -192,6 +193,8 @@ export default function OilChangeCostGuide() {
           change costs $25 to $50 in materials. You save $20 to $50 per change but
           need basic tools and a way to dispose of the used oil responsibly.
         </p>
+
+        <GearRecommendation section="maintenance" />
 
         <h2 className="text-2xl font-bold text-[#1A1A1A] mt-10 mb-4 font-[Cabin]">
           Find an Oil Change Shop Near You

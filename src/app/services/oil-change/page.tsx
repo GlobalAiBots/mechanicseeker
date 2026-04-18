@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Oil Change: Cost, Frequency & DIY Guide | MechanicSeeker",
@@ -207,6 +208,8 @@ export default function OilChangePage() {
           overall despite the higher per-service cost.
         </p>
       </div>
+
+      <GearRecommendation section="maintenance" />
 
       <div className="mt-12 text-center bg-[#2C3E50] rounded-lg p-8">
         <h2 className="text-2xl font-bold text-white mb-3 font-[Cabin]">

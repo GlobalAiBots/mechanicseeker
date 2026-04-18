@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Should I Change My Own Oil? DIY vs Mechanic Cost Breakdown | MechanicSeeker",
@@ -273,6 +274,8 @@ export default function ShouldIChangeMyOwnOil() {
           who charges fair prices for quality work.
         </p>
       </div>
+
+      <GearRecommendation section="maintenance" />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "How to Find a Trustworthy Mechanic: 8 Things to Look For",
@@ -193,6 +194,8 @@ export default function HowToFindTrustworthyMechanic() {
           and compare ratings, services, and reviews all in one place.
         </p>
       </div>
+
+      <GearRecommendation section="emergency" />
     </main>
   );
 }

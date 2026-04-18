@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "10 Car Maintenance Tasks You Can Do Yourself (and 5 You Can't) | MechanicSeeker",
@@ -233,6 +234,8 @@ export default function DIYCarMaintenanceTasks() {
           on MechanicSeeker to compare ratings, services, and pricing in your area.
         </p>
       </div>
+
+      <GearRecommendation section="diy-tools" />
     </main>
   );
 }

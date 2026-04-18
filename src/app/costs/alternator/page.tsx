@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Alternator Replacement Cost: DIY vs Mechanic in 2026 | MechanicSeeker",
@@ -196,6 +197,8 @@ export default function AlternatorCostGuide() {
           and have changed a serpentine belt before, an alternator swap is a
           reasonable next step.
         </p>
+
+        <GearRecommendation section="diy-tools" />
 
         <h2 className="text-2xl font-bold text-[#1A1A1A] mt-10 mb-4 font-[Cabin]">
           Find an Alternator Repair Shop Near You

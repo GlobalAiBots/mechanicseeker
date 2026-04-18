@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "The Complete Car Maintenance Schedule Every Owner Needs",
@@ -248,6 +249,8 @@ export default function CarMaintenanceSchedule() {
           and take the first step toward stress-free vehicle ownership.
         </p>
       </div>
+
+      <GearRecommendation section="maintenance" />
     </main>
   );
 }

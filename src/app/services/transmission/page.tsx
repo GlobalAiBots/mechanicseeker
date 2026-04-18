@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Transmission Repair: Warning Signs & Costs | MechanicSeeker",
@@ -211,6 +212,8 @@ export default function TransmissionPage() {
           $800 to $1,500 installed may be the most practical option.
         </p>
       </div>
+
+      <GearRecommendation section="diy-tools" />
 
       <div className="mt-12 text-center bg-[#2C3E50] rounded-lg p-8">
         <h2 className="text-2xl font-bold text-white mb-3 font-[Cabin]">

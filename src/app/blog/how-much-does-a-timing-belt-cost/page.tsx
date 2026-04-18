@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GearRecommendation from "@/components/GearRecommendation";
 
 export const metadata: Metadata = {
   title: "Timing Belt Replacement Cost Guide 2026 | MechanicSeeker",
@@ -233,6 +234,8 @@ export default function TimingBeltCostGuide() {
           for this critical maintenance service.
         </p>
       </div>
+
+      <GearRecommendation section="diy-tools" />
     </main>
   );
 }
