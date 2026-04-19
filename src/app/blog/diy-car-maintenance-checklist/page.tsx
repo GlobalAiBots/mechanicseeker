@@ -137,7 +137,7 @@ export default function DIYCarMaintenanceChecklist() {
         <p>
           This is the easiest maintenance task on any car. Open the air filter
           box (usually held by clips or a few screws on top of the engine),
-          pull out the old filter, and drop in the new one. A clean air filter
+          pull out the old filter, and drop in the new one (<a href="https://www.amazon.com/s?k=engine+air+filter&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>). A clean air filter
           improves airflow to the engine, which helps fuel efficiency and
           performance. Shops charge $30 to $60 for this service, including a
           markup on the filter. Do it yourself for about $15 and five minutes
@@ -149,7 +149,7 @@ export default function DIYCarMaintenanceChecklist() {
         </h2>
         <p>
           Worn wiper blades leave streaks, skip across the glass, and reduce
-          visibility in rain. New blades cost $10 to $25 for a pair and snap
+          visibility in rain. New blades (<a href="https://www.amazon.com/s?k=wiper+blades&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) cost $10 to $25 for a pair and snap
           on in minutes. Most auto parts stores will look up the correct size
           for your vehicle and even install them for free, but the process is
           simple enough to do in a parking lot. Replace your wipers every 6 to
@@ -238,7 +238,7 @@ export default function DIYCarMaintenanceChecklist() {
           causes musty smells, and makes your HVAC system work harder. The
           filter is usually located behind the glove box or under the dashboard
           and can be accessed by removing a few clips. A replacement filter
-          costs $12 to $20. Shops charge $40 to $80 for this service &mdash;
+          (<a href="https://www.amazon.com/s?k=cabin+air+filter&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) costs $12 to $20. Shops charge $40 to $80 for this service &mdash;
           almost entirely labor markup. Replace it every 15,000 to 20,000
           miles or once a year.
         </p>

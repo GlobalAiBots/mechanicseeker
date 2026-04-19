@@ -81,7 +81,7 @@ export default function HowMuchBrakeJobCost() {
           Rotor Replacement: $300 to $500 Per Axle
         </h2>
         <p>
-          Brake rotors are the metal discs that the pads clamp onto. Over time,
+          Brake rotors (<a href="https://www.amazon.com/s?k=brake+rotors&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) are the metal discs that the pads clamp onto. Over time,
           rotors develop wear grooves, can warp from heat, or may become too thin
           to safely machine. When rotors need replacement along with the pads,
           the cost jumps to $300 to $500 per axle. This includes new rotors, new
@@ -179,7 +179,7 @@ export default function HowMuchBrakeJobCost() {
         </h2>
         <p>
           Brake pad replacement is one of the more accessible DIY repairs for
-          home mechanics. A quality set of brake pads costs $30 to $80 per axle,
+          home mechanics. A quality set of brake pads (<a href="https://www.amazon.com/s?k=ceramic+brake+pads&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) costs $30 to $80 per axle,
           and the job requires basic hand tools, a jack, and jack stands. If you
           are mechanically inclined and have done it before, you can save
           significant money doing the work yourself. However, brakes are a

@@ -58,7 +58,7 @@ export default function GearRecommendation({ section = "diy-tools", heading }: {
               rel="noopener noreferrer nofollow sponsored"
               className="inline-block mt-3 text-xs font-semibold text-[#E67E22] hover:text-[#C56512] transition"
             >
-              View on Amazon &rarr;
+              &#9733; Our Pick &mdash; View on Amazon
             </a>
           </div>
         ))}

@@ -91,6 +91,33 @@ export default function OilChangeCostGuide() {
           helps you budget wisely and avoid paying more than you should.
         </p>
 
+        <div className="not-prose bg-[#FFF7EC] border-2 border-[#E67E22] rounded-xl p-5 my-6">
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+            <p className="font-[Cabin] text-lg font-bold text-[#1A1A1A]">Shop cost: <span className="text-[#E67E22]">$35&ndash;$75</span></p>
+            <p className="font-[Cabin] text-lg font-bold text-[#1A1A1A]">DIY cost: <span className="text-[#2D6A4F]">$35&ndash;$45</span></p>
+          </div>
+          <p className="font-semibold text-[#1A1A1A] text-sm mb-2">What you&apos;ll need to DIY:</p>
+          <ul className="space-y-1.5 text-sm text-[#1A1A1A]">
+            <li className="flex justify-between gap-2 border-b border-[#E67E22]/20 pb-1.5">
+              <span>Motor oil (5qt) &mdash; <a href="https://www.amazon.com/s?k=full+synthetic+motor+oil+5+quart&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] font-semibold hover:underline">Our Pick on Amazon</a></span>
+              <span className="font-mono text-gray-600 whitespace-nowrap">~$24</span>
+            </li>
+            <li className="flex justify-between gap-2 border-b border-[#E67E22]/20 pb-1.5">
+              <span>Oil filter &mdash; <a href="https://www.amazon.com/s?k=oil+filter+engine&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] font-semibold hover:underline">Our Pick on Amazon</a></span>
+              <span className="font-mono text-gray-600 whitespace-nowrap">~$7</span>
+            </li>
+            <li className="flex justify-between gap-2 border-b border-[#E67E22]/20 pb-1.5">
+              <span>Drain pan &mdash; <a href="https://www.amazon.com/s?k=oil+drain+pan&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] font-semibold hover:underline">Our Pick on Amazon</a></span>
+              <span className="font-mono text-gray-600 whitespace-nowrap">~$8</span>
+            </li>
+            <li className="flex justify-between gap-2">
+              <span>Oil filter wrench &mdash; <a href="https://www.amazon.com/s?k=oil+filter+wrench&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] font-semibold hover:underline">Our Pick on Amazon</a></span>
+              <span className="font-mono text-gray-600 whitespace-nowrap">~$6</span>
+            </li>
+          </ul>
+          <p className="text-xs text-gray-500 mt-3 italic">Total DIY cost: ~$35&ndash;$45 &mdash; but the drain pan and wrench work for every future oil change.</p>
+        </div>
+
         <h2 className="text-2xl font-bold text-[#1A1A1A] mt-10 mb-4 font-[Cabin]">
           Oil Change Cost by Oil Type
         </h2>

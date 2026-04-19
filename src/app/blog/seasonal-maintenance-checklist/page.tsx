@@ -127,7 +127,7 @@ export default function SeasonalMaintenanceChecklist() {
         </p>
         <p>
           <strong>Replace wiper blades.</strong> Ice and snow degrade rubber
-          quickly. Fresh wiper blades ($15 to $40 per pair) ensure clear visibility
+          quickly. Fresh wiper blades (<a href="https://www.amazon.com/s?k=wiper+blades&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) at $15 to $40 per pair ensure clear visibility
           in spring rain.
         </p>
         <p>
@@ -208,7 +208,7 @@ export default function SeasonalMaintenanceChecklist() {
           <strong>Inspect lights.</strong> Days are getting shorter and visibility
           matters. Check all headlights, taillights, brake lights, and turn
           signals. Replace any dim or burnt-out bulbs. Consider restoring hazy
-          headlight lenses with a restoration kit ($10 to $20).
+          headlight lenses with a restoration kit (<a href="https://www.amazon.com/s?k=headlight+restoration+kit&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) for $10 to $20.
         </p>
         <p>
           <strong>Check tire tread depth.</strong> You need adequate tread for wet
@@ -244,7 +244,7 @@ export default function SeasonalMaintenanceChecklist() {
         </p>
         <p>
           <strong>Switch to winter washer fluid.</strong> Standard washer fluid
-          freezes at 32 degrees Fahrenheit. Winter-rated fluid is good to minus 20
+          freezes at 32 degrees Fahrenheit. Winter-rated fluid (<a href="https://www.amazon.com/s?k=winter+de-icer+windshield+washer+fluid&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) is good to minus 20
           or minus 30 degrees and contains de-icing agents that help clear road
           grime and salt spray.
         </p>

@@ -98,7 +98,7 @@ export default function TransmissionRepairCostGuide() {
         </h2>
         <p>
           The most basic and preventative transmission service is a fluid change or
-          flush. Transmission fluid lubricates the internal gears, provides hydraulic
+          flush. Transmission fluid (<a href="https://www.amazon.com/s?k=automatic+transmission+fluid&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) lubricates the internal gears, provides hydraulic
           pressure for shifting, and helps cool the transmission. Over time, this
           fluid breaks down and becomes contaminated with metal particles and debris.
           A standard transmission fluid change &mdash; where the old fluid is drained

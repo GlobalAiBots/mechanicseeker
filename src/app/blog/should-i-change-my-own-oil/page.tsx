@@ -130,8 +130,8 @@ export default function ShouldIChangeMyOwnOil() {
           five-quart jug of{" "}
           <strong className="text-[#1A1A1A]">conventional motor oil</strong>{" "}
           costs $20 to $28 at most auto parts stores, while{" "}
-          <strong className="text-[#1A1A1A]">full synthetic oil</strong> runs
-          $25 to $40. A quality oil filter adds another $5 to $12 depending on
+          <strong className="text-[#1A1A1A]">full synthetic oil</strong> (<a href="https://www.amazon.com/s?k=full+synthetic+motor+oil+5+quart&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) runs
+          $25 to $40. A quality oil filter (<a href="https://www.amazon.com/s?k=engine+oil+filter&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) adds another $5 to $12 depending on
           the brand and your vehicle. All in, your consumable cost per oil
           change lands between $25 and $40 for conventional and $30 to $52 for
           full synthetic.

@@ -122,7 +122,7 @@ export default function ACRechargeCostGuide() {
         </h2>
         <p>
           When your AC system is losing refrigerant, a leak detection service is the
-          logical next step. Technicians use UV dye injection, electronic leak
+          logical next step. Technicians use UV dye injection (<a href="https://www.amazon.com/s?k=ac+uv+dye+leak+detection+kit&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>), electronic leak
           detectors, or nitrogen pressure testing to locate the source of the leak.
           The diagnostic process itself typically costs $50 to $100. The total repair
           cost depends on where the leak is located.
@@ -214,7 +214,7 @@ export default function ACRechargeCostGuide() {
           DIY AC Recharge: Risks to Consider
         </h2>
         <p>
-          Auto parts stores sell DIY AC recharge kits for $30 to $50, making it
+          Auto parts stores sell DIY AC recharge kits (<a href="https://www.amazon.com/s?k=ac+refrigerant+recharge+kit+r134a&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) for $30 to $50, making it
           tempting to skip the shop and do it yourself. However, there are
           significant risks to consider. Most DIY kits include sealant additives that
           can clog the system&apos;s expansion valve, damage the compressor, and

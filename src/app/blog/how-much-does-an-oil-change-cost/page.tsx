@@ -103,7 +103,7 @@ export default function OilChangeCostGuide() {
           up to five quarts of conventional oil, a new oil filter, and a basic
           multi-point inspection. Quick lube chains frequently advertise conventional
           oil changes starting as low as $25, though these promotional prices may
-          not include the filter or may be limited to specific oil weights.
+          not include the filter (<a href="https://www.amazon.com/s?k=engine+oil+filter&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) or may be limited to specific oil weights.
         </p>
         <p>
           Conventional oil should be changed every 3,000 to 5,000 miles or every
@@ -130,7 +130,7 @@ export default function OilChangeCostGuide() {
           Full Synthetic Oil Change: $65 to $100
         </h2>
         <p>
-          Full synthetic oil is engineered in a laboratory to provide superior
+          Full synthetic oil (<a href="https://www.amazon.com/s?k=full+synthetic+motor+oil+5+quart&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) is engineered in a laboratory to provide superior
           protection across extreme temperatures, reduce engine deposits, and
           maintain viscosity far longer than conventional oil. A full synthetic oil
           change costs $65 to $100 at most shops in 2026. Most vehicles manufactured
@@ -156,7 +156,7 @@ export default function OilChangeCostGuide() {
           High-Mileage Oil Change: $50 to $80
         </h2>
         <p>
-          High-mileage oil is formulated for vehicles with over 75,000 miles on the
+          High-mileage oil (<a href="https://www.amazon.com/s?k=high+mileage+motor+oil&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) is formulated for vehicles with over 75,000 miles on the
           odometer. It contains seal conditioners that help rejuvenate aging gaskets
           and seals, reducing oil consumption and preventing leaks that become common
           in older engines. A high-mileage oil change costs $50 to $80 in 2026.

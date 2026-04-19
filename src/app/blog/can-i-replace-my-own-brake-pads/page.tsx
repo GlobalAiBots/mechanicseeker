@@ -164,11 +164,11 @@ export default function CanIReplaceMyOwnBrakePads() {
           <strong className="text-[#1A1A1A]">socket set</strong> (3/8-inch
           drive with metric and SAE sockets) handles the caliper bolts. A{" "}
           <strong className="text-[#1A1A1A]">C-clamp or caliper piston tool</strong>{" "}
-          compresses the caliper piston to make room for the thicker new pads.
+          (<a href="https://www.amazon.com/s?k=brake+caliper+piston+tool&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) compresses the caliper piston to make room for the thicker new pads.
           A <strong className="text-[#1A1A1A]">wire brush</strong> cleans the
           caliper bracket where the pads slide. And{" "}
           <strong className="text-[#1A1A1A]">brake cleaner spray</strong>{" "}
-          removes dust, grease, and debris from the rotor and caliper. A
+          (<a href="https://www.amazon.com/s?k=brake+cleaner+spray&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) removes dust, grease, and debris from the rotor and caliper. A
           torque wrench is recommended for reinstalling the caliper bolts to
           manufacturer specifications.
         </p>

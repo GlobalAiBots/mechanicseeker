@@ -109,7 +109,7 @@ export default function BrakeJobCostGuide() {
           are the least expensive option at $30 to $50 per set but wear out faster
           and produce more dust. Semi-metallic pads run $40 to $70 and offer better
           heat dissipation, making them popular for trucks and SUVs. Ceramic pads
-          cost $60 to $150 per set but last the longest, produce minimal dust, and
+          (<a href="https://www.amazon.com/s?k=ceramic+brake+pads&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) cost $60 to $150 per set but last the longest, produce minimal dust, and
           operate more quietly. For most daily drivers, ceramic pads deliver the best
           long-term value despite the higher upfront cost.
         </p>
@@ -125,7 +125,7 @@ export default function BrakeJobCostGuide() {
           Rotor Replacement: $250 to $500 Per Axle
         </h2>
         <p>
-          Brake rotors are the heavy metal discs that spin with your wheels. The pads
+          Brake rotors (<a href="https://www.amazon.com/s?k=brake+rotors&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) are the heavy metal discs that spin with your wheels. The pads
           clamp down on these rotors to create the friction that stops your car. Over
           time, rotors develop wear grooves, hot spots, and can even warp from
           extreme heat during hard braking. When rotors need replacement along with
@@ -152,7 +152,7 @@ export default function BrakeJobCostGuide() {
         </h2>
         <p>
           A comprehensive brake job goes beyond just pads and rotors. It includes new
-          brake pads, new rotors, a brake fluid flush, caliper inspection and
+          brake pads, new rotors, a brake fluid (<a href="https://www.amazon.com/s?k=dot+3+brake+fluid&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) flush, caliper inspection and
           service, new hardware clips and shims, and a thorough road test. This full
           service typically costs $400 to $800 per axle in 2026. For a complete
           four-wheel brake overhaul, expect to pay $800 to $1,500 for most vehicles.

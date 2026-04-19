@@ -116,19 +116,19 @@ export default function DIYCarMaintenanceTasks() {
           for full pricing details.
         </p>
         <p>
-          <strong>2. Air filter replacement.</strong> Engine air filters cost $10
+          <strong>2. Air filter replacement.</strong> Engine air filters (<a href="https://www.amazon.com/s?k=engine+air+filter&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) cost $10
           to $25 and can be swapped in under five minutes on most vehicles. Open
           the airbox, pull out the old filter, drop in the new one. No tools
           needed on many models.
         </p>
         <p>
           <strong>3. Cabin air filter replacement.</strong> Located behind the
-          glove box on most cars, the cabin filter costs $12 to $30 and takes
+          glove box on most cars, the cabin filter (<a href="https://www.amazon.com/s?k=cabin+air+filter&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) costs $12 to $30 and takes
           five to ten minutes to replace. A fresh cabin filter improves air
           quality and HVAC performance.
         </p>
         <p>
-          <strong>4. Wiper blade replacement.</strong> New wiper blades cost $15
+          <strong>4. Wiper blade replacement.</strong> New wiper blades (<a href="https://www.amazon.com/s?k=wiper+blades&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) cost $15
           to $40 for a pair and snap on in minutes. Replace them every six to
           twelve months or whenever streaking appears.
         </p>

@@ -91,6 +91,33 @@ export default function BrakePadsCostGuide() {
           $200 to $400 per axle on top of that.
         </p>
 
+        <div className="not-prose bg-[#FFF7EC] border-2 border-[#E67E22] rounded-xl p-5 my-6">
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+            <p className="font-[Cabin] text-lg font-bold text-[#1A1A1A]">Shop cost: <span className="text-[#E67E22]">$150&ndash;$300/axle</span></p>
+            <p className="font-[Cabin] text-lg font-bold text-[#1A1A1A]">DIY cost: <span className="text-[#2D6A4F]">$35&ndash;$60</span></p>
+          </div>
+          <p className="font-semibold text-[#1A1A1A] text-sm mb-2">What you&apos;ll need:</p>
+          <ul className="space-y-1.5 text-sm text-[#1A1A1A]">
+            <li className="flex justify-between gap-2 border-b border-[#E67E22]/20 pb-1.5">
+              <span>Brake pads (ceramic) &mdash; <a href="https://www.amazon.com/s?k=ceramic+brake+pads&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] font-semibold hover:underline">Our Pick on Amazon</a></span>
+              <span className="font-mono text-gray-600 whitespace-nowrap">~$25&ndash;$40</span>
+            </li>
+            <li className="flex justify-between gap-2 border-b border-[#E67E22]/20 pb-1.5">
+              <span>Floor jack &mdash; <a href="https://www.amazon.com/s?k=floor+jack+3+ton&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] font-semibold hover:underline">Our Pick on Amazon</a></span>
+              <span className="font-mono text-gray-600 whitespace-nowrap">~$35</span>
+            </li>
+            <li className="flex justify-between gap-2 border-b border-[#E67E22]/20 pb-1.5">
+              <span>Lug wrench &mdash; <a href="https://www.amazon.com/s?k=4+way+lug+wrench&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] font-semibold hover:underline">Our Pick on Amazon</a></span>
+              <span className="font-mono text-gray-600 whitespace-nowrap">~$15</span>
+            </li>
+            <li className="flex justify-between gap-2">
+              <span>Brake cleaner &mdash; <a href="https://www.amazon.com/s?k=brake+parts+cleaner+spray&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] font-semibold hover:underline">Our Pick on Amazon</a></span>
+              <span className="font-mono text-gray-600 whitespace-nowrap">~$6</span>
+            </li>
+          </ul>
+          <p className="text-xs text-gray-500 mt-3 italic">Total DIY cost: ~$80&ndash;$100 first time &mdash; the floor jack and wrench work for every future brake job, oil change, and tire rotation.</p>
+        </div>
+
         <h2 className="text-2xl font-bold text-[#1A1A1A] mt-10 mb-4 font-[Cabin]">
           Brake Pad Replacement Cost Breakdown
         </h2>

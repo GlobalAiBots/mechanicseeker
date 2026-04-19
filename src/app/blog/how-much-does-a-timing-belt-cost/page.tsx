@@ -114,7 +114,7 @@ export default function TimingBeltCostGuide() {
         <p>
           A timing belt replacement should always include a new tensioner and idler
           pulleys. These components maintain proper belt tension and are subject to
-          the same wear as the belt itself. A quality timing belt kit that includes
+          the same wear as the belt itself. A quality timing belt kit (<a href="https://www.amazon.com/s?k=timing+belt+kit+with+water+pump&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) that includes
           the belt, tensioner, and idler pulleys costs $80 to $200 for parts. Shops
           that quote timing belt replacement without including these components are
           cutting corners &mdash; a failed tensioner can cause a new belt to jump
@@ -199,7 +199,7 @@ export default function TimingBeltCostGuide() {
           Bundle the Water Pump and Save Money
         </h2>
         <p>
-          On most vehicles with a timing belt, the water pump is driven by or located
+          On most vehicles with a timing belt, the water pump (<a href="https://www.amazon.com/s?k=engine+water+pump&tag=babymydog03-20" target="_blank" rel="noopener noreferrer nofollow sponsored" className="text-[#E67E22] hover:underline font-semibold">Our Pick on Amazon</a>) is driven by or located
           behind the timing belt. Since the mechanic already has everything
           disassembled to access the belt, replacing the water pump at the same time
           adds only $50 to $150 in parts cost with little to no additional labor. If

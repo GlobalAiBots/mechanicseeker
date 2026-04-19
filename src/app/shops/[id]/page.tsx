@@ -147,6 +147,24 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
           );
         })()}
 
+        {/* DIY Essentials Strip */}
+        <section className="mb-8 bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <p className="font-[Cabin] font-bold text-[#1A1A1A] text-sm mb-3">DIY before you go:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { name: "OBD2 Scanner", hook: "Know what's wrong before the shop tells you", q: "bluetooth obd2 scanner" },
+              { name: "Jump Starter", hook: "Never need a tow for a dead battery", q: "portable car jump starter" },
+              { name: "Tire Pressure Gauge", hook: "Check monthly, save hundreds on tires", q: "digital tire pressure gauge" },
+            ].map((p) => (
+              <a key={p.name} href={`https://www.amazon.com/s?k=${encodeURIComponent(p.q)}&tag=babymydog03-20`} target="_blank" rel="noopener noreferrer nofollow sponsored" className="block bg-white border border-gray-200 rounded-lg px-4 py-3 hover:border-[#E67E22] hover:shadow-sm transition">
+                <p className="font-bold text-[#1A1A1A] text-sm">{p.name}</p>
+                <p className="text-gray-500 text-xs mt-0.5">{p.hook}</p>
+                <p className="text-[#E67E22] text-xs font-semibold mt-1">&#9733; Our Pick &mdash; Shop on Amazon</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="mb-8">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
