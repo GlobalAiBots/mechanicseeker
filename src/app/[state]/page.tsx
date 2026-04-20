@@ -2,6 +2,7 @@
 import { use, useState, useMemo } from "react";
 import Link from "next/link";
 import { unified, stateList } from "@/data/all-mechanics";
+import { getStateRepairInfo } from "@/data/state-repair-info";
 import FeaturedArticle from "@/components/FeaturedArticle";
 
 export default function StatePage({ params }: { params: Promise<{ state: string }> }) {
@@ -20,19 +21,35 @@ export default function StatePage({ params }: { params: Promise<{ state: string 
 
   if (!stateInfo) return <div className="max-w-2xl mx-auto px-4 py-20 text-center"><h1 className="font-[Cabin] text-3xl font-bold text-[#1A1A1A] mb-4">State Not Found</h1><Link href="/" className="text-[#E67E22] hover:underline">Back to Home</Link></div>;
 
+  const repairInfo = getStateRepairInfo(stateInfo.code);
+
+  // State-agnostic FAQs always render. State-specific ones are appended only when
+  // we have real researched data for this state; otherwise the page is truthful
+  // about what we know.
+  const baseFaqs = [
+    { q: `How many auto repair shops are in ${stateInfo.name}?`, a: `There are ${shops.length.toLocaleString()} auto repair shops in ${stateInfo.name} on MechanicSeeker, including mechanics, tire shops, body shops, and quick lube locations.` },
+    { q: `How do I find a good mechanic in ${stateInfo.name}?`, a: `Browse MechanicSeeker to compare ${shops.length.toLocaleString()} shops in ${stateInfo.name}. Look for ASE-certified shops with transparent pricing and verified reviews.` },
+    { q: `Can I bring my own parts to a mechanic?`, a: `Some independent mechanics allow customer-supplied parts, but many prefer to source their own for warranty and quality reasons. Ask upfront — shops that accept your parts may charge a higher labor rate. Chain shops typically do not allow outside parts.` },
+    { q: `Should I go to the dealer or an independent mechanic?`, a: `Dealers use OEM parts and have brand-specific training, but charge 30-50% more. Independent mechanics are usually cheaper and handle most repairs. Go to the dealer for warranty work and complex brand-specific issues; use an independent for routine maintenance and common repairs.` },
+  ];
+
+  const stateFaqs = repairInfo
+    ? [
+        { q: `Does ${stateInfo.name} require written repair estimates?`, a: repairInfo.estimateLaw },
+        { q: `What's ${stateInfo.name}'s Lemon Law coverage?`, a: repairInfo.lemonLaw },
+        { q: `Does ${stateInfo.name} require vehicle inspections?`, a: repairInfo.inspection },
+        { q: `What's the average hourly labor rate in ${stateInfo.name}?`, a: repairInfo.avgLaborRate },
+        { q: `Who handles auto repair complaints in ${stateInfo.name}?`, a: repairInfo.consumerProtection },
+      ]
+    : [];
+
+  const faqs = [...stateFaqs, ...baseFaqs];
+
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "FAQPage",
-        mainEntity: [
-          { "@type": "Question", name: `How many auto repair shops are in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `There are ${shops.length.toLocaleString()} auto repair shops in ${stateInfo.name}. MechanicSeeker lists mechanics, tire shops, body shops, and quick lube locations.` } },
-          { "@type": "Question", name: `How much does an oil change cost in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `Oil changes in ${stateInfo.name} typically cost $30-$75 for conventional oil and $65-$125 for synthetic. Prices vary by shop and vehicle.` } },
-          { "@type": "Question", name: `How do I find a good mechanic in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `Use MechanicSeeker to browse all ${shops.length.toLocaleString()} auto repair shops in ${stateInfo.name}. Look for ASE-certified shops with good reviews and transparent pricing.` } },
-          { "@type": "Question", name: `Are chain mechanics or independent shops better in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `Both have advantages. Chains offer consistency and warranties. Independent shops often provide personalized service and competitive pricing. Browse both on MechanicSeeker.` } },
-          { "@type": "Question", name: `How do I find auto repair shops near me in ${stateInfo.name}?`, acceptedAnswer: { "@type": "Answer", text: `Use MechanicSeeker to browse all ${shops.length.toLocaleString()} shops in ${stateInfo.name} by city. Each listing includes services, hours, and contact info.` } },
-          { "@type": "Question", name: "Can I bring my own parts to a mechanic?", acceptedAnswer: { "@type": "Answer", text: "Some independent mechanics allow customer-supplied parts, but many prefer to source their own for warranty and quality reasons. Ask upfront — shops that accept your parts may charge a higher labor rate. Chain shops typically do not allow outside parts." } },
-          { "@type": "Question", name: "Should I go to the dealer or an independent mechanic?", acceptedAnswer: { "@type": "Answer", text: "Dealers use OEM parts and have brand-specific training, but charge 30-50% more. Independent mechanics are usually cheaper and can handle most repairs. Go to the dealer for warranty work and complex brand-specific issues. Use an independent for routine maintenance and common repairs." } },
-        ],
+        mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
       }) }} />
       <section className="py-16 md:py-24 text-center px-4" style={{ background: "#FAF8F5" }}>
         <p className="text-[#E67E22] text-sm font-bold tracking-wider uppercase mb-3 font-[Cabin]">{stateInfo.name} Auto Repair</p>
@@ -40,7 +57,6 @@ export default function StatePage({ params }: { params: Promise<{ state: string 
         <p className="text-gray-500 mt-4">{shops.length.toLocaleString()} shops. Mechanics, tire shops, body shops, and more.</p>
       </section>
 
-      {/* State intro + tips */}
       <section className="max-w-4xl mx-auto px-4 pt-10 pb-4">
         <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6">
           <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-3">Auto Repair in {stateInfo.name}</h2>
@@ -48,13 +64,58 @@ export default function StatePage({ params }: { params: Promise<{ state: string 
             {stateInfo.name} is home to {shops.length.toLocaleString()} auto repair shops listed on MechanicSeeker, from independent mechanics to national chains like Jiffy Lube, Firestone, and Midas. Whether you need an oil change, brake service, tire replacement, or a full engine rebuild, there&apos;s a shop near you. Browse by city below to find trusted mechanics in your area.
           </p>
         </div>
+
+        {repairInfo && (
+          <div className="space-y-4 mb-6">
+            <div className="bg-white border border-gray-200 rounded-xl p-5">
+              <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-2">Auto Repair Laws in {stateInfo.name}</h3>
+              <p className="text-sm text-gray-700 leading-relaxed mb-3"><strong className="text-[#1A1A1A]">Written estimates:</strong> {repairInfo.estimateLaw}</p>
+              <p className="text-sm text-gray-700 leading-relaxed mb-3"><strong className="text-[#1A1A1A]">Mechanic&apos;s liens:</strong> {repairInfo.mechanicLien}</p>
+              <p className="text-sm text-gray-700 leading-relaxed"><strong className="text-[#1A1A1A]">Lemon Law:</strong> {repairInfo.lemonLaw}</p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5">
+              <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-2">Vehicle Inspection Requirements</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">{repairInfo.inspection}</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white border border-gray-200 rounded-xl p-5">
+                <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-2">Typical Labor Rates</h3>
+                <p className="text-sm text-gray-700 leading-relaxed">{repairInfo.avgLaborRate}</p>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-5">
+                <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-2">Climate &amp; Common Repairs</h3>
+                <p className="text-sm text-gray-700 leading-relaxed">{repairInfo.climateIssues}</p>
+              </div>
+            </div>
+
+            {repairInfo.popularRepairs.length > 0 && (
+              <div className="bg-white border border-gray-200 rounded-xl p-5">
+                <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-2">Most Common Repairs in {stateInfo.name}</h3>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {repairInfo.popularRepairs.map((r) => (
+                    <span key={r} className="inline-block bg-[#E67E22]/10 text-[#E67E22] text-xs font-semibold px-3 py-1.5 rounded-full">{r}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
+              <h3 className="font-[Cabin] font-bold text-[#E67E22] mb-2">Consumer Protection in {stateInfo.name}</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">{repairInfo.consumerProtection}</p>
+              <p className="text-xs text-gray-500 mt-2">If a shop won&apos;t honor an estimate or you suspect fraud, file a complaint with your state consumer protection office.</p>
+            </div>
+          </div>
+        )}
+
         <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-6">
-          <h3 className="font-[Cabin] font-bold text-[#E67E22] mb-3">Tips for Finding Auto Repair in {stateInfo.name}</h3>
+          <h3 className="font-[Cabin] font-bold text-[#E67E22] mb-3">How to Pick a Good Mechanic</h3>
           <ul className="space-y-2 text-sm text-gray-700">
-            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> {stateInfo.name} requires shops to provide written estimates before starting work.</li>
-            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Always ask about warranty on parts and labor before authorizing repairs.</li>
-            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Get at least 2-3 quotes for major repairs like transmission or engine work.</li>
-            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Check if the shop is ASE-certified &mdash; it&apos;s a sign of professional standards.</li>
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Ask for a written estimate before authorizing any repair.</li>
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Get the warranty on parts and labor in writing.</li>
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Compare 2-3 quotes for major repairs like transmission or engine work.</li>
+            <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Look for ASE-certified technicians &mdash; a basic professional standard.</li>
             <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Read our <Link href="/blog/how-to-find-trustworthy-mechanic" className="text-[#E67E22] hover:underline">guide to finding a trustworthy mechanic</Link>.</li>
           </ul>
         </div>
@@ -88,17 +149,10 @@ export default function StatePage({ params }: { params: Promise<{ state: string 
         </div>
       </section>
 
-      {/* Visible FAQ */}
       <section className="max-w-4xl mx-auto px-4 py-8">
         <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
         <div className="space-y-2">
-          {[
-            { q: `How many auto repair shops are in ${stateInfo.name}?`, a: `There are ${shops.length.toLocaleString()} auto repair shops in ${stateInfo.name} on MechanicSeeker, including mechanics, tire shops, body shops, and quick lube locations.` },
-            { q: `How much does an oil change cost in ${stateInfo.name}?`, a: `Oil changes in ${stateInfo.name} typically cost $30-$75 for conventional oil and $65-$125 for synthetic. Prices vary by shop and vehicle.` },
-            { q: `How do I find a good mechanic in ${stateInfo.name}?`, a: `Browse MechanicSeeker to compare ${shops.length.toLocaleString()} shops in ${stateInfo.name}. Look for ASE-certified shops with transparent pricing and good reviews.` },
-            { q: `Do I need a vehicle inspection in ${stateInfo.name}?`, a: `Vehicle inspection requirements vary by state. Check with your local DMV for ${stateInfo.name}'s specific requirements for annual safety and emissions inspections.` },
-            { q: `Are chain mechanics or independent shops better?`, a: `Both have advantages. Chains offer consistency and nationwide warranties. Independent shops often provide personalized service, competitive pricing, and specialized expertise.` },
-          ].map((f, i) => (
+          {faqs.map((f, i) => (
             <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
               <summary className="px-5 py-4 cursor-pointer font-semibold text-[#1A1A1A] text-sm hover:text-[#E67E22] transition list-none flex items-center justify-between">{f.q}<svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg></summary>
               <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{f.a}</div>
