@@ -101,7 +101,7 @@ export default function Home() {
       <section className="max-w-5xl mx-auto px-4 py-12">
         <h2 className="font-[Cabin] text-[28px] md:text-[36px] font-extrabold text-[#1A1A1A] text-center mb-3">Your Complete Auto Care Hub</h2>
         <p className="text-gray-500 text-center mb-10 max-w-lg mx-auto">Everything your car needs &mdash; repair shops, tire services, and maintenance tools.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <Link href="#browse-states" className="group rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ background: 'linear-gradient(135deg, #FFF7ED, #FDE68A)', border: '2px solid rgba(230,126,34,0.2)' }}>
             <span className="text-5xl block mb-3">&#128295;</span>
             <h3 className="font-[Cabin] font-extrabold text-[#1A1A1A] text-xl mb-1">Auto Repair Shops</h3>
@@ -116,20 +116,13 @@ export default function Home() {
             <p className="text-gray-500 text-xs mb-4">Leveling kits, spacers, and more.</p>
             <span className="inline-block text-white font-bold text-sm px-5 py-2 rounded-xl" style={{ background: 'linear-gradient(135deg, #2C3E50, #1A2332)', boxShadow: '0 4px 12px rgba(44,62,80,0.25)' }}>Shop Upgrades &rarr;</span>
           </Link>
-          <div className="group rounded-2xl p-8 text-center opacity-80" style={{ background: 'linear-gradient(135deg, #F0F0F0, #E5E5E5)', border: '2px solid rgba(0,0,0,0.08)' }}>
+          <Link href="/tire-shops" className="group rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ background: 'linear-gradient(135deg, #E0F2FE, #BAE6FD)', border: '2px solid rgba(14,116,144,0.2)' }}>
             <span className="text-5xl block mb-3">&#128734;</span>
             <h3 className="font-[Cabin] font-extrabold text-[#1A1A1A] text-xl mb-1">Tire Services</h3>
-            <p className="font-extrabold text-[20px] text-gray-400 leading-none mb-2">Coming Soon</p>
-            <p className="text-gray-400 text-xs mb-4">Tire shops, rotation, alignment, and replacement.</p>
-            <span className="inline-block bg-gray-300 text-white font-bold text-sm px-5 py-2 rounded-xl">SimpleTire Partner &mdash; Soon</span>
-          </div>
-          <div className="group rounded-2xl p-8 text-center opacity-80" style={{ background: 'linear-gradient(135deg, #F0F0F0, #E5E5E5)', border: '2px solid rgba(0,0,0,0.08)' }}>
-            <span className="text-5xl block mb-3">&#129526;</span>
-            <h3 className="font-[Cabin] font-extrabold text-[#1A1A1A] text-xl mb-1">Glass Repair</h3>
-            <p className="font-extrabold text-[20px] text-gray-400 leading-none mb-2">Coming Soon</p>
-            <p className="text-gray-400 text-xs mb-4">Windshield repair and replacement near you.</p>
-            <span className="inline-block bg-gray-300 text-white font-bold text-sm px-5 py-2 rounded-xl">Safelite Partner &mdash; Soon</span>
-          </div>
+            <p className="font-extrabold text-[20px] text-[#0E7490] leading-none mb-2">{shopTypes["tire_shop"]?.toLocaleString() || "8,000"}+ tire shops</p>
+            <p className="text-gray-500 text-xs mb-4">Tire sales, rotation, balancing, and alignment nationwide.</p>
+            <span className="inline-block text-white font-bold text-sm px-5 py-2 rounded-xl" style={{ background: 'linear-gradient(135deg, #0891B2, #0E7490)', boxShadow: '0 4px 12px rgba(14,116,144,0.25)' }}>Browse Tire Shops &rarr;</span>
+          </Link>
         </div>
       </section>
 
