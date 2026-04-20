@@ -11,10 +11,9 @@ const allCities = (cityPagesData as { state: string; stateSlug: string; city: st
 export const dynamicParams = true;
 export const revalidate = 86400;
 
-export function generateStaticParams() {
-  // Pre-build top 1000 shops (rest generated on-demand via ISR)
-  return unified.slice(0, 1000).map((s) => ({ id: s.id }));
-}
+// Too many shops (~49,000) to pre-render within Vercel build memory limits.
+// All shops render on-demand (ISR): first visit builds + caches at the edge, revalidate daily.
+export function generateStaticParams() { return []; }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
