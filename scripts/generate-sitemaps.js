@@ -26,6 +26,7 @@ mainUrls.push(urlEntry(`${BASE}/`, "1.0", "weekly"));
 mainUrls.push(urlEntry(`${BASE}/shops`, "0.8", "weekly"));
 mainUrls.push(urlEntry(`${BASE}/map`, "0.7", "weekly"));
 mainUrls.push(urlEntry(`${BASE}/blog`, "0.7", "weekly"));
+mainUrls.push(urlEntry(`${BASE}/compare`, "0.7", "weekly"));
 mainUrls.push(urlEntry(`${BASE}/near-me`, "0.7", "weekly"));
 mainUrls.push(urlEntry(`${BASE}/for-businesses`, "0.6", "monthly"));
 mainUrls.push(urlEntry(`${BASE}/claim`, "0.6", "monthly"));
@@ -55,6 +56,18 @@ const brands = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "dat
 for (const b of brands) {
   mainUrls.push(urlEntry(`${BASE}/brand/${b.slug}`, "0.6", "monthly"));
 }
+
+// Comparison pages — extract slugs from src/data/comparisons.ts
+try {
+  const compareTxt = fs.readFileSync(path.join(__dirname, "..", "src", "data", "comparisons.ts"), "utf8");
+  const compareBlock = compareTxt.match(/comparisons[^=]*=\s*\[([\s\S]*?)\n\];/);
+  if (compareBlock) {
+    const slugs = [...new Set((compareBlock[1].match(/slug:\s*"([^"]+)"/g) || []).map(s => s.match(/"([^"]+)"/)[1]))];
+    for (const slug of slugs) {
+      mainUrls.push(urlEntry(`${BASE}/compare/${slug}`, "0.8", "monthly"));
+    }
+  }
+} catch { /* file may not exist yet */ }
 
 fs.writeFileSync(path.join(PUB, "sitemap-main.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${mainUrls.join("\n")}\n</urlset>\n`);
