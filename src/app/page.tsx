@@ -101,13 +101,20 @@ export default function Home() {
       <section className="max-w-5xl mx-auto px-4 py-12">
         <h2 className="font-[Cabin] text-[28px] md:text-[36px] font-extrabold text-[#1A1A1A] text-center mb-3">Your Complete Auto Care Hub</h2>
         <p className="text-gray-500 text-center mb-10 max-w-lg mx-auto">Everything your car needs &mdash; repair shops, tire services, and maintenance tools.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <Link href="#browse-states" className="group rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ background: 'linear-gradient(135deg, #FFF7ED, #FDE68A)', border: '2px solid rgba(230,126,34,0.2)' }}>
             <span className="text-5xl block mb-3">&#128295;</span>
             <h3 className="font-[Cabin] font-extrabold text-[#1A1A1A] text-xl mb-1">Auto Repair Shops</h3>
             <p className="font-extrabold text-[28px] text-[#E67E22] leading-none mb-2">{unified.length.toLocaleString()}</p>
             <p className="text-gray-500 text-xs mb-4">Mechanics, body shops, tire shops, and quick lube.</p>
             <span className="inline-block text-white font-bold text-sm px-5 py-2 rounded-xl" style={{ background: 'linear-gradient(135deg, #F39C12, #E67E22)', boxShadow: '0 4px 12px rgba(230,126,34,0.25)' }}>Find a Shop &rarr;</span>
+          </Link>
+          <Link href="/truck-upgrades" className="group rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ background: 'linear-gradient(135deg, #E8EEF2, #CBD5E1)', border: '2px solid rgba(44,62,80,0.2)' }}>
+            <span className="text-5xl block mb-3">&#128736;</span>
+            <h3 className="font-[Cabin] font-extrabold text-[#1A1A1A] text-xl mb-1">Truck Upgrades</h3>
+            <p className="font-extrabold text-[18px] text-[#2C3E50] leading-none mb-2">KSP Performance</p>
+            <p className="text-gray-500 text-xs mb-4">Leveling kits, spacers, and more.</p>
+            <span className="inline-block text-white font-bold text-sm px-5 py-2 rounded-xl" style={{ background: 'linear-gradient(135deg, #2C3E50, #1A2332)', boxShadow: '0 4px 12px rgba(44,62,80,0.25)' }}>Shop Upgrades &rarr;</span>
           </Link>
           <div className="group rounded-2xl p-8 text-center opacity-80" style={{ background: 'linear-gradient(135deg, #F0F0F0, #E5E5E5)', border: '2px solid rgba(0,0,0,0.08)' }}>
             <span className="text-5xl block mb-3">&#128734;</span>

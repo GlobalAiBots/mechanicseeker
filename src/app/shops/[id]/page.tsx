@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { unified, getShopById, stateList, serviceLabels } from "@/data/all-mechanics";
 import ShopMapWrapper from "@/components/ShopMapWrapper";
 import FeaturedArticle from "@/components/FeaturedArticle";
+import KSPProductStrip from "@/components/KSPProductStrip";
 import cityPagesData from "@/data/city-pages.json";
 import type { Metadata } from "next";
 
@@ -163,6 +164,9 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
             ))}
           </div>
         </section>
+
+        {/* KSP Performance product strip */}
+        <KSPProductStrip />
 
         {/* FAQ */}
         <section className="mb-8">

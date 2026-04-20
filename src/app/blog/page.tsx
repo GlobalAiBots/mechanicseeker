@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = { title: "Blog | MechanicSeeker", alternates: { canonical: "https://www.mechanicseeker.com/blog" } };
 
 const posts = [
+  { slug: "best-leveling-lift-kits", title: "Best Leveling Lift Kits for Trucks & SUVs (2026 Guide)", date: "April 20, 2026", desc: "How to choose the right leveling kit, installation walkthrough, and our picks for trucks and SUVs." },
+  { slug: "best-wheel-spacers", title: "Best Wheel Spacers: Hub-Centric vs Bolt-On (Buyer's Guide)", date: "April 20, 2026", desc: "Wheel spacer sizing, safety, and installation — plus the forged hub-centric options we recommend." },
+  { slug: "upper-control-arm-upgrade", title: "When to Upgrade Upper Control Arms After a Lift", date: "April 20, 2026", desc: "Why factory control arms fail after a leveling lift and how forged aluminum upgrades fix it." },
   { slug: "diy-car-maintenance-tasks", title: "10 Car Maintenance Tasks You Can Do Yourself (and 5 You Can't)", date: "April 15, 2026", desc: "Save money by handling these 10 easy car maintenance tasks at home — plus 5 repairs to always leave to a pro." },
   { slug: "car-strange-noises", title: "Car Making Strange Noises? Here's What Each Sound Means", date: "April 15, 2026", desc: "Squealing, grinding, clicking, knocking, or hissing? Decode your car's strange noises and learn which need immediate attention." },
   { slug: "used-car-inspection", title: "Used Car Pre-Purchase Inspection: What to Check", date: "April 15, 2026", desc: "Don't buy a used car without checking these critical items first. Complete pre-purchase inspection checklist." },
