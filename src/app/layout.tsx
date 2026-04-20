@@ -54,6 +54,7 @@ function Footer() {
               <Link href="/blog" className="text-white/40 hover:text-white transition">Blog</Link>
               <Link href="/about" className="text-white/40 hover:text-white transition">About</Link>
               <Link href="/claim" className="text-[#E67E22] hover:text-white transition font-semibold">Claim Your Listing</Link>
+              <Link href="/advertise" className="text-white/40 hover:text-white transition">Advertise With Us</Link>
               <Link href="/privacy" className="text-white/40 hover:text-white transition">Privacy</Link>
               <Link href="/terms" className="text-white/40 hover:text-white transition">Terms</Link>
             </div>
