@@ -270,13 +270,25 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
           </div>
         </section>
 
-        {/* Claim Listing CTA */}
-        <section className="bg-[#F0F4F8] rounded-xl p-6 border border-[#D4D8DD] mb-8">
-          <h3 className="font-[Cabin] text-lg font-bold text-[#1A1A1A] mb-2">Own this shop?</h3>
-          <p className="text-gray-500 text-sm mb-4">Claim your free listing to update your hours, services, contact info, and respond to customers.</p>
-          <Link href={`/claim?shop=${encodeURIComponent(shop.id)}&name=${encodeURIComponent(shop.name)}`} className="inline-block bg-[#E67E22] hover:bg-[#d35400] text-white font-bold px-6 py-3 rounded-lg transition text-sm">
-            Claim This Listing &mdash; It&apos;s Free
-          </Link>
+        {/* Claim / Featured CTA */}
+        <section className="my-8 rounded-xl border-2 border-amber-300 bg-amber-50 p-6">
+          <div className="flex items-start gap-4">
+            <div className="text-3xl leading-none">&#11088;</div>
+            <div className="flex-1">
+              <h3 className="font-[Cabin] text-lg font-bold text-[#1A1A1A] mb-1">Is this your shop?</h3>
+              <p className="text-sm text-gray-700 mb-4">
+                Claim your listing free, or upgrade to Featured for priority placement, photos, a customer message form, and a monthly performance report. <Link href="/pricing" className="text-[#E67E22] underline hover:text-[#d35400]">See pricing</Link>.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href={`/claim?shop=${encodeURIComponent(shop.id)}&name=${encodeURIComponent(shop.name)}`} className="inline-block bg-gray-700 hover:bg-gray-800 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition">
+                  Claim Free Listing
+                </Link>
+                <a href="https://buy.stripe.com/cNieVd9I96K3de9dDCcZa00" target="_blank" rel="noopener noreferrer" className="inline-block bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition">
+                  &#11088; Upgrade to Featured &mdash; $49.95/mo
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
