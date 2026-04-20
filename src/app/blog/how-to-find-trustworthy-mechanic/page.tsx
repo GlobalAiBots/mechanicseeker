@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Wondering how to find a mechanic you can trust? Here are 8 key things to look for when choosing an auto repair shop, from ASE certification to transparent pricing.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/how-to-find-trustworthy-mechanic",
+    canonical: "https://www.mechanicseeker.com/blog/how-to-find-trustworthy-mechanic",
   },
 };
 

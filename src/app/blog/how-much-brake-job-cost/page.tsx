@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Learn what a brake job should cost in 2026, from pad replacement to full rotor work. Compare chain vs independent shop pricing and know when to replace your brakes.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/how-much-brake-job-cost",
+    canonical: "https://www.mechanicseeker.com/blog/how-much-brake-job-cost",
   },
 };
 

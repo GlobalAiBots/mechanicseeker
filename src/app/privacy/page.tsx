@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Privacy Policy | MechanicSeeker", alternates: { canonical: "https://mechanicseeker.com/privacy" } };
+export const metadata: Metadata = { title: "Privacy Policy | MechanicSeeker", alternates: { canonical: "https://www.mechanicseeker.com/privacy" } };
 export default function PrivacyPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">

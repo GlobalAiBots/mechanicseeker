@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Don't buy a used car without checking these critical items first. Complete pre-purchase inspection checklist covering engine, transmission, brakes, body, and electrical systems.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/used-car-inspection",
+    canonical: "https://www.mechanicseeker.com/blog/used-car-inspection",
   },
 };
 
@@ -23,9 +23,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Used Car Pre-Purchase Inspection", item: "https://mechanicseeker.com/blog/used-car-inspection" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mechanicseeker.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Used Car Pre-Purchase Inspection", item: "https://www.mechanicseeker.com/blog/used-car-inspection" },
   ],
 };
 

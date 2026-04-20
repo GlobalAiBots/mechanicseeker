@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Compare DIY oil change costs ($25-40) vs mechanic prices ($30-125). Learn what tools you need, how long it takes, and when it makes sense to visit a shop instead.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/should-i-change-my-own-oil",
+    canonical: "https://www.mechanicseeker.com/blog/should-i-change-my-own-oil",
   },
 };
 
@@ -30,19 +30,19 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://mechanicseeker.com",
+      item: "https://www.mechanicseeker.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Blog",
-      item: "https://mechanicseeker.com/blog",
+      item: "https://www.mechanicseeker.com/blog",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Should I Change My Own Oil?",
-      item: "https://mechanicseeker.com/blog/should-i-change-my-own-oil",
+      item: "https://www.mechanicseeker.com/blog/should-i-change-my-own-oil",
     },
   ],
 };

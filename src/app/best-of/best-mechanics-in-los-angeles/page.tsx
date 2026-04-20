@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Find the best mechanics in Los Angeles, CA. Our top 10 list features European specialists, full-service centers, collision shops, and trusted independent garages across LA.",
   alternates: {
-    canonical: "https://mechanicseeker.com/best-of/best-mechanics-in-los-angeles",
+    canonical: "https://www.mechanicseeker.com/best-of/best-mechanics-in-los-angeles",
   },
 };
 
@@ -19,19 +19,19 @@ export default function BestMechanicsLosAngeles() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://mechanicseeker.com",
+        item: "https://www.mechanicseeker.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Best Of",
-        item: "https://mechanicseeker.com/best-of",
+        item: "https://www.mechanicseeker.com/best-of",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Best Mechanics in Los Angeles",
-        item: "https://mechanicseeker.com/best-of/best-mechanics-in-los-angeles",
+        item: "https://www.mechanicseeker.com/best-of/best-mechanics-in-los-angeles",
       },
     ],
   };

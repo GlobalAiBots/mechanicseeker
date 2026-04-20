@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Transmission repair cost guide for 2026. Learn warning signs of transmission failure, fluid change vs rebuild costs ($300-3,500+), and when to see a specialist.",
   alternates: {
-    canonical: "https://mechanicseeker.com/services/transmission",
+    canonical: "https://www.mechanicseeker.com/services/transmission",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://mechanicseeker.com/services" },
-    { "@type": "ListItem", position: 3, name: "Transmission Repair", item: "https://mechanicseeker.com/services/transmission" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.mechanicseeker.com/services" },
+    { "@type": "ListItem", position: 3, name: "Transmission Repair", item: "https://www.mechanicseeker.com/services/transmission" },
   ],
 };
 

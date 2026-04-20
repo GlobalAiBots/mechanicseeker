@@ -4,11 +4,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Advertise With MechanicSeeker — Reach Car Owners Nationwide",
   description: "Advertise on MechanicSeeker. Reach car owners actively searching for mechanics, parts, and repair guidance. Featured listings, sponsored posts, and banner ads across 51,000+ shop pages.",
-  alternates: { canonical: "https://mechanicseeker.com/advertise" },
+  alternates: { canonical: "https://www.mechanicseeker.com/advertise" },
   openGraph: {
     title: "Advertise With MechanicSeeker",
     description: "Reach car owners actively searching for mechanics, parts, and repair advice.",
-    url: "https://mechanicseeker.com/advertise",
+    url: "https://www.mechanicseeker.com/advertise",
     siteName: "MechanicSeeker",
   },
 };
@@ -18,8 +18,8 @@ export default function AdvertisePage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-      { "@type": "ListItem", position: 2, name: "Advertise", item: "https://mechanicseeker.com/advertise" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+      { "@type": "ListItem", position: 2, name: "Advertise", item: "https://www.mechanicseeker.com/advertise" },
     ],
   };
 

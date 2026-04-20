@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "A step-by-step diagnostic checklist for when your car won't start. Battery, starter, alternator, fuel pump, ignition switch — how to narrow down the problem yourself.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/car-wont-start",
+    canonical: "https://www.mechanicseeker.com/blog/car-wont-start",
   },
 };
 
@@ -23,9 +23,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Car Won't Start", item: "https://mechanicseeker.com/blog/car-wont-start" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mechanicseeker.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Car Won't Start", item: "https://www.mechanicseeker.com/blog/car-wont-start" },
   ],
 };
 

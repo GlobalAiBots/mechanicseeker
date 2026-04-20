@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "8 warning signs that mean you need a mechanic immediately. Learn what check engine lights, strange noises, fluid leaks, and smoke mean for your vehicle.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/when-to-see-a-mechanic",
+    canonical: "https://www.mechanicseeker.com/blog/when-to-see-a-mechanic",
   },
 };
 
@@ -30,19 +30,19 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://mechanicseeker.com",
+      item: "https://www.mechanicseeker.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Blog",
-      item: "https://mechanicseeker.com/blog",
+      item: "https://www.mechanicseeker.com/blog",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Warning Signs You Need a Mechanic ASAP",
-      item: "https://mechanicseeker.com/blog/when-to-see-a-mechanic",
+      item: "https://www.mechanicseeker.com/blog/when-to-see-a-mechanic",
     },
   ],
 };

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Everything you need to know about tire rotation in 2026. Learn why it matters, how often to rotate, typical costs ($20-50), and how to do it yourself.",
   alternates: {
-    canonical: "https://mechanicseeker.com/services/tire-rotation",
+    canonical: "https://www.mechanicseeker.com/services/tire-rotation",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://mechanicseeker.com/services" },
-    { "@type": "ListItem", position: 3, name: "Tire Rotation", item: "https://mechanicseeker.com/services/tire-rotation" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.mechanicseeker.com/services" },
+    { "@type": "ListItem", position: 3, name: "Tire Rotation", item: "https://www.mechanicseeker.com/services/tire-rotation" },
   ],
 };
 

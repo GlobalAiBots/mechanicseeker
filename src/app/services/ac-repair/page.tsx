@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Car AC not working? Learn the most common causes, repair costs ($100-900), DIY recharge tips, and when to see a professional mechanic for AC diagnosis.",
   alternates: {
-    canonical: "https://mechanicseeker.com/services/ac-repair",
+    canonical: "https://www.mechanicseeker.com/services/ac-repair",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://mechanicseeker.com/services" },
-    { "@type": "ListItem", position: 3, name: "AC Repair", item: "https://mechanicseeker.com/services/ac-repair" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.mechanicseeker.com/services" },
+    { "@type": "ListItem", position: 3, name: "AC Repair", item: "https://www.mechanicseeker.com/services/ac-repair" },
   ],
 };
 

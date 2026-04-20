@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Alternator replacement costs $250 to $600 total in 2026. Parts run $150-$350 and labor $100-$250. Compare DIY vs professional installation and learn the warning signs.",
   alternates: {
-    canonical: "https://mechanicseeker.com/costs/alternator",
+    canonical: "https://www.mechanicseeker.com/costs/alternator",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://mechanicseeker.com/costs" },
-    { "@type": "ListItem", position: 3, name: "Alternator Replacement Cost", item: "https://mechanicseeker.com/costs/alternator" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://www.mechanicseeker.com/costs" },
+    { "@type": "ListItem", position: 3, name: "Alternator Replacement Cost", item: "https://www.mechanicseeker.com/costs/alternator" },
   ],
 };
 

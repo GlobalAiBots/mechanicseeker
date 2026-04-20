@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Most extended warranties aren't worth the price. The math, the fine print, and when (rarely) an extended warranty actually makes sense — plus the self-insure alternative.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/extended-warranty-worth-it",
+    canonical: "https://www.mechanicseeker.com/blog/extended-warranty-worth-it",
   },
 };
 
@@ -23,9 +23,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Extended Warranty Worth It", item: "https://mechanicseeker.com/blog/extended-warranty-worth-it" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mechanicseeker.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Extended Warranty Worth It", item: "https://www.mechanicseeker.com/blog/extended-warranty-worth-it" },
   ],
 };
 

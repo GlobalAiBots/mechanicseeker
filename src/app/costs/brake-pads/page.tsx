@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Brake pad replacement costs $150 to $300 per axle in 2026. Learn about rotor costs, warning signs, and how to save on brake service at independent shops.",
   alternates: {
-    canonical: "https://mechanicseeker.com/costs/brake-pads",
+    canonical: "https://www.mechanicseeker.com/costs/brake-pads",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://mechanicseeker.com/costs" },
-    { "@type": "ListItem", position: 3, name: "Brake Pad Replacement Cost", item: "https://mechanicseeker.com/costs/brake-pads" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://www.mechanicseeker.com/costs" },
+    { "@type": "ListItem", position: 3, name: "Brake Pad Replacement Cost", item: "https://www.mechanicseeker.com/costs/brake-pads" },
   ],
 };
 

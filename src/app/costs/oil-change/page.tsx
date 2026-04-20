@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Complete oil change cost breakdown for 2026. Compare conventional, synthetic blend, and full synthetic oil change prices at dealers, chains, and independent shops.",
   alternates: {
-    canonical: "https://mechanicseeker.com/costs/oil-change",
+    canonical: "https://www.mechanicseeker.com/costs/oil-change",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://mechanicseeker.com/costs" },
-    { "@type": "ListItem", position: 3, name: "Oil Change Cost", item: "https://mechanicseeker.com/costs/oil-change" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://www.mechanicseeker.com/costs" },
+    { "@type": "ListItem", position: 3, name: "Oil Change Cost", item: "https://www.mechanicseeker.com/costs/oil-change" },
   ],
 };
 

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: `${shop.name} \u2014 Auto Repair in ${shop.city ? shop.city + ", " : ""}${stateName} | MechanicSeeker`,
     description: `${shop.name} is an auto repair shop in ${shop.city ? shop.city + ", " : ""}${stateName}. Services, phone, address, hours, and directions. Find auto mechanics near you on MechanicSeeker.`,
-    alternates: { canonical: `https://mechanicseeker.com/shops/${shop.id}` },
+    alternates: { canonical: `https://www.mechanicseeker.com/shops/${shop.id}` },
   };
 }
 
@@ -52,9 +52,9 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-          { "@type": "ListItem", position: 2, name: stateName, item: `https://mechanicseeker.com/${stateSlug}` },
-          { "@type": "ListItem", position: 3, name: shop.name, item: `https://mechanicseeker.com/shops/${shop.id}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+          { "@type": "ListItem", position: 2, name: stateName, item: `https://www.mechanicseeker.com/${stateSlug}` },
+          { "@type": "ListItem", position: 3, name: shop.name, item: `https://www.mechanicseeker.com/shops/${shop.id}` },
         ],
       }) }} />
       <div className="max-w-4xl mx-auto px-4 py-8">

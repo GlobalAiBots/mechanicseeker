@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Save money by handling these 10 easy car maintenance tasks at home. Plus, learn 5 repairs that should always be left to a professional mechanic.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/diy-car-maintenance-tasks",
+    canonical: "https://www.mechanicseeker.com/blog/diy-car-maintenance-tasks",
   },
 };
 
@@ -23,9 +23,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "DIY Car Maintenance Tasks", item: "https://mechanicseeker.com/blog/diy-car-maintenance-tasks" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mechanicseeker.com/blog" },
+    { "@type": "ListItem", position: 3, name: "DIY Car Maintenance Tasks", item: "https://www.mechanicseeker.com/blog/diy-car-maintenance-tasks" },
   ],
 };
 

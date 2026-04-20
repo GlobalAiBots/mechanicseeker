@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Oil change cost breakdown for 2026. Compare conventional, synthetic blend, full synthetic, and high-mileage oil change prices at quick lube shops, dealers, and independent mechanics.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/how-much-does-an-oil-change-cost",
+    canonical: "https://www.mechanicseeker.com/blog/how-much-does-an-oil-change-cost",
   },
 };
 

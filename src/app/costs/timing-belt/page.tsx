@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Timing belt replacement costs $500 to $1,000 for most vehicles in 2026. Honda and Toyota run $400-$800, European cars $800-$1,500. Learn about interference engines and when to replace.",
   alternates: {
-    canonical: "https://mechanicseeker.com/costs/timing-belt",
+    canonical: "https://www.mechanicseeker.com/costs/timing-belt",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://mechanicseeker.com/costs" },
-    { "@type": "ListItem", position: 3, name: "Timing Belt Replacement Cost", item: "https://mechanicseeker.com/costs/timing-belt" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://www.mechanicseeker.com/costs" },
+    { "@type": "ListItem", position: 3, name: "Timing Belt Replacement Cost", item: "https://www.mechanicseeker.com/costs/timing-belt" },
   ],
 };
 

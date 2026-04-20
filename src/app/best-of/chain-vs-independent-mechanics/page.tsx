@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Chain vs independent mechanics — which is right for you? We compare pricing, warranties, expertise, upselling risks, convenience, and trust to help you decide.",
   alternates: {
-    canonical: "https://mechanicseeker.com/best-of/chain-vs-independent-mechanics",
+    canonical: "https://www.mechanicseeker.com/best-of/chain-vs-independent-mechanics",
   },
 };
 
@@ -19,19 +19,19 @@ export default function ChainVsIndependent() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://mechanicseeker.com",
+        item: "https://www.mechanicseeker.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Best Of",
-        item: "https://mechanicseeker.com/best-of",
+        item: "https://www.mechanicseeker.com/best-of",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Chain vs Independent Mechanics",
-        item: "https://mechanicseeker.com/best-of/chain-vs-independent-mechanics",
+        item: "https://www.mechanicseeker.com/best-of/chain-vs-independent-mechanics",
       },
     ],
   };

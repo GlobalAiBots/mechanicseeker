@@ -4,8 +4,8 @@ export const metadata: Metadata = {
   title: "CLETUS AI — 24/7 AI Chat & Voice Agent for Any Business | MechanicSeeker",
   description: "CLETUS answers your customers' questions 24/7 on your website and phone. Works for auto repair shops, tire shops, body shops, and any business. Less than $1/day.",
   keywords: "AI chatbot for auto repair, AI customer service, 24/7 chatbot for mechanics, AI phone answering service, chatbot for auto shops",
-  openGraph: { title: "CLETUS AI — 24/7 Chat & Voice Agent for Any Business", url: "https://mechanicseeker.com/for-businesses", siteName: "MechanicSeeker" },
-  alternates: { canonical: "https://mechanicseeker.com/for-businesses" },
+  openGraph: { title: "CLETUS AI — 24/7 Chat & Voice Agent for Any Business", url: "https://www.mechanicseeker.com/for-businesses", siteName: "MechanicSeeker" },
+  alternates: { canonical: "https://www.mechanicseeker.com/for-businesses" },
 };
 
 const businesses = [

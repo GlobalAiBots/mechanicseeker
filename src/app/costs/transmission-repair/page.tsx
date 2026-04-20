@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Transmission repair costs range from $150 for a fluid change to $5,000+ for a full replacement. Compare rebuild, repair, and replacement costs for manual and automatic transmissions.",
   alternates: {
-    canonical: "https://mechanicseeker.com/costs/transmission-repair",
+    canonical: "https://www.mechanicseeker.com/costs/transmission-repair",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://mechanicseeker.com/costs" },
-    { "@type": "ListItem", position: 3, name: "Transmission Repair Cost", item: "https://mechanicseeker.com/costs/transmission-repair" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Cost Guides", item: "https://www.mechanicseeker.com/costs" },
+    { "@type": "ListItem", position: 3, name: "Transmission Repair Cost", item: "https://www.mechanicseeker.com/costs/transmission-repair" },
   ],
 };
 

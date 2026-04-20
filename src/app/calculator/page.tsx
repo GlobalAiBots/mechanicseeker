@@ -20,8 +20,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Calculator", item: "https://mechanicseeker.com/calculator" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Calculator", item: "https://www.mechanicseeker.com/calculator" },
   ],
 };
 

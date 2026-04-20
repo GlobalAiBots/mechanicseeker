@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Blog | MechanicSeeker", alternates: { canonical: "https://mechanicseeker.com/blog" } };
+export const metadata: Metadata = { title: "Blog | MechanicSeeker", alternates: { canonical: "https://www.mechanicseeker.com/blog" } };
 
 const posts = [
   { slug: "diy-car-maintenance-tasks", title: "10 Car Maintenance Tasks You Can Do Yourself (and 5 You Can't)", date: "April 15, 2026", desc: "Save money by handling these 10 easy car maintenance tasks at home — plus 5 repairs to always leave to a pro." },

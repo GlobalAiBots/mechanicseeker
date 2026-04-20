@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Timing belt replacement cost guide for 2026. Learn typical pricing ($400-$1,000), why timing belts matter, when to replace them, and how bundling the water pump saves money.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/how-much-does-a-timing-belt-cost",
+    canonical: "https://www.mechanicseeker.com/blog/how-much-does-a-timing-belt-cost",
   },
 };
 

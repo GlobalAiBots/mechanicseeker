@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Follow this complete car maintenance schedule to keep your vehicle running reliably. From oil changes to timing belts, learn when every service is due.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/car-maintenance-schedule",
+    canonical: "https://www.mechanicseeker.com/blog/car-maintenance-schedule",
   },
 };
 

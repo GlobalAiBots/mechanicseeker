@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Car AC recharge and repair cost guide for 2026. Learn what to pay for refrigerant recharge, leak repair, compressor replacement, and evaporator service. Avoid summer price spikes.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/how-much-does-an-ac-recharge-cost",
+    canonical: "https://www.mechanicseeker.com/blog/how-much-does-an-ac-recharge-cost",
   },
 };
 

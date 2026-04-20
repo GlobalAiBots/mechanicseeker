@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Keep your car running reliably year-round with this seasonal maintenance checklist. Covers tires, fluids, brakes, AC, battery, and more for every season.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/seasonal-maintenance-checklist",
+    canonical: "https://www.mechanicseeker.com/blog/seasonal-maintenance-checklist",
   },
 };
 
@@ -23,9 +23,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Seasonal Maintenance Checklist", item: "https://mechanicseeker.com/blog/seasonal-maintenance-checklist" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mechanicseeker.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Seasonal Maintenance Checklist", item: "https://www.mechanicseeker.com/blog/seasonal-maintenance-checklist" },
   ],
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Is your car battery dying? Learn the warning signs, replacement costs ($50-200), how to test and replace a battery yourself, and when to see a mechanic.",
   alternates: {
-    canonical: "https://mechanicseeker.com/services/battery-replacement",
+    canonical: "https://www.mechanicseeker.com/services/battery-replacement",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://mechanicseeker.com/services" },
-    { "@type": "ListItem", position: 3, name: "Battery Replacement", item: "https://mechanicseeker.com/services/battery-replacement" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.mechanicseeker.com/services" },
+    { "@type": "ListItem", position: 3, name: "Battery Replacement", item: "https://www.mechanicseeker.com/services/battery-replacement" },
   ],
 };
 

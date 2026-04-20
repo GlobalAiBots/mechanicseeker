@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Learn the 10 warning signs that your car needs immediate repair, from dashboard lights to fluid leaks. Do not ignore these symptoms — they could save your engine.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/signs-car-needs-repair",
+    canonical: "https://www.mechanicseeker.com/blog/signs-car-needs-repair",
   },
 };
 

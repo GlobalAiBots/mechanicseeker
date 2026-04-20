@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Discover why independent mechanics often deliver better service, lower prices, and more personalized care than dealership service departments and national chains.",
   alternates: {
-    canonical: "https://mechanicseeker.com/best-of/best-independent-mechanics",
+    canonical: "https://www.mechanicseeker.com/best-of/best-independent-mechanics",
   },
 };
 
@@ -19,19 +19,19 @@ export default function BestIndependentMechanics() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://mechanicseeker.com",
+        item: "https://www.mechanicseeker.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Best Of",
-        item: "https://mechanicseeker.com/best-of",
+        item: "https://www.mechanicseeker.com/best-of",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Why Choose an Independent Mechanic",
-        item: "https://mechanicseeker.com/best-of/best-independent-mechanics",
+        item: "https://www.mechanicseeker.com/best-of/best-independent-mechanics",
       },
     ],
   };

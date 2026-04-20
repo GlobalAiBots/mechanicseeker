@@ -5,8 +5,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Auto Repair Comparisons — Dealer vs Independent, DIY vs Mechanic | MechanicSeeker",
   description: "Honest head-to-head comparisons for car owners. Dealer vs independent mechanic, synthetic vs conventional oil, OEM vs aftermarket, DIY vs pro, national chain vs local shop.",
-  alternates: { canonical: "https://mechanicseeker.com/compare" },
-  openGraph: { title: "Auto Repair Comparisons", description: "Side-by-side comparisons to help car owners make smart repair decisions.", url: "https://mechanicseeker.com/compare", siteName: "MechanicSeeker" },
+  alternates: { canonical: "https://www.mechanicseeker.com/compare" },
+  openGraph: { title: "Auto Repair Comparisons", description: "Side-by-side comparisons to help car owners make smart repair decisions.", url: "https://www.mechanicseeker.com/compare", siteName: "MechanicSeeker" },
 };
 
 export default function CompareIndexPage() {
@@ -14,8 +14,8 @@ export default function CompareIndexPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://mechanicseeker.com/compare" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.mechanicseeker.com/compare" },
     ],
   };
 

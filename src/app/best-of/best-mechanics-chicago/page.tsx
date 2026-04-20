@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Best Auto Repair Shops in Chicago — Top 10 Picks | MechanicSeeker",
   description: "Top-rated Chicago mechanics: Fulton-Desplaines Garage, City Tire & Auto, Ogden Automotive, Cassidy Tire, Midas. Ratings, addresses, hours, services.",
-  openGraph: { title: "Best Auto Repair Shops in Chicago — Top 10", url: "https://mechanicseeker.com/best-of/best-mechanics-chicago", siteName: "MechanicSeeker" },
-  alternates: { canonical: "https://mechanicseeker.com/best-of/best-mechanics-chicago" },
+  openGraph: { title: "Best Auto Repair Shops in Chicago — Top 10", url: "https://www.mechanicseeker.com/best-of/best-mechanics-chicago", siteName: "MechanicSeeker" },
+  alternates: { canonical: "https://www.mechanicseeker.com/best-of/best-mechanics-chicago" },
 };
 
 export default function BestMechanicsChicago() {
@@ -15,9 +15,9 @@ export default function BestMechanicsChicago() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-          { "@type": "ListItem", position: 2, name: "Best Of", item: "https://mechanicseeker.com/best-of" },
-          { "@type": "ListItem", position: 3, name: "Best Mechanics in Chicago", item: "https://mechanicseeker.com/best-of/best-mechanics-chicago" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+          { "@type": "ListItem", position: 2, name: "Best Of", item: "https://www.mechanicseeker.com/best-of" },
+          { "@type": "ListItem", position: 3, name: "Best Mechanics in Chicago", item: "https://www.mechanicseeker.com/best-of/best-mechanics-chicago" },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Squealing, grinding, clicking, knocking, or hissing? Decode your car's strange noises with this guide and learn which sounds need immediate attention.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/car-strange-noises",
+    canonical: "https://www.mechanicseeker.com/blog/car-strange-noises",
   },
 };
 
@@ -23,9 +23,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Car Strange Noises Guide", item: "https://mechanicseeker.com/blog/car-strange-noises" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mechanicseeker.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Car Strange Noises Guide", item: "https://www.mechanicseeker.com/blog/car-strange-noises" },
   ],
 };
 

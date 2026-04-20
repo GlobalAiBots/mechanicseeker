@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Best Auto Repair Shops in Phoenix — Top 10 Picks | MechanicSeeker",
   description: "Top-rated Phoenix mechanics: Precision Imports, Jake's Auto, Japanese Auto Pros, Sun Devil Auto, Thunderbird Automotive. Ratings, addresses, hours, services.",
-  openGraph: { title: "Best Auto Repair Shops in Phoenix — Top 10", url: "https://mechanicseeker.com/best-of/best-mechanics-phoenix", siteName: "MechanicSeeker" },
-  alternates: { canonical: "https://mechanicseeker.com/best-of/best-mechanics-phoenix" },
+  openGraph: { title: "Best Auto Repair Shops in Phoenix — Top 10", url: "https://www.mechanicseeker.com/best-of/best-mechanics-phoenix", siteName: "MechanicSeeker" },
+  alternates: { canonical: "https://www.mechanicseeker.com/best-of/best-mechanics-phoenix" },
 };
 
 export default function BestMechanicsPhoenix() {
@@ -15,9 +15,9 @@ export default function BestMechanicsPhoenix() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-          { "@type": "ListItem", position: 2, name: "Best Of", item: "https://mechanicseeker.com/best-of" },
-          { "@type": "ListItem", position: 3, name: "Best Mechanics in Phoenix", item: "https://mechanicseeker.com/best-of/best-mechanics-phoenix" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+          { "@type": "ListItem", position: 2, name: "Best Of", item: "https://www.mechanicseeker.com/best-of" },
+          { "@type": "ListItem", position: 3, name: "Best Mechanics in Phoenix", item: "https://www.mechanicseeker.com/best-of/best-mechanics-phoenix" },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({

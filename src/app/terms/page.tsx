@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Terms of Service | MechanicSeeker", alternates: { canonical: "https://mechanicseeker.com/terms" } };
+export const metadata: Metadata = { title: "Terms of Service | MechanicSeeker", alternates: { canonical: "https://www.mechanicseeker.com/terms" } };
 export default function TermsPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">

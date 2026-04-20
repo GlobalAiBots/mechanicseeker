@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Complete brake job cost breakdown for 2026. Learn what to pay for brake pads, rotors, and full brake service. Compare dealer, chain, and independent shop pricing.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/how-much-does-a-brake-job-cost",
+    canonical: "https://www.mechanicseeker.com/blog/how-much-does-a-brake-job-cost",
   },
 };
 

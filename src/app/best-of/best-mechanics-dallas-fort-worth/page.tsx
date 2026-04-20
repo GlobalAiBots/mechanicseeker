@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Best Mechanics in Dallas-Fort Worth — Top 12 Picks | MechanicSeeker",
   description: "Top-rated DFW metro auto repair shops across Dallas, Fort Worth, Arlington, Plano, Irving, Garland, and Grand Prairie. Ratings, addresses, hours, specialties.",
-  openGraph: { title: "Best Mechanics in Dallas-Fort Worth — Top 12", url: "https://mechanicseeker.com/best-of/best-mechanics-dallas-fort-worth", siteName: "MechanicSeeker" },
-  alternates: { canonical: "https://mechanicseeker.com/best-of/best-mechanics-dallas-fort-worth" },
+  openGraph: { title: "Best Mechanics in Dallas-Fort Worth — Top 12", url: "https://www.mechanicseeker.com/best-of/best-mechanics-dallas-fort-worth", siteName: "MechanicSeeker" },
+  alternates: { canonical: "https://www.mechanicseeker.com/best-of/best-mechanics-dallas-fort-worth" },
 };
 
 export default function BestMechanicsDFW() {
@@ -15,9 +15,9 @@ export default function BestMechanicsDFW() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-          { "@type": "ListItem", position: 2, name: "Best Of", item: "https://mechanicseeker.com/best-of" },
-          { "@type": "ListItem", position: 3, name: "Best Mechanics in Dallas-Fort Worth", item: "https://mechanicseeker.com/best-of/best-mechanics-dallas-fort-worth" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+          { "@type": "ListItem", position: 2, name: "Best Of", item: "https://www.mechanicseeker.com/best-of" },
+          { "@type": "ListItem", position: 3, name: "Best Mechanics in Dallas-Fort Worth", item: "https://www.mechanicseeker.com/best-of/best-mechanics-dallas-fort-worth" },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({

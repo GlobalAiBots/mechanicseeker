@@ -44,9 +44,9 @@ export default function Home() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "WebSite", name: "MechanicSeeker", url: "https://mechanicseeker.com",
+        "@context": "https://schema.org", "@type": "WebSite", name: "MechanicSeeker", url: "https://www.mechanicseeker.com",
         description: `Find auto repair shops across America. ${unified.length.toLocaleString()}+ shops.`,
-        potentialAction: { "@type": "SearchAction", target: "https://mechanicseeker.com/?q={search_term_string}", "query-input": "required name=search_term_string" },
+        potentialAction: { "@type": "SearchAction", target: "https://www.mechanicseeker.com/?q={search_term_string}", "query-input": "required name=search_term_string" },
       }) }} />
 
       {/* HERO */}

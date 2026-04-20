@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Learn how to replace your own brake pads with this complete DIY guide. Covers tools needed, safety warnings, step-by-step overview, and when to leave it to a professional.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/can-i-replace-my-own-brake-pads",
+    canonical: "https://www.mechanicseeker.com/blog/can-i-replace-my-own-brake-pads",
   },
 };
 
@@ -30,19 +30,19 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://mechanicseeker.com",
+      item: "https://www.mechanicseeker.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Blog",
-      item: "https://mechanicseeker.com/blog",
+      item: "https://www.mechanicseeker.com/blog",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Can I Replace My Own Brake Pads?",
-      item: "https://mechanicseeker.com/blog/can-i-replace-my-own-brake-pads",
+      item: "https://www.mechanicseeker.com/blog/can-i-replace-my-own-brake-pads",
     },
   ],
 };

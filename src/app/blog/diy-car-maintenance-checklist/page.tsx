@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Save $200-400 per year with these 10 easy DIY car maintenance tasks. Includes cost, time, and difficulty for each job from air filters to headlight restoration.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/diy-car-maintenance-checklist",
+    canonical: "https://www.mechanicseeker.com/blog/diy-car-maintenance-checklist",
   },
 };
 
@@ -30,19 +30,19 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://mechanicseeker.com",
+      item: "https://www.mechanicseeker.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Blog",
-      item: "https://mechanicseeker.com/blog",
+      item: "https://www.mechanicseeker.com/blog",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "10 Car Maintenance Tasks You Can Do Yourself",
-      item: "https://mechanicseeker.com/blog/diy-car-maintenance-checklist",
+      item: "https://www.mechanicseeker.com/blog/diy-car-maintenance-checklist",
     },
   ],
 };

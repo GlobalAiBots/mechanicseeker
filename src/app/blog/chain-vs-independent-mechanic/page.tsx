@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Should you take your car to a chain shop or an independent mechanic? Compare the pros and cons of Jiffy Lube, Midas, Firestone versus local independent shops.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/chain-vs-independent-mechanic",
+    canonical: "https://www.mechanicseeker.com/blog/chain-vs-independent-mechanic",
   },
 };
 

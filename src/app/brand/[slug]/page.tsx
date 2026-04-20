@@ -16,7 +16,7 @@ export default function BrandPage({ params }: { params: Promise<{ slug: string }
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" }, { "@type": "ListItem", position: 2, name: brand.brandName, item: `https://mechanicseeker.com/brand/${slug}` }] }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" }, { "@type": "ListItem", position: 2, name: brand.brandName, item: `https://www.mechanicseeker.com/brand/${slug}` }] }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
         { "@type": "Question", name: `How many ${brand.brandName} locations are there?`, acceptedAnswer: { "@type": "Answer", text: `There are ${brand.totalCount} ${brand.brandName} locations across ${brand.states.length} states in the US.` } },
         { "@type": "Question", name: `Where is the nearest ${brand.brandName}?`, acceptedAnswer: { "@type": "Answer", text: `Browse MechanicSeeker by state to find the nearest ${brand.brandName} location with address, phone, and hours.` } },

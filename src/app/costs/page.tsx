@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "How much does car repair cost? Browse our 2026 cost guides for oil changes, brake pads, transmission repair, timing belts, alternators, and more.",
   alternates: {
-    canonical: "https://mechanicseeker.com/costs",
+    canonical: "https://www.mechanicseeker.com/costs",
   },
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Don't get overcharged. The 15 questions every car owner should ask before authorizing repairs — from written estimates to warranty on labor and old parts.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/questions-to-ask-mechanic",
+    canonical: "https://www.mechanicseeker.com/blog/questions-to-ask-mechanic",
   },
 };
 
@@ -23,9 +23,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Questions to Ask Your Mechanic", item: "https://mechanicseeker.com/blog/questions-to-ask-mechanic" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mechanicseeker.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Questions to Ask Your Mechanic", item: "https://www.mechanicseeker.com/blog/questions-to-ask-mechanic" },
   ],
 };
 

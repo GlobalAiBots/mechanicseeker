@@ -56,8 +56,8 @@ fs.writeFileSync(path.join(__dirname, "..", "src", "data", "categories.json"), J
 fs.writeFileSync(path.join(__dirname, "..", "src", "data", "brands.json"), JSON.stringify(brands, null, 2));
 
 // Sitemaps
-const catLines = categories.map(c => `  <url><loc>https://mechanicseeker.com/category/${c.slug}</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
-const brandLines = brands.map(b => `  <url><loc>https://mechanicseeker.com/brand/${b.slug}</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
+const catLines = categories.map(c => `  <url><loc>https://www.mechanicseeker.com/category/${c.slug}</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
+const brandLines = brands.map(b => `  <url><loc>https://www.mechanicseeker.com/brand/${b.slug}</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
 const allLines = [...catLines, ...brandLines];
 fs.writeFileSync(path.join(__dirname, "..", "public", "sitemap-categories.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${allLines.join("\n")}\n</urlset>`);
 

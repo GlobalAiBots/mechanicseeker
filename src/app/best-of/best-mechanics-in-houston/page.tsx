@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Discover the best mechanics in Houston, TX. Our curated list of the top 10 auto repair shops covers everything from quick oil changes to collision repair and motorcycle service.",
   alternates: {
-    canonical: "https://mechanicseeker.com/best-of/best-mechanics-in-houston",
+    canonical: "https://www.mechanicseeker.com/best-of/best-mechanics-in-houston",
   },
 };
 
@@ -19,19 +19,19 @@ export default function BestMechanicsHouston() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://mechanicseeker.com",
+        item: "https://www.mechanicseeker.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Best Of",
-        item: "https://mechanicseeker.com/best-of",
+        item: "https://www.mechanicseeker.com/best-of",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Best Mechanics in Houston",
-        item: "https://mechanicseeker.com/best-of/best-mechanics-in-houston",
+        item: "https://www.mechanicseeker.com/best-of/best-mechanics-in-houston",
       },
     ],
   };

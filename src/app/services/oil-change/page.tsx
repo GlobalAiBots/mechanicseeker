@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "How much does an oil change cost in 2026? Learn about oil change frequency, synthetic vs conventional oil, DIY tips, and when to visit a mechanic. $30-75 typical cost.",
   alternates: {
-    canonical: "https://mechanicseeker.com/services/oil-change",
+    canonical: "https://www.mechanicseeker.com/services/oil-change",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://mechanicseeker.com/services" },
-    { "@type": "ListItem", position: 3, name: "Oil Change", item: "https://mechanicseeker.com/services/oil-change" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.mechanicseeker.com/services" },
+    { "@type": "ListItem", position: 3, name: "Oil Change", item: "https://www.mechanicseeker.com/services/oil-change" },
   ],
 };
 

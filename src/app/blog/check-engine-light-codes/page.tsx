@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Understand the 10 most common OBD2 codes — P0300, P0171, P0420, P0440 and more. What each means, how serious it is, typical repair cost, and whether to DIY or call a mechanic.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/check-engine-light-codes",
+    canonical: "https://www.mechanicseeker.com/blog/check-engine-light-codes",
   },
 };
 
@@ -23,9 +23,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://mechanicseeker.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Check Engine Light Codes", item: "https://mechanicseeker.com/blog/check-engine-light-codes" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mechanicseeker.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Check Engine Light Codes", item: "https://www.mechanicseeker.com/blog/check-engine-light-codes" },
   ],
 };
 

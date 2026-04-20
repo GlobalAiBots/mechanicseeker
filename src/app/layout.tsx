@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   title: "MechanicSeeker | Find Auto Repair Shops Near You — 51,000+ Shops",
   description: "Find auto repair shops across the United States. 51,000+ mechanics, tire shops, body shops, and quick lube locations with reviews, services, and contact info. Free.",
   keywords: "mechanic near me, auto repair shop, car repair, brake shop, tire shop, oil change near me",
-  openGraph: { title: "MechanicSeeker | Find Auto Repair Shops Near You", description: "51,000+ auto repair shops across the US. Find trusted mechanics, tire shops, and body shops.", url: "https://mechanicseeker.com", siteName: "MechanicSeeker", type: "website" },
+  openGraph: { title: "MechanicSeeker | Find Auto Repair Shops Near You", description: "51,000+ auto repair shops across the US. Find trusted mechanics, tire shops, and body shops.", url: "https://www.mechanicseeker.com", siteName: "MechanicSeeker", type: "website" },
   twitter: { card: "summary", title: "MechanicSeeker | Find Auto Repair Shops", description: "51,000+ auto repair shops across the US." },
-  alternates: { canonical: "https://mechanicseeker.com" },
+  alternates: { canonical: "https://www.mechanicseeker.com" },
   other: { "google-adsense-account": "ca-pub-4822220549367368", "impact-site-verification": "5e24b07b-ec3d-4add-8aaf-3b4f2f385422" },
 };
 
@@ -70,7 +70,7 @@ function Footer() {
               <a href="https://pierseeker.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition">PierSeeker</a>
               <a href="https://barkseeker.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition">BarkSeeker</a>
               <a href="https://marinaseeker.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition">MarinaSeeker</a>
-              <a href="https://mechanicseeker.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition">MechanicSeeker</a>
+              <a href="https://www.mechanicseeker.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition">MechanicSeeker</a>
               <a href="https://babymydog.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition">BabyMyDog</a>
               <a href="https://askcletus.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition">CLETUS AI Chat</a>
               <a href="https://getcletus.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition">CLETUS AI Voice</a>

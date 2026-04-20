@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Complete transmission repair cost guide for 2026. Learn what to pay for fluid changes, minor repairs, rebuilds, and full replacements. Spot warning signs early and save money.",
   alternates: {
-    canonical: "https://mechanicseeker.com/blog/how-much-does-a-transmission-repair-cost",
+    canonical: "https://www.mechanicseeker.com/blog/how-much-does-a-transmission-repair-cost",
   },
 };
 

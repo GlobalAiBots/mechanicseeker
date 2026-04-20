@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Explore common auto repair services with honest cost breakdowns, DIY difficulty ratings, and advice on when to see a professional mechanic.",
   alternates: {
-    canonical: "https://mechanicseeker.com/services",
+    canonical: "https://www.mechanicseeker.com/services",
   },
 };
 
@@ -25,8 +25,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://mechanicseeker.com/services" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.mechanicseeker.com/services" },
   ],
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Complete guide to brake repair costs in 2026. Learn the warning signs, what to expect to pay ($150-400 per axle), DIY tips, and when to see a professional mechanic.",
   alternates: {
-    canonical: "https://mechanicseeker.com/services/brake-repair",
+    canonical: "https://www.mechanicseeker.com/services/brake-repair",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://mechanicseeker.com/services" },
-    { "@type": "ListItem", position: 3, name: "Brake Repair", item: "https://mechanicseeker.com/services/brake-repair" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.mechanicseeker.com/services" },
+    { "@type": "ListItem", position: 3, name: "Brake Repair", item: "https://www.mechanicseeker.com/services/brake-repair" },
   ],
 };
 

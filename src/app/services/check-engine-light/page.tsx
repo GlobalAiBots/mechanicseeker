@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Check engine light on? Learn what it means, common causes, diagnostic costs ($100-200), whether you can drive safely, and when to see a mechanic immediately.",
   alternates: {
-    canonical: "https://mechanicseeker.com/services/check-engine-light",
+    canonical: "https://www.mechanicseeker.com/services/check-engine-light",
   },
 };
 
@@ -15,9 +15,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://mechanicseeker.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://mechanicseeker.com/services" },
-    { "@type": "ListItem", position: 3, name: "Check Engine Light", item: "https://mechanicseeker.com/services/check-engine-light" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mechanicseeker.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.mechanicseeker.com/services" },
+    { "@type": "ListItem", position: 3, name: "Check Engine Light", item: "https://www.mechanicseeker.com/services/check-engine-light" },
   ],
 };
 

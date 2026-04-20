@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Enter your mileage to see which maintenance services are due. Get personalized oil change, brake, tire rotation, and transmission service schedules with cost estimates.",
   alternates: {
-    canonical: "https://mechanicseeker.com/calculator",
+    canonical: "https://www.mechanicseeker.com/calculator",
   },
 };
 
