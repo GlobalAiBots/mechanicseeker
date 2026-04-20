@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { KSP_LINKS, KSP_COUPON_CODE, KSP_DISCLOSURE } from "@/lib/ksp-affiliate";
+import { KSP_LINKS, KSP_COUPON_CODE, KSP_DISCLOSURE, KSP_BANNERS } from "@/lib/ksp-affiliate";
 
 export const metadata: Metadata = {
   title: "Truck & SUV Performance Upgrades — Parts Guide (2026) | MechanicSeeker",
@@ -201,6 +201,28 @@ export default function TruckUpgradesHub() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
+      {/* Top mobile leaderboard ad */}
+      <div className="mb-6 rounded-xl border border-[#E67E22]/40 bg-gradient-to-r from-[#fff8ef] to-white p-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={KSP_BANNERS.mobileLeaderboard320x50.href}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          aria-label="Shop KSP Performance"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={KSP_BANNERS.mobileLeaderboard320x50.src}
+            width={KSP_BANNERS.mobileLeaderboard320x50.width}
+            height={KSP_BANNERS.mobileLeaderboard320x50.height}
+            alt="Shop KSP Performance"
+          />
+        </a>
+        <p className="text-sm text-[#1A1A1A] font-semibold">
+          Use code <span className="text-[#E67E22]">{KSP_COUPON_CODE}</span> for
+          5% off &mdash; Free Shipping
+        </p>
+      </div>
+
       <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
         <Link href="/" className="hover:underline">
           Home
@@ -251,23 +273,48 @@ export default function TruckUpgradesHub() {
         </div>
       </a>
 
-      {/* Product Grid */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-[#1A1A1A] mb-6 font-[Cabin]">
-          Our Picks
-        </h2>
-        <p className="text-gray-700 mb-8 max-w-3xl">
-          All five picks below come from KSP Performance, our paid partner
-          for 2026. We selected them because they share the traits we care
-          about most: forged construction, vehicle-specific fitment, and
-          clear install documentation. Pricing listed is MSRP before the{" "}
-          {KSP_COUPON_CODE} discount.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {products.map((p) => (
-            <ProductCard key={p.name} product={p} />
-          ))}
+      {/* Product Grid + desktop sidebar ad */}
+      <section className="mb-16 grid grid-cols-1 lg:grid-cols-[1fr_270px] gap-8">
+        <div>
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-6 font-[Cabin]">
+            Our Picks
+          </h2>
+          <p className="text-gray-700 mb-8 max-w-3xl">
+            All five picks below come from KSP Performance, our paid partner
+            for 2026. We selected them because they share the traits we care
+            about most: forged construction, vehicle-specific fitment, and
+            clear install documentation. Pricing listed is MSRP before the{" "}
+            {KSP_COUPON_CODE} discount.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {products.map((p) => (
+              <ProductCard key={p.name} product={p} />
+            ))}
+          </div>
         </div>
+        <aside className="hidden lg:block">
+          <div className="sticky top-24">
+            <a
+              href={KSP_BANNERS.square250.href}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              aria-label="Shop KSP Performance"
+              className="block"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={KSP_BANNERS.square250.src}
+                width={KSP_BANNERS.square250.width}
+                height={KSP_BANNERS.square250.height}
+                alt="Shop KSP Performance"
+                loading="lazy"
+              />
+            </a>
+            <p className="text-xs text-gray-500 text-center mt-2">
+              Code {KSP_COUPON_CODE} &middot; 5% off
+            </p>
+          </div>
+        </aside>
       </section>
 
       {/* Related Guides */}

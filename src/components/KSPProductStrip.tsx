@@ -1,4 +1,4 @@
-import { KSP_LINKS, KSP_COUPON_CODE } from "@/lib/ksp-affiliate";
+import { KSP_LINKS, KSP_COUPON_CODE, KSP_BANNERS } from "@/lib/ksp-affiliate";
 
 export default function KSPProductStrip() {
   const products = [
@@ -13,15 +13,53 @@ export default function KSPProductStrip() {
         <p className="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-1">Paid Partner</p>
         <h3 className="font-[Cabin] text-lg md:text-xl font-bold">Truck &amp; SUV Upgrades from KSP Performance</h3>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
-        {products.map((p) => (
-          <div key={p.name} className="p-5 flex flex-col">
-            <p className="font-[Cabin] font-bold text-[#1A1A1A] mb-1">{p.name}</p>
-            <p className="text-[#E67E22] font-bold text-sm mb-2">{p.price}</p>
-            <p className="text-gray-600 text-xs leading-relaxed mb-4 flex-1">{p.desc}</p>
-            <a href={p.url} target="_blank" rel="noopener noreferrer sponsored" className="inline-block text-center bg-[#E67E22] hover:bg-[#d35400] text-white font-bold text-xs px-4 py-2.5 rounded-lg transition">Shop at KSP &rarr;</a>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
+          {products.map((p) => (
+            <div key={p.name} className="p-5 flex flex-col">
+              <p className="font-[Cabin] font-bold text-[#1A1A1A] mb-1">{p.name}</p>
+              <p className="text-[#E67E22] font-bold text-sm mb-2">{p.price}</p>
+              <p className="text-gray-600 text-xs leading-relaxed mb-4 flex-1">{p.desc}</p>
+              <a href={p.url} target="_blank" rel="noopener noreferrer sponsored" className="inline-block text-center bg-[#E67E22] hover:bg-[#d35400] text-white font-bold text-xs px-4 py-2.5 rounded-lg transition">Shop at KSP &rarr;</a>
+            </div>
+          ))}
+        </div>
+        <div className="border-t lg:border-t-0 lg:border-l border-gray-200 flex items-center justify-center p-4 bg-gray-50">
+          {/* Medium Rectangle on desktop */}
+          <a
+            href={KSP_BANNERS.medRect320x250.href}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            aria-label="Shop KSP Performance"
+            className="hidden sm:block"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={KSP_BANNERS.medRect320x250.src}
+              width={KSP_BANNERS.medRect320x250.width}
+              height={KSP_BANNERS.medRect320x250.height}
+              alt="Shop KSP Performance"
+              loading="lazy"
+            />
+          </a>
+          {/* Mobile leaderboard on small screens */}
+          <a
+            href={KSP_BANNERS.mobileLeaderboard320x50.href}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            aria-label="Shop KSP Performance"
+            className="sm:hidden"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={KSP_BANNERS.mobileLeaderboard320x50.src}
+              width={KSP_BANNERS.mobileLeaderboard320x50.width}
+              height={KSP_BANNERS.mobileLeaderboard320x50.height}
+              alt="Shop KSP Performance"
+              loading="lazy"
+            />
+          </a>
+        </div>
       </div>
       <div className="px-6 py-3 bg-gray-50 border-t border-gray-200 text-xs text-gray-500 text-center">
         Use code <a href={KSP_LINKS.couponSitewide} target="_blank" rel="noopener noreferrer sponsored" className="font-bold text-[#E67E22] hover:underline">{KSP_COUPON_CODE}</a> for 5% off &middot; Free shipping

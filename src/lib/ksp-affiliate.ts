@@ -16,3 +16,26 @@ export const KSP_LINKS = {
 
 export const KSP_DISCLOSURE =
   "We earn a commission on qualifying purchases. KSP Performance is a paid partner. Use code KSPAF for 5% off.";
+
+// CJ-hosted banner creatives. Use these instead of custom images so
+// impression/click tracking goes through CJ reporting.
+export const KSP_BANNERS = {
+  square250: {
+    href: "https://www.kqzyfj.com/click-101726471-17177442",
+    src: "https://www.lduhtrp.net/image-101726471-17177442",
+    width: 250,
+    height: 250,
+  },
+  medRect320x250: {
+    href: "https://www.kqzyfj.com/click-101726471-17177443",
+    src: "https://www.tqlkg.com/image-101726471-17177443",
+    width: 320,
+    height: 250,
+  },
+  mobileLeaderboard320x50: {
+    href: "https://www.tkqlhce.com/click-101726471-17177444",
+    src: "https://www.ftjcfx.com/image-101726471-17177444",
+    width: 320,
+    height: 50,
+  },
+} as const;

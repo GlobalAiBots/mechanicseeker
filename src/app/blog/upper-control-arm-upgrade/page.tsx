@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { KSP_LINKS, KSP_COUPON_CODE, KSP_DISCLOSURE } from "@/lib/ksp-affiliate";
+import { KSP_LINKS, KSP_COUPON_CODE, KSP_DISCLOSURE, KSP_BANNERS } from "@/lib/ksp-affiliate";
 
 export const metadata: Metadata = {
   title: "When to Replace Upper Control Arms on a Lifted Truck",
@@ -138,6 +138,25 @@ export default function UpperControlArmUpgrade() {
           ball joint with greater articulation, which means less binding
           through the full range of motion.
         </p>
+
+        <div className="my-6 flex justify-center">
+          <a
+            href={KSP_BANNERS.square250.href}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            aria-label="Shop KSP Performance"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={KSP_BANNERS.square250.src}
+              width={KSP_BANNERS.square250.width}
+              height={KSP_BANNERS.square250.height}
+              alt="Shop KSP Performance"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
         <p>
           Lighter unsprung weight also means better ride quality and
           faster suspension response. The tradeoff is cost, but on a

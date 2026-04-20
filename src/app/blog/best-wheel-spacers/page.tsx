@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { KSP_LINKS, KSP_COUPON_CODE, KSP_DISCLOSURE } from "@/lib/ksp-affiliate";
+import { KSP_LINKS, KSP_COUPON_CODE, KSP_DISCLOSURE, KSP_BANNERS } from "@/lib/ksp-affiliate";
 
 export const metadata: Metadata = {
   title: "Are Wheel Spacers Safe? Best Picks for Trucks & SUVs (2026)",
@@ -129,6 +129,24 @@ export default function BestWheelSpacers() {
           Reject any spacer that does not clearly list a hub-centric bore
           dimension matching your vehicle.
         </p>
+
+        <div className="my-6 flex justify-center">
+          <a
+            href={KSP_BANNERS.medRect320x250.href}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            aria-label="Shop KSP Performance"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={KSP_BANNERS.medRect320x250.src}
+              width={KSP_BANNERS.medRect320x250.width}
+              height={KSP_BANNERS.medRect320x250.height}
+              alt="Shop KSP Performance"
+              loading="lazy"
+            />
+          </a>
+        </div>
 
         <h2 className="text-2xl font-bold text-[#1A1A1A] mt-10 mb-4 font-[Cabin]">
           Forged 6061-T6 Aluminum vs Cast

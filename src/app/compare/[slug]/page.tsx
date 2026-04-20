@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { comparisons, getComparisonBySlug, type ComparisonPage } from "@/data/comparisons";
+import { KSP_BANNERS, KSP_COUPON_CODE } from "@/lib/ksp-affiliate";
 import type { Metadata } from "next";
+
+const KSP_COMPARE_SLUGS = new Set(["diy-vs-mechanic", "oem-vs-aftermarket-parts"]);
 
 export function generateStaticParams() {
   return comparisons.map((c) => ({ slug: c.slug }));
@@ -255,6 +258,34 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
             </div>
           )}
         </section>
+
+        {KSP_COMPARE_SLUGS.has(cmp.slug) && (
+          <section className="mb-12 flex flex-col items-center gap-3 p-6 rounded-2xl border border-[#E67E22]/30 bg-[#fff8ef]">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-[#E67E22]">
+              Paid Partner
+            </p>
+            <a
+              href={KSP_BANNERS.square250.href}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              aria-label="Shop KSP Performance"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={KSP_BANNERS.square250.src}
+                width={KSP_BANNERS.square250.width}
+                height={KSP_BANNERS.square250.height}
+                alt="Shop KSP Performance"
+                loading="lazy"
+              />
+            </a>
+            <p className="text-sm text-gray-600 text-center">
+              Use code{" "}
+              <span className="font-bold text-[#E67E22]">{KSP_COUPON_CODE}</span>{" "}
+              for 5% off &middot; Free shipping on truck &amp; SUV upgrades
+            </p>
+          </section>
+        )}
 
         <section className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm">
           <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-4">More Comparisons</h2>
