@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Personal reference files
+KSP links.csv
+*.csv.personal
+
+# Script outputs (don't need in repo)
+scripts/output/
