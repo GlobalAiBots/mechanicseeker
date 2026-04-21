@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = { title: "Blog | MechanicSeeker", alternates: { canonical: "https://www.mechanicseeker.com/blog" } };
 
 const posts = [
+  { slug: "timing-belt-vs-timing-chain", title: "Timing Belt vs Timing Chain: Which Does Your Car Have? (2026)", date: "April 21, 2026", desc: "How to tell which your engine uses, lifespan, replacement cost, interference vs non-interference, and lookup table for 30 common vehicles." },
   { slug: "best-leveling-lift-kits", title: "Best Leveling Lift Kits for Trucks & SUVs (2026 Guide)", date: "April 20, 2026", desc: "How to choose the right leveling kit, installation walkthrough, and our picks for trucks and SUVs." },
   { slug: "best-wheel-spacers", title: "Best Wheel Spacers: Hub-Centric vs Bolt-On (Buyer's Guide)", date: "April 20, 2026", desc: "Wheel spacer sizing, safety, and installation — plus the forged hub-centric options we recommend." },
   { slug: "upper-control-arm-upgrade", title: "When to Upgrade Upper Control Arms After a Lift", date: "April 20, 2026", desc: "Why factory control arms fail after a leveling lift and how forged aluminum upgrades fix it." },
