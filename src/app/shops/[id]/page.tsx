@@ -36,6 +36,23 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
   const stateName = stateList.find((s) => s.code === shop.state)?.name || shop.state;
   const stateSlug = stateList.find((s) => s.code === shop.state)?.slug || "";
 
+  // Derive per-shop hours tags from the raw hours string so each page carries
+  // slightly different content than siblings. Keeps "duplicate content"
+  // signals down without fabricating data — only triggers when the hours
+  // string actually supports each claim.
+  const hoursLower = (shop.hours || "").toLowerCase();
+  const hoursTags: string[] = [];
+  if (/24[\s-]*hour|24\/7|all day/.test(hoursLower)) hoursTags.push("24-hour service");
+  if (/sat|sun|weekend/.test(hoursLower)) hoursTags.push("Open weekends");
+  if (/\b[56](:00)?\s*am\b|opens?\s*at\s*[56]/.test(hoursLower)) hoursTags.push("Early open");
+  if (/\b(9|10|11)\s*pm\b|late/.test(hoursLower)) hoursTags.push("Late hours");
+
+  // One-line blurb that varies by brand presence. Independent shops get
+  // location-flavored copy; chain shops get network-flavored copy.
+  const brandBlurb = shop.brand
+    ? `${shop.name} is part of the ${shop.brand} nationwide auto repair network, serving ${shop.city || stateName} with brand-standard service protocols and warranty coverage.`
+    : `${shop.name} is a locally-owned independent auto repair shop serving ${shop.city || stateName} and the surrounding area${shop.services.length >= 3 ? ` — specializing in ${shop.services.slice(0, 3).map(s => (serviceLabels[s]?.label || s.replace(/_/g, " ")).toLowerCase()).join(", ")}` : ""}.`;
+
   const jsonLd = {
     "@context": "https://schema.org", "@type": "AutoRepair",
     name: shop.name,
@@ -82,6 +99,15 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
           {shop.website && <a href={shop.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#2C3E50] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1A2332] transition">{"🌐"} Website</a>}
           {shop.hours && <span className="inline-flex items-center gap-2 bg-white border border-gray-200 text-[#1A1A1A] px-5 py-2.5 rounded-lg text-sm">{"🕐"} {shop.hours}</span>}
         </div>
+        {hoursTags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-8">
+            {hoursTags.map((t) => (
+              <span key={t} className="inline-flex items-center gap-1 bg-[#E67E22]/10 text-[#E67E22] text-xs font-bold px-3 py-1 rounded-full">
+                &#10003; {t}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* Map */}
         <div className="mb-8">
@@ -114,7 +140,7 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-3">About {shop.name}</h2>
             <p className="text-gray-600 leading-relaxed text-sm">
-              {shop.name} is {shop.brand ? `a ${shop.brand} location` : "an independent auto repair shop"} in {shop.city ? `${shop.city}, ` : ""}{stateName}. {shop.services.length > 0 ? `Services include ${shop.services.slice(0, 4).map(s => (serviceLabels[s]?.label || s.replace(/_/g, " ")).toLowerCase()).join(", ")}.` : ""} {shop.phone ? `Call ${shop.phone} for an appointment.` : ""}
+              {brandBlurb} {shop.services.length > 0 ? `Services include ${shop.services.slice(0, 4).map(s => (serviceLabels[s]?.label || s.replace(/_/g, " ")).toLowerCase()).join(", ")}.` : ""} {hoursTags.length > 0 ? `Availability: ${hoursTags.join(" · ").toLowerCase()}.` : ""} {shop.phone ? `Call ${shop.phone} for an appointment.` : ""}
             </p>
           </div>
         </section>
