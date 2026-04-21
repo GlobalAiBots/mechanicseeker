@@ -1,0 +1,57 @@
+Total shops: 49105
+Still need fixing: 22085
+Resuming at checkpoint index: 0
+Nominatim ETA for remainder: ~405 min
+
+  500/22085 — parsed: 0, geo: 198, mismatch: 26, no-data: 276
+  1000/22085 — parsed: 0, geo: 456, mismatch: 147, no-data: 397
+  1500/22085 — parsed: 0, geo: 683, mismatch: 217, no-data: 600
+  2000/22085 — parsed: 0, geo: 957, mismatch: 289, no-data: 754
+  2500/22085 — parsed: 0, geo: 1300, mismatch: 429, no-data: 771
+  3000/22085 — parsed: 0, geo: 1591, mismatch: 490, no-data: 919
+  3500/22085 — parsed: 0, geo: 1982, mismatch: 575, no-data: 943
+  4000/22085 — parsed: 0, geo: 2331, mismatch: 726, no-data: 943
+  4500/22085 — parsed: 0, geo: 2689, mismatch: 868, no-data: 943
+  5000/22085 — parsed: 0, geo: 3079, mismatch: 978, no-data: 943
+  5500/22085 — parsed: 0, geo: 3454, mismatch: 1103, no-data: 943
+  6000/22085 — parsed: 0, geo: 3887, mismatch: 1170, no-data: 943
+  6500/22085 — parsed: 0, geo: 4294, mismatch: 1263, no-data: 943
+  7000/22085 — parsed: 0, geo: 4712, mismatch: 1345, no-data: 943
+  7500/22085 — parsed: 0, geo: 5056, mismatch: 1501, no-data: 943
+  8000/22085 — parsed: 0, geo: 5376, mismatch: 1681, no-data: 943
+  8500/22085 — parsed: 0, geo: 5764, mismatch: 1793, no-data: 943
+  9000/22085 — parsed: 0, geo: 6189, mismatch: 1868, no-data: 943
+  9500/22085 — parsed: 0, geo: 6536, mismatch: 2021, no-data: 943
+  10000/22085 — parsed: 0, geo: 6948, mismatch: 2109, no-data: 943
+  10500/22085 — parsed: 0, geo: 7360, mismatch: 2182, no-data: 958
+  11000/22085 — parsed: 0, geo: 7794, mismatch: 2228, no-data: 978
+  11500/22085 — parsed: 0, geo: 8151, mismatch: 2359, no-data: 990
+  12000/22085 — parsed: 0, geo: 8553, mismatch: 2440, no-data: 1007
+  12500/22085 — parsed: 0, geo: 8975, mismatch: 2518, no-data: 1007
+  13000/22085 — parsed: 0, geo: 9407, mismatch: 2586, no-data: 1007
+  13500/22085 — parsed: 0, geo: 9764, mismatch: 2729, no-data: 1007
+  14000/22085 — parsed: 1, geo: 10214, mismatch: 2778, no-data: 1007
+  14500/22085 — parsed: 1, geo: 10688, mismatch: 2799, no-data: 1012
+  15000/22085 — parsed: 1, geo: 11138, mismatch: 2841, no-data: 1020
+  15500/22085 — parsed: 3, geo: 11611, mismatch: 2864, no-data: 1022
+  16000/22085 — parsed: 3, geo: 12079, mismatch: 2875, no-data: 1043
+  16500/22085 — parsed: 3, geo: 12563, mismatch: 2881, no-data: 1053
+  17000/22085 — parsed: 4, geo: 13042, mismatch: 2897, no-data: 1057
+  17500/22085 — parsed: 4, geo: 13529, mismatch: 2909, no-data: 1058
+  18000/22085 — parsed: 4, geo: 14006, mismatch: 2929, no-data: 1061
+  18500/22085 — parsed: 4, geo: 14448, mismatch: 2962, no-data: 1086
+  19000/22085 — parsed: 4, geo: 14931, mismatch: 2973, no-data: 1092
+  19500/22085 — parsed: 4, geo: 15398, mismatch: 2993, no-data: 1105
+  20000/22085 — parsed: 4, geo: 15846, mismatch: 3028, no-data: 1122
+  20500/22085 — parsed: 4, geo: 16322, mismatch: 3041, no-data: 1133
+  21000/22085 — parsed: 4, geo: 16793, mismatch: 3048, no-data: 1155
+  21500/22085 — parsed: 4, geo: 17290, mismatch: 3051, no-data: 1155
+  22000/22085 — parsed: 4, geo: 17729, mismatch: 3075, no-data: 1192
+
+DONE
+  Fixed via address parse:  4
+  Fixed via reverse geocode: 17798
+  Flagged (state mismatch):  3086
+  Flagged (no data):         1197
+  Redirects written:         17802
+  Review entries:            4283
