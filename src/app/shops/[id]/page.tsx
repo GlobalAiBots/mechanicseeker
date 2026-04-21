@@ -5,6 +5,7 @@ import ShopMapWrapper from "@/components/ShopMapWrapper";
 import FeaturedArticle from "@/components/FeaturedArticle";
 import KSPProductStrip from "@/components/KSPProductStrip";
 import cityPagesData from "@/data/city-pages.json";
+import { getRelatedBlog } from "@/lib/related-blogs";
 import type { Metadata } from "next";
 
 const allCities = (cityPagesData as { state: string; stateSlug: string; city: string; citySlug: string; count: number }[]);
@@ -216,22 +217,22 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
           </div>
         </section>
 
-        {/* Related Guides */}
-        <section className="mb-8">
-          <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3">Related Guides</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {[
-              { href: "/blog/how-to-find-trustworthy-mechanic", title: "Finding a Mechanic", desc: "How to find one you can trust" },
-              { href: "/blog/car-maintenance-schedule", title: "Maintenance Schedule", desc: "Keep your car running right" },
-              { href: "/blog/how-much-does-a-brake-job-cost", title: "Brake Job Costs", desc: "What to expect and how to save" },
-            ].map((g) => (
-              <Link key={g.href} href={g.href} className="group bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <p className="font-bold text-[#1A1A1A] group-hover:text-[#E67E22] transition text-sm">{g.title}</p>
-                <p className="text-gray-400 text-xs mt-1">{g.desc}</p>
+        {/* Related Guide — contextual based on shop type + services + city */}
+        {(() => {
+          const tease = getRelatedBlog(shop);
+          return (
+            <section className="mb-8 rounded-lg border border-gray-200 p-6 bg-gray-50">
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Related Guide</p>
+              <h3 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-2">
+                <Link href={`/blog/${tease.slug}`} className="hover:text-[#E67E22] transition">{tease.title}</Link>
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-3">{tease.excerpt}</p>
+              <Link href={`/blog/${tease.slug}`} className="inline-block text-[#E67E22] hover:text-[#d35400] font-semibold text-sm">
+                Read the full guide &rarr;
               </Link>
-            ))}
-          </div>
-        </section>
+            </section>
+          );
+        })()}
 
         {/* Nearby Shops */}
         {(() => {
