@@ -1,151 +1,123 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const STRIPE_FEATURED = "https://buy.stripe.com/cNieVd9I96K3de9dDCcZa00";
+const CLETUS_SIGNUP = "https://globalaibots.com/signup";
+
 export const metadata: Metadata = {
-  title: "CLETUS AI — 24/7 AI Chat & Voice Agent for Any Business | MechanicSeeker",
-  description: "CLETUS answers your customers' questions 24/7 on your website and phone. Works for auto repair shops, tire shops, body shops, and any business. Less than $1/day.",
-  keywords: "AI chatbot for auto repair, AI customer service, 24/7 chatbot for mechanics, AI phone answering service, chatbot for auto shops",
-  openGraph: { title: "CLETUS AI — 24/7 Chat & Voice Agent for Any Business", url: "https://www.mechanicseeker.com/for-businesses", siteName: "MechanicSeeker" },
+  title: "List Your Shop on MechanicSeeker | For Businesses",
+  description: "Two ways to grow your auto repair, tire, or body shop: Featured Listing on MechanicSeeker ($49.95/mo) or CLETUS AI chat and voice agent for your own website (from $29.95/mo).",
+  keywords: "auto repair shop marketing, featured listing mechanic directory, AI chatbot for auto shops, AI receptionist for mechanics",
+  openGraph: { title: "List Your Shop on MechanicSeeker", url: "https://www.mechanicseeker.com/for-businesses", siteName: "MechanicSeeker" },
   alternates: { canonical: "https://www.mechanicseeker.com/for-businesses" },
 };
-
-const businesses = [
-  { icon: "&#128295;", type: "Auto Repair Shops", questions: ["How much does a brake job cost?", "Do you work on [make/model]?", "Can I get a same-day appointment?"] },
-  { icon: "&#128722;", type: "Tire Shops", questions: ["Do you have [size] tires in stock?", "How much for a tire rotation?", "Do you offer road hazard coverage?"] },
-  { icon: "&#128663;", type: "Body Shops", questions: ["Do you offer free estimates?", "How long does a paint job take?", "Do you work with my insurance?"] },
-  { icon: "&#9981;", type: "Quick Lube & Oil Change", questions: ["How much is a synthetic oil change?", "Do I need an appointment?", "How long does it take?"] },
-  { icon: "&#128267;", type: "Transmission Shops", questions: ["How much does a rebuild cost?", "Do you offer a warranty?", "Can you diagnose the problem first?"] },
-  { icon: "&#10052;", type: "AC & Heating", questions: ["How much is an AC recharge?", "Why is my AC blowing warm?", "Do you diagnose leaks?"] },
-  { icon: "&#127976;", type: "Car Dealerships", questions: ["Do you have [model] in stock?", "What financing do you offer?", "Can I schedule a test drive?"] },
-  { icon: "&#128663;", type: "Car Wash & Detailing", questions: ["What are your packages?", "Do you do interior detailing?", "How long does a full detail take?"] },
-  { icon: "&#128295;", type: "Service Businesses", questions: ["How much does [service] cost?", "Do you offer free estimates?", "What areas do you serve?"] },
-  { icon: "&#127860;", type: "Restaurants & Bars", questions: ["What are your hours?", "Do you take reservations?", "Is there a wait?"] },
-  { icon: "&#127973;", type: "Veterinary Clinics", questions: ["Are you accepting new patients?", "What are your hours?", "Do you handle emergencies?"] },
-  { icon: "&#127968;", type: "Real Estate", questions: ["Is this property still available?", "Can I schedule a showing?", "What are the HOA fees?"] },
-];
 
 export default function ForBusinessesPage() {
   return (
     <div>
-      {/* Featured Listing CTA — primary offer */}
-      <section className="px-4 pt-8">
-        <div className="max-w-5xl mx-auto rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 p-6 md:p-8 text-white shadow-lg">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 font-[Cabin]">&#11088; Get Featured on MechanicSeeker</h2>
-              <p className="text-white/90 text-sm md:text-base">
-                Priority placement on state, city, and service pages. Photo gallery, customer message form, and monthly performance report &mdash; $49.95/mo. Cancel anytime.
-              </p>
-            </div>
-            <a href="https://buy.stripe.com/cNieVd9I96K3de9dDCcZa00" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-amber-600 px-6 py-3 rounded-lg font-bold whitespace-nowrap hover:bg-gray-50 transition shadow-md">
-              Get Featured &rarr;
-            </a>
-          </div>
-          <p className="text-white/80 text-xs mt-3">
-            <Link href="/pricing" className="underline hover:text-white">See full pricing tiers</Link>
-          </p>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 text-center px-4" style={{ background: "#FAF8F5", backgroundImage: "radial-gradient(circle at 30% 70%, rgba(230,126,34,0.06) 0%, transparent 50%)" }}>
+      {/* Hero */}
+      <section className="px-4 pt-12 pb-8 text-center" style={{ background: "#FAF8F5", backgroundImage: "radial-gradient(circle at 30% 70%, rgba(230,126,34,0.06) 0%, transparent 50%)" }}>
         <h1 className="font-[Cabin] text-3xl md:text-5xl font-bold text-[#1A1A1A] leading-tight max-w-3xl mx-auto">
-          Your Customers Have Questions.<br />CLETUS Answers Them 24/7.
+          List Your Shop on MechanicSeeker
         </h1>
-        <p className="text-gray-500 text-lg mt-6 max-w-xl mx-auto leading-relaxed">
-          Own an auto repair shop, tire shop, body shop, or quick lube? CLETUS is an AI chat and voice agent for your website and phone. Works for any business, any industry. Less than $1/day.
+        <p className="text-gray-500 text-lg mt-5 max-w-xl mx-auto">
+          Two ways to grow your business. Pick one or both.
         </p>
-        <div className="flex gap-3 justify-center mt-8 flex-wrap">
-          <a href="https://globalaibots.com/signup" target="_blank" rel="noopener noreferrer" className="bg-[#E67E22] hover:bg-[#d35400] text-white font-bold px-6 py-3 rounded-lg transition shadow-sm">Start Free 14-Day Trial</a>
-          <a href="#see-it" className="border-2 border-[#2C3E50] text-[#2C3E50] hover:bg-[#2C3E50] hover:text-white font-bold px-6 py-3 rounded-lg transition">See It In Action</a>
-        </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] text-center mb-3">CLETUS Works for Every Business</h2>
-        <p className="text-gray-500 text-center mb-10 max-w-lg mx-auto">CLETUS learns YOUR business and answers YOUR customers&apos; questions — instantly, accurately, 24/7.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {businesses.map((b) => (
-            <div key={b.type} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-              <p className="text-2xl mb-2" dangerouslySetInnerHTML={{ __html: b.icon }} />
-              <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-3">{b.type}</h3>
-              <div className="space-y-2">
-                {b.questions.map((q) => (
-                  <p key={q} className="text-gray-500 text-sm bg-gray-50 rounded-lg px-3 py-2 italic" dangerouslySetInnerHTML={{ __html: `&ldquo;${q}&rdquo;` }} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Two-card choice */}
+      <section className="px-4 pb-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Featured Listing */}
+          <div className="rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-500 p-8 text-white shadow-xl flex flex-col">
+            <p className="text-xs font-bold uppercase tracking-widest text-white/80 mb-2">&#11088; Primary Product</p>
+            <h2 className="font-[Cabin] text-2xl md:text-3xl font-bold mb-1">Featured Listing</h2>
+            <p className="text-4xl font-extrabold mb-1">$49.95<span className="text-lg text-white/80 font-semibold">/mo</span></p>
+            <p className="text-white/90 text-sm mb-6">Get your shop seen by customers already searching.</p>
+            <ul className="space-y-2 text-sm text-white/95 mb-8 flex-1">
+              <li className="flex items-start gap-2"><span className="text-white font-bold flex-shrink-0 mt-0.5">&#10003;</span> Priority placement on state, city, and service pages</li>
+              <li className="flex items-start gap-2"><span className="text-white font-bold flex-shrink-0 mt-0.5">&#10003;</span> Photo gallery &mdash; bay, waiting room, team, certifications</li>
+              <li className="flex items-start gap-2"><span className="text-white font-bold flex-shrink-0 mt-0.5">&#10003;</span> Customer message form on your listing</li>
+              <li className="flex items-start gap-2"><span className="text-white font-bold flex-shrink-0 mt-0.5">&#10003;</span> Monthly performance report (views, clicks, contacts)</li>
+              <li className="flex items-start gap-2"><span className="text-white font-bold flex-shrink-0 mt-0.5">&#10003;</span> 3x more visibility than free listings</li>
+              <li className="flex items-start gap-2"><span className="text-white font-bold flex-shrink-0 mt-0.5">&#10003;</span> Cancel anytime</li>
+            </ul>
+            <a href={STRIPE_FEATURED} target="_blank" rel="noopener noreferrer" className="block text-center bg-white text-amber-600 font-bold px-6 py-3 rounded-lg hover:bg-gray-50 transition shadow-md">
+              Get Featured Now &rarr;
+            </a>
+            <p className="text-white/80 text-xs text-center mt-3">
+              <Link href="/pricing" className="underline hover:text-white">See full pricing</Link>
+            </p>
+          </div>
 
-      <section className="bg-gray-50 border-y border-gray-200 py-14 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] text-center mb-10">How It Works</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { step: "1", title: "Sign Up", desc: "Create your account in 30 seconds. No credit card for the free trial." },
-              { step: "2", title: "Teach CLETUS", desc: "Enter your hours, prices, FAQ, and policies. CLETUS learns it all in minutes." },
-              { step: "3", title: "Go Live", desc: "Paste one line of code on your website. CLETUS starts answering immediately." },
-            ].map((s) => (
-              <div key={s.step} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[#E67E22] text-white font-bold text-xl flex items-center justify-center mx-auto mb-3">{s.step}</div>
-                <h3 className="font-[Cabin] font-bold text-[#1A1A1A] mb-1">{s.title}</h3>
-                <p className="text-gray-500 text-sm">{s.desc}</p>
-              </div>
-            ))}
+          {/* CLETUS AI */}
+          <div className="rounded-2xl bg-white border-2 border-[#2C3E50] p-8 shadow-xl flex flex-col">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#2C3E50] mb-2">&#129302; AI for Your Own Site</p>
+            <h2 className="font-[Cabin] text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-1">CLETUS AI</h2>
+            <p className="text-4xl font-extrabold text-[#1A1A1A] mb-1">from $29.95<span className="text-lg text-gray-500 font-semibold">/mo</span></p>
+            <p className="text-gray-600 text-sm mb-6">Add AI chat and voice to the website you already have.</p>
+            <ul className="space-y-2 text-sm text-gray-700 mb-8 flex-1">
+              <li className="flex items-start gap-2"><span className="text-[#2C3E50] font-bold flex-shrink-0 mt-0.5">&#10003;</span> AI chat widget on YOUR website, 24/7</li>
+              <li className="flex items-start gap-2"><span className="text-[#2C3E50] font-bold flex-shrink-0 mt-0.5">&#10003;</span> Optional AI voice receptionist (from $49.95/mo)</li>
+              <li className="flex items-start gap-2"><span className="text-[#2C3E50] font-bold flex-shrink-0 mt-0.5">&#10003;</span> Works on WordPress, Wix, Squarespace, Shopify, anywhere</li>
+              <li className="flex items-start gap-2"><span className="text-[#2C3E50] font-bold flex-shrink-0 mt-0.5">&#10003;</span> Learns your business from a simple Q&amp;A setup</li>
+              <li className="flex items-start gap-2"><span className="text-[#2C3E50] font-bold flex-shrink-0 mt-0.5">&#10003;</span> 14-day free trial &mdash; no credit card required</li>
+              <li className="flex items-start gap-2"><span className="text-[#2C3E50] font-bold flex-shrink-0 mt-0.5">&#10003;</span> Cancel anytime</li>
+            </ul>
+            <a href={CLETUS_SIGNUP} target="_blank" rel="noopener noreferrer" className="block text-center bg-[#2C3E50] hover:bg-[#1A2332] text-white font-bold px-6 py-3 rounded-lg transition shadow-md">
+              Start Free Trial &rarr;
+            </a>
+            <p className="text-gray-500 text-xs text-center mt-3">
+              <a href="https://globalaibots.com/pricing" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#1A1A1A]">See CLETUS pricing tiers</a>
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 py-14">
-        <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] text-center mb-8">Simple Pricing</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[
-            { name: "CLETUS Chat", price: "$29.95", desc: "AI chat widget on your website. 24/7." },
-            { name: "CLETUS Voice", price: "$49.95", desc: "AI phone receptionist. Natural voice." },
-            { name: "Chat + Voice", price: "$69.95", desc: "Both products. Save $10/mo.", highlight: true },
-          ].map((p) => (
-            <div key={p.name} className={`rounded-xl p-6 text-center ${p.highlight ? "bg-[#2C3E50] text-white" : "bg-white border border-gray-200 shadow-sm"}`}>
-              <p className={`font-[Cabin] font-bold text-sm mb-1 ${p.highlight ? "text-white/80" : "text-gray-500"}`}>{p.name}</p>
-              <p className="text-3xl font-bold font-[Cabin] mb-1">{p.price}<span className={`text-sm font-normal ${p.highlight ? "text-white/70" : "text-gray-400"}`}>/mo</span></p>
-              <p className={`text-sm ${p.highlight ? "text-white/80" : "text-gray-500"}`}>{p.desc}</p>
-            </div>
-          ))}
-        </div>
-        <p className="text-gray-400 text-sm text-center mt-4">14-day free trial on every plan. No credit card required.</p>
-      </section>
-
-      <section id="see-it" className="max-w-3xl mx-auto px-4 py-14">
-        <div className="bg-orange-50 border border-orange-200 rounded-xl p-8 text-center">
-          <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-3">See CLETUS In Action — Right Now</h2>
-          <p className="text-gray-600 text-sm leading-relaxed mb-4">
-            Visit <a href="https://askcletus.com" target="_blank" rel="noopener noreferrer" className="text-[#E67E22] font-semibold hover:underline">askcletus.com</a> to try a live demo. That&apos;s exactly what your customers would experience.
+      {/* What CLETUS answers — site-specific */}
+      <section className="bg-gray-50 border-y border-gray-200 py-14 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#E67E22] mb-3">What CLETUS Can Answer</p>
+          <p className="text-2xl md:text-3xl font-[Cabin] font-bold text-[#1A1A1A] leading-snug">
+            Your hours, estimate availability, services, pricing &mdash; all answered automatically, 24/7.
+          </p>
+          <p className="text-gray-500 mt-4 text-sm max-w-xl mx-auto">
+            CLETUS learns your business in minutes. Paste in your FAQs, pricing, and service list; the chat widget answers every customer question instantly without you lifting a phone.
           </p>
         </div>
       </section>
 
-      <section className="py-14 px-4 text-center" style={{ backgroundImage: "radial-gradient(circle at 50% 100%, rgba(230,126,34,0.06) 0%, transparent 50%)" }}>
-        <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mb-3">Stop Losing Customers to Unanswered Questions</h2>
-        <p className="text-gray-500 mb-6 max-w-lg mx-auto">CLETUS costs less than $1/day and works 24/7. Your customers get instant answers. You get more business.</p>
-        <a href="https://globalaibots.com/signup" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#E67E22] hover:bg-[#d35400] text-white font-bold px-8 py-3 rounded-lg transition shadow-sm">Start Your Free 14-Day Trial &rarr;</a>
-        <p className="text-gray-400 text-xs mt-4">Questions? <a href="mailto:hello@globalaibots.com" className="text-[#E67E22] hover:underline">hello@globalaibots.com</a></p>
+      {/* FAQ */}
+      <section className="max-w-3xl mx-auto px-4 py-14">
+        <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] text-center mb-8">Frequently Asked</h2>
+        <div className="space-y-3">
+          {[
+            { q: "How quickly does my featured listing go live?", a: "Within 1 business day after you subscribe and verify you're authorized to represent the shop. You get an email when Featured is activated." },
+            { q: "Can I have both Featured Listing and CLETUS?", a: "Yes, and many shops do. Featured Listing drives customers from MechanicSeeker to your shop. CLETUS answers the questions they ask once they land on your own website or call you. Different funnels, complementary." },
+            { q: "Can I cancel anytime?", a: "Both products are monthly with no commitment. Cancel from Stripe (Featured) or your CLETUS dashboard. Billing stops at the end of the current month." },
+            { q: "Is there a setup fee?", a: "No. Featured Listing is $49.95/mo flat. CLETUS is $29.95-$129.95/mo depending on tier, with a 14-day free trial. No setup fees, no contracts." },
+            { q: "How does CLETUS learn my business?", a: "Via a simple admin interface where you paste in your hours, services, prices, and FAQ. No coding. Most shops finish setup in under 15 minutes. The AI handles variation in how customers phrase questions automatically." },
+          ].map((f, i) => (
+            <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
+              <summary className="px-5 py-4 cursor-pointer font-semibold text-[#1A1A1A] text-sm hover:text-[#E67E22] transition list-none flex items-center justify-between">{f.q}<svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg></summary>
+              <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{f.a}</div>
+            </details>
+          ))}
+        </div>
       </section>
 
-      {/* Featured Listing CTA — secondary, bottom-of-page */}
-      <section className="px-4 pb-12">
-        <div className="max-w-5xl mx-auto rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 p-6 md:p-8 text-white shadow-lg">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 font-[Cabin]">&#11088; Already own a shop? Get Featured.</h2>
-              <p className="text-white/90 text-sm md:text-base">
-                Priority placement, photos, customer messages, and monthly performance reports &mdash; $49.95/mo. Cancel anytime.
-              </p>
-            </div>
-            <a href="https://buy.stripe.com/cNieVd9I96K3de9dDCcZa00" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-amber-600 px-6 py-3 rounded-lg font-bold whitespace-nowrap hover:bg-gray-50 transition shadow-md">
-              Get Featured &rarr;
-            </a>
-          </div>
+      {/* Final CTA */}
+      <section className="py-14 px-4 text-center" style={{ backgroundImage: "radial-gradient(circle at 50% 100%, rgba(230,126,34,0.06) 0%, transparent 50%)" }}>
+        <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mb-6">Ready to grow your shop?</h2>
+        <div className="flex gap-3 justify-center flex-wrap">
+          <a href={STRIPE_FEATURED} target="_blank" rel="noopener noreferrer" className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg transition shadow-sm">
+            &#11088; Get Featured &rarr;
+          </a>
+          <a href={CLETUS_SIGNUP} target="_blank" rel="noopener noreferrer" className="bg-[#2C3E50] hover:bg-[#1A2332] text-white font-bold px-6 py-3 rounded-lg transition shadow-sm">
+            Try CLETUS Free &rarr;
+          </a>
         </div>
+        <p className="text-gray-400 text-xs mt-6">Questions? <a href="mailto:hello@globalaibots.com" className="text-[#E67E22] hover:underline">hello@globalaibots.com</a></p>
       </section>
     </div>
   );
