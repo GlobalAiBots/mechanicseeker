@@ -6,6 +6,7 @@ import FeaturedArticle from "@/components/FeaturedArticle";
 import KSPProductStrip from "@/components/KSPProductStrip";
 import cityPagesData from "@/data/city-pages.json";
 import { getRelatedBlog } from "@/lib/related-blogs";
+import { detectChain } from "@/lib/chain-detection";
 import type { Metadata } from "next";
 
 const allCities = (cityPagesData as { state: string; stateSlug: string; city: string; citySlug: string; count: number }[]);
@@ -48,10 +49,11 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
   if (/\b[56](:00)?\s*am\b|opens?\s*at\s*[56]/.test(hoursLower)) hoursTags.push("Early open");
   if (/\b(9|10|11)\s*pm\b|late/.test(hoursLower)) hoursTags.push("Late hours");
 
-  // One-line blurb that varies by brand presence. Independent shops get
-  // location-flavored copy; chain shops get network-flavored copy.
-  const brandBlurb = shop.brand
-    ? `${shop.name} is part of the ${shop.brand} nationwide auto repair network, serving ${shop.city || stateName} with brand-standard service protocols and warranty coverage.`
+  // Detect chain affiliation from name + brand (brand field is often blank even
+  // for obvious chains). One-line blurb varies by chain vs independent.
+  const detectedChain = detectChain(shop);
+  const brandBlurb = detectedChain
+    ? `${shop.name} is part of the ${detectedChain} nationwide auto repair network, serving ${shop.city || stateName} with brand-standard service protocols and warranty coverage.`
     : `${shop.name} is a locally-owned independent auto repair shop serving ${shop.city || stateName} and the surrounding area${shop.services.length >= 3 ? ` — specializing in ${shop.services.slice(0, 3).map(s => (serviceLabels[s]?.label || s.replace(/_/g, " ")).toLowerCase()).join(", ")}` : ""}.`;
 
   const jsonLd = {
@@ -87,11 +89,14 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
             <h1 className="font-[Cabin] text-3xl md:text-4xl font-bold text-[#1A1A1A]">{shop.name}</h1>
             <p className="text-gray-500 mt-1">{shop.address ? `${shop.address}, ` : ""}{shop.city ? `${shop.city}, ` : ""}{stateName}{shop.zip ? ` ${shop.zip}` : ""}</p>
           </div>
-          {shop.brand ? (
-            <span className="bg-[#E67E22]/10 text-[#E67E22] text-xs font-bold px-3 py-1 rounded-full">{shop.brand}</span>
-          ) : (
-            <span className="bg-gray-100 text-gray-500 text-xs font-bold px-3 py-1 rounded-full">Independent Shop</span>
-          )}
+          {(() => {
+            const chain = detectChain(shop);
+            return chain ? (
+              <span className="bg-[#E67E22]/10 text-[#E67E22] text-xs font-bold px-3 py-1 rounded-full">{chain}</span>
+            ) : (
+              <span className="bg-gray-100 text-gray-500 text-xs font-bold px-3 py-1 rounded-full">Independent Shop</span>
+            );
+          })()}
         </div>
 
         {/* Contact */}
