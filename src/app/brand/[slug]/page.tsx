@@ -1,18 +1,31 @@
-"use client";
-
-import { use, useMemo } from "react";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import brandsData from "@/data/brands.json";
+import type { Metadata } from "next";
 
 interface BrandState { code: string; name: string; slug: string; count: number; }
 interface Brand { slug: string; title: string; brandName: string; description: string; totalCount: number; states: BrandState[]; }
 const brands = brandsData as Brand[];
 
-export default function BrandPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
-  const brand = useMemo(() => brands.find(b => b.slug === slug), [slug]);
+export function generateStaticParams() {
+  return brands.map((b) => ({ slug: b.slug }));
+}
 
-  if (!brand) return <div className="max-w-2xl mx-auto px-4 py-20 text-center"><h1 className="font-[Cabin] text-3xl font-bold text-[#1A1A1A] mb-4">Brand Not Found</h1><Link href="/" className="text-[#E67E22] hover:underline">Back to Home</Link></div>;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const brand = brands.find((b) => b.slug === slug);
+  if (!brand) return { title: "Brand Not Found" };
+  return {
+    title: `${brand.brandName} Locations in America | MechanicSeeker`,
+    description: brand.description,
+    alternates: { canonical: `https://www.mechanicseeker.com/brand/${brand.slug}` },
+  };
+}
+
+export default async function BrandPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const brand = brands.find((b) => b.slug === slug);
+  if (!brand) notFound();
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
