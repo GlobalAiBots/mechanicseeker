@@ -29,6 +29,7 @@ function Nav() {
           <Link href="/map" className="text-gray-500 hover:text-[#2C3E50] transition">Map</Link>
           <Link href="/compare" className="text-gray-500 hover:text-[#2C3E50] transition hidden md:block">Compare</Link>
           <Link href="/truck-upgrades" className="text-gray-500 hover:text-[#2C3E50] transition hidden md:block">Truck Upgrades</Link>
+          <Link href="/classic-restoration" className="text-gray-500 hover:text-[#2C3E50] transition hidden md:block">Classic Restoration</Link>
           <Link href="/blog" className="text-gray-500 hover:text-[#2C3E50] transition hidden sm:block">Blog</Link>
           <Link href="/about" className="text-gray-500 hover:text-[#2C3E50] transition hidden sm:block">About</Link>
           <Link href="/for-businesses" className="text-[#E67E22] font-bold hover:text-[#d35400] transition hidden sm:block">For Businesses</Link>
