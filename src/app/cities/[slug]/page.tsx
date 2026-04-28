@@ -1,71 +1,47 @@
-"use client";
-
-import { use, useState, useMemo } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { unified } from "@/data/all-mechanics";
 import cityPages from "@/data/city-pages.json";
 import FeaturedArticle from "@/components/FeaturedArticle";
 import { detectChain } from "@/lib/chain-detection";
-
-const ShopMap = dynamic(() => import("@/components/ShopMap"), { ssr: false, loading: () => <div className="rounded-xl bg-gray-100 flex items-center justify-center" style={{ height: 350 }}><p className="text-gray-400 text-sm">Loading map...</p></div> });
+import CityClientView from "./CityClientView";
 
 interface CityPage { state: string; stateName: string; stateSlug: string; city: string; citySlug: string; count: number; lat: number; lng: number; }
 const allCityPages = cityPages as CityPage[];
 
-export default function CityPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
+export const dynamicParams = true;
+
+export default async function CityPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const cityInfo = allCityPages.find((c) => `${c.stateSlug}-${c.citySlug}` === slug);
+  if (!cityInfo) notFound();
 
-  const shops = useMemo(() => {
-    if (!cityInfo) return [];
-    return unified.filter((s) => s.state === cityInfo.state && s.city?.trim() === cityInfo.city);
-  }, [cityInfo]);
+  const shops = unified.filter((s) => s.state === cityInfo.state && s.city?.trim() === cityInfo.city);
 
-  // Aggregate shopType values across shops in this city (dynamic per city).
-  const typeCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
-    for (const s of shops) if (s.shopType) counts[s.shopType] = (counts[s.shopType] || 0) + 1;
-    return Object.entries(counts).sort((a, b) => b[1] - a[1]);
-  }, [shops]);
+  const typeCountsRecord: Record<string, number> = {};
+  for (const s of shops) if (s.shopType) typeCountsRecord[s.shopType] = (typeCountsRecord[s.shopType] || 0) + 1;
+  const typeCounts = Object.entries(typeCountsRecord).sort((a, b) => b[1] - a[1]);
 
-  // Aggregate detected chains operating in this city.
-  const cityChains = useMemo(() => {
-    const counts: Record<string, number> = {};
-    for (const s of shops) {
-      const c = detectChain(s);
-      if (c) counts[c] = (counts[c] || 0) + 1;
-    }
-    return Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8);
-  }, [shops]);
-
-  const independentCount = useMemo(() => shops.filter(s => !detectChain(s)).length, [shops]);
-
-  const mapShops = useMemo(() => shops.map(s => ({ id: s.id, name: s.name, lat: s.lat, lng: s.lng, city: s.city })), [shops]);
-  const center = useMemo<[number, number]>(() => shops.length ? [shops.reduce((s, sh) => s + sh.lat, 0) / shops.length, shops.reduce((s, sh) => s + sh.lng, 0) / shops.length] : [39.8, -98.5], [shops]);
-
-  const [search, setSearch] = useState("");
-  const filtered = search.length >= 2
-    ? shops.filter((s) => s.name.toLowerCase().includes(search.toLowerCase()))
-    : shops;
-
-  const nearbyCities = useMemo(() => {
-    if (!cityInfo) return [];
-    return allCityPages
-      .filter((c) => c !== cityInfo)
-      .map((c) => ({ ...c, dist: Math.sqrt(Math.pow(c.lat - cityInfo.lat, 2) + Math.pow(c.lng - cityInfo.lng, 2)) }))
-      .sort((a, b) => a.dist - b.dist)
-      .slice(0, 5);
-  }, [cityInfo]);
-
-  if (!cityInfo) {
-    return (
-      <div className="max-w-2xl mx-auto px-4 py-20 text-center">
-        <h1 className="font-[Cabin] text-3xl font-bold text-[#1A1A1A] mb-4">City Not Found</h1>
-        <Link href="/" className="text-[#E67E22] hover:underline">Back to Home</Link>
-      </div>
-    );
+  const chainCountsRecord: Record<string, number> = {};
+  for (const s of shops) {
+    const c = detectChain(s);
+    if (c) chainCountsRecord[c] = (chainCountsRecord[c] || 0) + 1;
   }
+  const cityChains = Object.entries(chainCountsRecord).sort((a, b) => b[1] - a[1]).slice(0, 8);
+
+  const independentCount = shops.filter(s => !detectChain(s)).length;
+
+  const center: [number, number] = shops.length
+    ? [shops.reduce((s, sh) => s + sh.lat, 0) / shops.length, shops.reduce((s, sh) => s + sh.lng, 0) / shops.length]
+    : [39.8, -98.5];
+
+  const nearbyCities = allCityPages
+    .filter((c) => c !== cityInfo)
+    .map((c) => ({ ...c, dist: Math.sqrt(Math.pow(c.lat - cityInfo.lat, 2) + Math.pow(c.lng - cityInfo.lng, 2)) }))
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, 5);
+
+  const clientShops = shops.map(s => ({ id: s.id, name: s.name, lat: s.lat, lng: s.lng, city: s.city, state: s.state, brand: s.brand }));
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
@@ -88,22 +64,7 @@ export default function CityPage({ params }: { params: Promise<{ slug: string }>
       <h1 className="font-[Cabin] text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-2">Auto Repair Shops in {cityInfo.city}, {cityInfo.stateName}</h1>
       <p className="text-gray-500 mb-6">{shops.length} auto repair shop{shops.length !== 1 ? "s" : ""} in {cityInfo.city}, {cityInfo.stateName}. Mechanics, tire shops, body shops, and more.</p>
 
-      {shops.length > 5 && (
-        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search shops in this city..." className="w-full max-w-md px-4 py-2.5 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#E67E22] transition mb-6" />
-      )}
-
-      {shops.length > 0 && <div className="mb-8"><ShopMap shops={mapShops} center={center} zoom={12} height="350px" /></div>}
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-12">
-        {filtered.slice(0, 100).map((s) => (
-          <Link key={s.id} href={`/shops/${s.id}`} className="group bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md hover:-translate-y-0.5 transition-all">
-            <h3 className="font-[Cabin] font-bold text-[#1A1A1A] group-hover:text-[#E67E22] transition">{s.name}</h3>
-            <p className="text-gray-500 text-sm mt-1">{s.city}, {s.state}</p>
-            {s.brand && <span className="inline-block mt-1 text-xs bg-[#E67E22]/10 text-[#E67E22] px-2 py-0.5 rounded">{s.brand}</span>}
-            <span className="text-sm font-semibold text-[#E67E22] mt-2 inline-block">View Details &rarr;</span>
-          </Link>
-        ))}
-      </div>
+      <CityClientView shops={clientShops} center={center} />
 
       {/* About — dynamic per city */}
       <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6">
