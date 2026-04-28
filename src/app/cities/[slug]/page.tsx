@@ -74,8 +74,9 @@ export default function CityPage({ params }: { params: Promise<{ slug: string }>
         mainEntity: [
           { "@type": "Question", name: `How many auto repair shops are in ${cityInfo.city}, ${cityInfo.stateName}?`, acceptedAnswer: { "@type": "Answer", text: `${cityInfo.city} has ${shops.length} auto repair shop${shops.length !== 1 ? "s" : ""} listed on MechanicSeeker${cityChains.length > 0 ? ` — ${independentCount} independent and ${shops.length - independentCount} national-chain location${shops.length - independentCount !== 1 ? "s" : ""}` : ""}.` } },
           { "@type": "Question", name: `What national chains have shops in ${cityInfo.city}?`, acceptedAnswer: { "@type": "Answer", text: cityChains.length > 0 ? `${cityChains.slice(0, 6).map(([c, n]) => `${c} (${n})`).join(", ")}.` : `${cityInfo.city} has only independent auto repair shops listed.` } },
-          { "@type": "Question", name: `How much does an oil change cost in ${cityInfo.city}?`, acceptedAnswer: { "@type": "Answer", text: `Oil change prices in ${cityInfo.city} typically run $30-$50 for conventional and $65-$125 for full synthetic.` } },
+          { "@type": "Question", name: `How much does an oil change cost in ${cityInfo.city}?`, acceptedAnswer: { "@type": "Answer", text: `Oil change prices in ${cityInfo.city} typically run $30-$50 for conventional and $65-$125 for full synthetic. Chains tend toward the lower end; dealer service centers run higher.` } },
           { "@type": "Question", name: `What types of auto repair shops are in ${cityInfo.city}?`, acceptedAnswer: { "@type": "Answer", text: typeCounts.length > 0 ? typeCounts.map(([t, c]) => `${c} ${t.replace(/_/g, " ")}${c !== 1 ? "s" : ""}`).join(", ") + "." : "Contact individual shops for details." } },
+          { "@type": "Question", name: `How do I find a good mechanic in ${cityInfo.city}?`, acceptedAnswer: { "@type": "Answer", text: `Browse the ${shops.length} shop${shops.length !== 1 ? "s" : ""} on MechanicSeeker, look for ASE-certified technicians, read reviews, and get written estimates from 2-3 shops before authorizing major repairs. MechanicSeeker is free to use — no account required.` } },
         ],
       }) }} />
       <nav className="text-sm text-gray-400 mb-6 flex flex-wrap gap-2">
@@ -108,10 +109,10 @@ export default function CityPage({ params }: { params: Promise<{ slug: string }>
       <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6">
         <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-3">About Auto Repair in {cityInfo.city}, {cityInfo.stateName}</h2>
         <p className="text-gray-600 leading-relaxed text-sm">
-          {cityInfo.city} has <strong className="text-[#1A1A1A]">{shops.length} auto repair shop{shops.length !== 1 ? "s" : ""}</strong> listed on MechanicSeeker
+          {cityInfo.city}, {cityInfo.stateName} has <strong className="text-[#1A1A1A]">{shops.length} auto repair shop{shops.length !== 1 ? "s" : ""}</strong> listed on MechanicSeeker
           {cityChains.length > 0 && independentCount > 0 ? ` — a mix of ${independentCount} independent shop${independentCount !== 1 ? "s" : ""} and ${shops.length - independentCount} national-chain location${shops.length - independentCount !== 1 ? "s" : ""}` : ""}
           {cityChains.length === 0 && independentCount > 0 ? ` — all locally-owned independent shops` : ""}
-          . Every listing includes address, phone, services, and turn-by-turn directions. Click any shop card below to see full details.
+          . Whether you need a quick oil change, a brake job, transmission work, a state inspection, or full collision repair, the shops below serve {cityInfo.city} drivers with verified addresses, phone numbers, services offered, and turn-by-turn directions. Independents tend to specialize and price competitively on labor; chains offer consistent pricing and nationwide warranty coverage. Always get a written estimate before authorizing repairs over $200, and look for ASE-certified technicians as the baseline industry credential.
         </p>
       </div>
 
@@ -150,12 +151,13 @@ export default function CityPage({ params }: { params: Promise<{ slug: string }>
 
       {/* What to know — generic tips stay but framed as "How to pick" not "in this city" */}
       <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 mb-6">
-        <h3 className="font-[Cabin] font-bold text-[#E67E22] mb-3">How to Pick the Right Shop</h3>
+        <h3 className="font-[Cabin] font-bold text-[#E67E22] mb-3">How to Pick the Right Shop in {cityInfo.city}</h3>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Get a written estimate before authorizing any repair over $200.</li>
+          <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Get a written estimate before authorizing any repair over $200 &mdash; <Link href={`/${cityInfo.stateSlug}`} className="text-[#E67E22] hover:underline">see {cityInfo.stateName} repair guide</Link>.</li>
           <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Ask about warranty coverage on parts and labor before work begins.</li>
           <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Look for ASE-certified technicians &mdash; the baseline industry credential.</li>
           <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> For the same job, get a quote from one chain and one independent to compare.</li>
+          <li className="flex items-start gap-2"><span className="text-[#E67E22] mt-0.5">&#10003;</span> Confirm whether the shop honors your manufacturer warranty &mdash; especially for vehicles still under powertrain coverage.</li>
         </ul>
       </div>
 
