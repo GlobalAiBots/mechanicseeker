@@ -1,6 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { KSP_LINKS, KSP_COUPON_CODE, KSP_DISCLOSURE, KSP_BANNERS } from "@/lib/ksp-affiliate";
+import AffiliateInlineLink from "@/components/affiliate/AffiliateInlineLink";
+import { CJ_PONY_PARTS } from "@/data/affiliates/cjponyparts";
+
+const POST_SLUG = "truck-upgrades-hub";
 
 export const metadata: Metadata = {
   title: "Truck & SUV Performance Upgrades — Parts Guide (2026) | MechanicSeeker",
@@ -342,6 +346,37 @@ export default function TruckUpgradesHub() {
               </p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Classic Bronco cross-promo — subtle bridge to /classic-restoration */}
+      <section className="mb-16">
+        <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-[#fff8ef] to-white p-6 md:p-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3 font-[Cabin]">
+            Restoring an Older Bronco?
+          </h2>
+          <p className="text-gray-700 leading-relaxed max-w-3xl">
+            The picks above target modern truck and SUV builds. If you&rsquo;re
+            working on a classic Bronco &mdash; first-generation restoration or
+            modern Bronco rebuild &mdash;{" "}
+            <AffiliateInlineLink
+              partner={CJ_PONY_PARTS}
+              linkKey="bronco"
+              postSlug={POST_SLUG}
+            >
+              CJ Pony Parts
+            </AffiliateInlineLink>{" "}
+            carries a dedicated Bronco catalog covering both eras, often filling
+            gaps that broader auto parts retailers can&rsquo;t. For shop
+            selection, our{" "}
+            <Link
+              href="/classic-restoration"
+              className="text-[#E67E22] hover:text-[#d35400] hover:underline font-semibold transition"
+            >
+              classic restoration directory
+            </Link>{" "}
+            covers 248+ specialty restoration shops by state.
+          </p>
         </div>
       </section>
 
