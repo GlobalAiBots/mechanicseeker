@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { unified, stateList } from "@/data/all-mechanics";
+import cityPages from "@/data/city-pages.json";
 import NearMeButton from "@/components/NearMeButton";
 import CletusAd from "@/components/CletusAd";
 import GearRecommendation from "@/components/GearRecommendation";
@@ -25,6 +26,13 @@ export default function Home() {
   const [expanded, setExpanded] = useState(false);
   const visibleStates = useMemo(() => statesWithCounts.filter(s => s.count > 0), [statesWithCounts]);
   const showToggle = visibleStates.length > 15;
+
+  const topCities = useMemo(() => {
+    return [...(cityPages as Array<{ city: string; citySlug: string; count: number; stateSlug: string; stateName: string; state: string }>)]
+      .filter(c => c.count >= 5)
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 6);
+  }, []);
 
   const suggestions = useMemo(() => {
     if (query.length < 2) return [];
@@ -175,6 +183,31 @@ export default function Home() {
           </div>
         )}
       </section>
+
+      {/* POPULAR CITIES */}
+      {topCities.length > 0 && (
+        <section className="py-10" style={{ background: 'linear-gradient(135deg, #FFF7ED 0%, #F8FAFB 100%)' }}>
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A]">Popular Auto Repair Cities</h2>
+                <p className="text-gray-400 text-sm">Cities with the most auto repair shops on MechanicSeeker.</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {topCities.map((c) => (
+                <Link key={`${c.stateSlug}-${c.citySlug}`} href={`/cities/${c.stateSlug}-${c.citySlug}`} className="group bg-white rounded-xl p-4 hover:shadow-md hover:-translate-y-0.5 transition-all border-l-4 border-l-[#E67E22]" style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+                  <h3 className="font-[Cabin] font-bold text-[#1A1A1A] group-hover:text-[#E67E22] transition text-sm">{c.city}</h3>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-xs font-semibold bg-[#E67E22]/10 text-[#E67E22] px-2 py-0.5 rounded">{c.count.toLocaleString()} shops</span>
+                    <span className="text-gray-400 text-xs">&middot; {c.stateName}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* WHY */}
       <section className="max-w-5xl mx-auto px-4 py-10">
