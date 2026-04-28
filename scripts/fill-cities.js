@@ -10,16 +10,33 @@ const STATE_ABBREVS = {"alabama":"AL","alaska":"AK","arizona":"AZ","arkansas":"A
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-async function geocode(lat, lon) {
+function parseArgs(argv) {
+  const args = { batch: Infinity, resume: true };
+  for (const a of argv.slice(2)) {
+    const m = a.match(/^--batch=(\d+)$/);
+    if (m) args.batch = parseInt(m[1], 10);
+    else if (a === "--resume") args.resume = true;
+  }
+  return args;
+}
+
+// Sentinel thrown to abort the main loop when the daily quota is exhausted
+// or a sustained-failure pattern indicates the API is unhealthy.
+class QuotaExhausted extends Error {}
+
+async function geocode(lat, lon, retries = 1) {
   const url = `${API_URL}?key=${API_KEY}&lat=${lat}&lon=${lon}&format=json`;
   const res = await fetch(url);
   if (res.status === 429) {
-    console.log("    Rate limited, waiting 60s...");
+    if (retries <= 0) throw new QuotaExhausted("HTTP 429 — daily quota exhausted");
+    console.log("    Rate limited, waiting 60s and retrying once...");
     await sleep(60000);
-    return geocode(lat, lon);
+    return geocode(lat, lon, retries - 1);
   }
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
+  // Quota-exceeded responses sometimes return 200 OK with an `error` field instead of `address`.
+  if (data.error) throw new QuotaExhausted(`API error: ${data.error}`);
   if (!data.address) return null;
   const a = data.address;
   const st = STATE_ABBREVS[(a.state || "").toLowerCase()] || "";
@@ -28,31 +45,62 @@ async function geocode(lat, lon) {
 }
 
 async function main() {
+  const args = parseArgs(process.argv);
   const shops = JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
   const need = shops.filter(s => !s.state && s.lat && s.lng);
-  console.log(`Total: ${shops.length}, Need geocoding: ${need.length}`);
+  const cap = Math.min(args.batch, need.length);
+  console.log(`Total: ${shops.length}, Remaining ungeocoded: ${need.length}, Batch cap: ${args.batch === Infinity ? "none" : args.batch}, Will process: ${cap}`);
 
-  let done = 0, fail = 0;
-  for (let i = 0; i < need.length; i++) {
-    try {
-      const r = await geocode(need[i].lat, need[i].lng);
-      if (r && r.state) {
-        need[i].state = r.state;
-        if (!need[i].city && r.city) need[i].city = r.city;
-        done++;
-      } else { fail++; }
-    } catch (e) { fail++; }
+  // Bail out if we see a sustained-failure pattern: the API may return 200 OK
+  // with empty/unhelpful payloads under quota exhaustion, which would otherwise
+  // burn through the whole batch with done=0.
+  const SUSTAINED_FAIL_THRESHOLD = 50;
 
-    if ((i + 1) % 200 === 0) {
-      fs.writeFileSync(DATA_FILE, JSON.stringify(shops));
-      console.log(`  ${i + 1}/${need.length} — done: ${done}, fail: ${fail}`);
+  let done = 0, fail = 0, consecutiveFail = 0, quotaHit = false, sustainedFailHit = false;
+  try {
+    for (let i = 0; i < cap; i++) {
+      try {
+        const r = await geocode(need[i].lat, need[i].lng);
+        if (r && r.state) {
+          need[i].state = r.state;
+          if (!need[i].city && r.city) need[i].city = r.city;
+          done++;
+          consecutiveFail = 0;
+        } else {
+          fail++;
+          consecutiveFail++;
+        }
+      } catch (e) {
+        if (e instanceof QuotaExhausted) { quotaHit = true; throw e; }
+        fail++;
+        consecutiveFail++;
+      }
+
+      if (consecutiveFail >= SUSTAINED_FAIL_THRESHOLD && done === 0) {
+        sustainedFailHit = true;
+        throw new QuotaExhausted(`${consecutiveFail} consecutive failures with 0 successes — likely quota exhausted`);
+      }
+
+      if ((i + 1) % 200 === 0) {
+        fs.writeFileSync(DATA_FILE, JSON.stringify(shops));
+        console.log(`  ${i + 1}/${cap} — done: ${done}, fail: ${fail}`);
+      }
+      await sleep(RATE_MS);
     }
-    await sleep(RATE_MS);
+  } catch (e) {
+    if (!(e instanceof QuotaExhausted)) throw e;
   }
 
   fs.writeFileSync(DATA_FILE, JSON.stringify(shops));
-  console.log(`\nFINISHED: ${done} geocoded, ${fail} failed`);
+  if (sustainedFailHit) {
+    console.log(`\nQUOTA EXHAUSTED (sustained-failure pattern) — saved progress and exited cleanly. ${done} geocoded, ${fail} failed in this run.`);
+  } else if (quotaHit) {
+    console.log(`\nQUOTA EXHAUSTED — saved progress and exited cleanly. ${done} geocoded, ${fail} failed in this run.`);
+  } else {
+    console.log(`\nFINISHED: ${done} geocoded, ${fail} failed`);
+  }
   console.log(`Total with state: ${shops.filter(s => s.state).length}/${shops.length}`);
+  if (quotaHit) process.exit(2);
 }
 
-main().catch(console.error);
+main().catch((e) => { console.error(e); process.exit(1); });
