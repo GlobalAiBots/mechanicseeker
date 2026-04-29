@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import StatesDropdown from "@/components/StatesDropdown";
+import Nav from "@/components/Nav";
 import CletusWidget from "@/components/CletusWidget";
 import "./globals.css";
 
@@ -14,30 +14,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.mechanicseeker.com" },
   other: { "google-adsense-account": "ca-pub-4822220549367368", "impact-site-verification": "5e24b07b-ec3d-4add-8aaf-3b4f2f385422" },
 };
-
-function Nav() {
-  return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
-      <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg font-[Cabin]">
-          <span className="text-2xl">{"🔧"}</span>
-          <span className="text-[#1A1A1A]">Mechanic<span className="text-[#E67E22]">Seeker</span></span>
-        </Link>
-        <div className="flex items-center gap-4 sm:gap-6 text-sm font-medium">
-          <StatesDropdown />
-          <Link href="/search" className="text-gray-500 hover:text-[#2C3E50] transition"><svg className="w-4 h-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg></Link>
-          <Link href="/map" className="text-gray-500 hover:text-[#2C3E50] transition">Map</Link>
-          <Link href="/compare" className="text-gray-500 hover:text-[#2C3E50] transition hidden md:block">Compare</Link>
-          <Link href="/truck-upgrades" className="text-gray-500 hover:text-[#2C3E50] transition hidden md:block">Truck Upgrades</Link>
-          <Link href="/classic-restoration" className="text-gray-500 hover:text-[#2C3E50] transition hidden md:block">Classic Restoration</Link>
-          <Link href="/blog" className="text-gray-500 hover:text-[#2C3E50] transition hidden sm:block">Blog</Link>
-          <Link href="/about" className="text-gray-500 hover:text-[#2C3E50] transition hidden sm:block">About</Link>
-          <Link href="/for-businesses" className="text-[#E67E22] font-bold hover:text-[#d35400] transition hidden sm:block">For Businesses</Link>
-        </div>
-      </div>
-    </nav>
-  );
-}
 
 function Footer() {
   return (
