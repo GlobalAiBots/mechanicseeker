@@ -53,12 +53,32 @@ export default function Home() {
     return counts;
   }, []);
 
+  const faqItems = [
+    { q: "How much should a diagnostic fee cost?", a: "Most shops charge $80-150 for diagnostic work, often waived if you authorize the recommended repair. Free diagnostics are common at chain stores for basic OBD-II code reads but rarely cover deep drivability or electrical issues. Always confirm fee policy upfront." },
+    { q: "What does ASE certification mean and does it matter?", a: "ASE (Automotive Service Excellence) certification means a mechanic passed independent industry tests. ASE Master certification requires passing all 8 specialty exams. It's a meaningful signal of competence — though not a guarantee, it filters out the least qualified shops." },
+    { q: "Should I go to a chain shop or an independent mechanic?", a: "Chains are best for predictable, warrantied routine work (oil changes, brakes, tires). Independents typically offer better value on complex repairs and have more accountability. Dealerships are best for warranty work and proprietary diagnostics." },
+    { q: "How do I know if a quoted repair is fair?", a: "Get at least two written estimates. Use RepairPal or your vehicle manufacturer's published labor times to verify hours quoted. Parts pricing should roughly match RockAuto or O'Reilly retail. Significant deviations on either side warrant questions." },
+    { q: "Is MechanicSeeker free to use?", a: "Yes, completely free. No login, no account, no paid tier. We're funded by display advertising and listing partnerships. Find your shop and go." },
+  ];
+
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "WebSite", name: "MechanicSeeker", url: "https://www.mechanicseeker.com",
         description: `Find auto repair shops across America. ${unified.length.toLocaleString()}+ shops.`,
         potentialAction: { "@type": "SearchAction", target: "https://www.mechanicseeker.com/?q={search_term_string}", "query-input": "required name=search_term_string" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "Article",
+        headline: "How to Find an Honest Auto Repair Shop: The Complete Guide",
+        description: "Practical guide to vetting auto repair shops — independent vs. chain vs. dealership, diagnostic fees, ASE certification, reading reviews critically, and questions to ask before authorizing repair.",
+        author: { "@type": "Organization", name: "MechanicSeeker Editorial", url: "https://www.mechanicseeker.com" },
+        publisher: { "@type": "Organization", name: "MechanicSeeker", url: "https://www.mechanicseeker.com" },
+        datePublished: "2026-04-29",
+        dateModified: "2026-04-29",
+        mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.mechanicseeker.com" },
+        articleSection: "Auto Repair",
+        keywords: ["how to find an honest mechanic", "ASE certification", "diagnostic fee", "independent vs dealership", "auto repair estimate", "OEM vs aftermarket parts", "labor warranty"],
       }) }} />
 
       {/* HERO */}
@@ -161,6 +181,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ARTICLE HEADER */}
+      <article id="mechanic-guide" className="max-w-3xl mx-auto px-4 pt-12 pb-8">
+        <h1 className="font-[Cabin] text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 leading-tight">How to Find an Honest Auto Repair Shop: The Complete Guide</h1>
+        <div className="text-gray-700 leading-relaxed space-y-5">
+          <p>The difference between a $400 brake job and a $1,200 brake job at the next shop down the street isn&apos;t always craftsmanship &mdash; it&apos;s often pricing transparency, parts sourcing, and whether the shop owner needs to make rent this month. Finding an honest mechanic is one of the highest-leverage skills a car owner can build. The right shop saves you thousands over the life of your car, catches problems early, and tells you when a repair isn&apos;t worth doing on a vehicle nearing the end of its life. The wrong shop charges you for diagnostics that should be free, replaces parts that didn&apos;t need replacing, and quietly damages your relationship with your car.</p>
+          <p>MechanicSeeker indexes auto repair shops across the U.S., from independent specialty shops to chain service centers, transmission specialists, body shops, and dealership service departments. We track ASE certification status where available, customer review patterns across multiple platforms, specialization areas, and the data points that separate trustworthy shops from the ones that show up high in search ads but disappoint at the counter.</p>
+          <p>Below is MechanicSeeker&apos;s directory of repair shops organized by state. Continue reading below the directory for the complete guide to vetting a shop before you bring your car in, understanding what diagnostic fees should and shouldn&apos;t cost, the difference between ASE-certified mechanics and dealership-trained technicians, and the questions every car owner should ask before authorizing a repair.</p>
+        </div>
+      </article>
+
       {/* BROWSE BY STATE */}
       <section id="browse-states" className="max-w-5xl mx-auto px-4 pt-14 pb-8">
         <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mb-6">Browse by State</h2>
@@ -183,6 +213,45 @@ export default function Home() {
           </div>
         )}
       </section>
+
+      {/* ARTICLE CONTINUATION */}
+      <article className="max-w-3xl mx-auto px-4 py-12">
+        <div className="border-t border-[#E67E22]/30 pt-6 mb-8">
+          <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold font-[Cabin]">Complete Guide Continues</p>
+        </div>
+        <div className="text-gray-700 leading-relaxed space-y-5">
+
+          <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mt-2 mb-3">Why Choosing the Right Shop Matters</h2>
+          <p>A trustworthy mechanic compounds in value over years. The first visit is a transaction &mdash; they fix what&apos;s broken and charge a fair price. The third visit is the start of a relationship: they remember your car, they catch a developing issue early, they recommend the cheaper repair when there&apos;s a choice. By the tenth visit, they&apos;re saving you thousands a year by not replacing parts that don&apos;t need replacing and by warning you when a repair on a 200,000-mile car isn&apos;t worth doing.</p>
+          <p>The wrong shop does the opposite. They quote you for parts and labor that aren&apos;t justified by the actual problem, recommend &quot;while we were in there&quot; work that wasn&apos;t in the original estimate, and over time, they erode your confidence in every dashboard light. A bad shop costs much more than the markup on any single repair &mdash; they cost the relationship between you and your car. Owners with a good mechanic drive their cars longer and spend less per year on maintenance. Owners with a bad mechanic replace their cars sooner and complain more.</p>
+
+          <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mt-10 mb-3">Independent vs. Chain vs. Dealership: What Each Is Best At</h2>
+          <p>Independent shops are usually the best value on routine repairs and maintenance. Owner-operator accountability is real &mdash; the mechanic at the counter is often the same person who&apos;ll work on your car. Independents specialize: a German-car-only shop will know BMW and Audi repairs cold; a Toyota and Honda specialist will spot Camry transmission issues a generalist would miss. Hourly labor rates are typically $20-40 lower than dealerships. The trade-off is variability &mdash; quality across independents ranges from excellent to shady, and you have to vet them yourself.</p>
+          <p>Chain shops (Firestone, Pep Boys, Midas, Jiffy Lube) offer predictable hours, consistent warranty coverage across locations, and standardized service procedures. They&apos;re best for routine high-volume work &mdash; oil changes, brakes, tires, batteries &mdash; where consistency matters more than specialization. The downside is upselling pressure and limited capability on complex drivability or electrical issues.</p>
+          <p>Dealerships are best for warranty work (always free), recall service (always free), proprietary diagnostics on newer vehicles, and certain specialty repairs (timing chains on direct-injection engines, transmission rebuilds, ECU programming). Hourly rates are the highest in the market &mdash; typically $150-200 per hour &mdash; but the depth of brand-specific training and parts access justifies it for the right jobs.</p>
+
+          <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mt-10 mb-3">Understanding Diagnostic Fees and Estimate Practices</h2>
+          <p>A diagnostic fee covers the time a technician spends finding the problem, not just reading codes. Most shops charge $80-150 for proper drivability or electrical diagnosis. Many waive the fee if you authorize the recommended repair &mdash; confirm this upfront. Free diagnostics at chain stores typically mean an OBD-II code read, which is the starting point of diagnosis, not the answer. A check-engine light with a P0420 code (catalyst efficiency) needs investigation beyond the code itself; the code points to a system, not a specific failed part.</p>
+          <p>Always get a written estimate before authorizing repair. Verbal &quot;ballpark&quot; numbers are not enforceable, and any reputable shop will provide written estimates as standard practice. A proper estimate itemizes parts (with brand and price), labor hours (with the labor time guide reference), and labor rate. If a shop refuses to itemize, walk.</p>
+          <p>Authorize work in stages on larger jobs. The original quote covers what&apos;s been diagnosed so far; if the technician finds additional issues mid-job, they should call before doing extra work. &quot;While we had it apart&quot; charges added without authorization are a red flag &mdash; and in most states, technically not enforceable on the customer.</p>
+
+          <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mt-10 mb-3">ASE Certification, Manufacturer Training, and What Credentials Mean</h2>
+          <p>ASE (Automotive Service Excellence) is an independent testing organization. ASE-Certified means a mechanic passed at least one specialty exam. ASE-Master-Certified means they passed all eight exams covering engine repair, automatic transmission, manual drivetrain, suspension, brakes, electrical, heating/AC, and engine performance. Master certification is meaningful; it filters out mechanics who haven&apos;t bothered to test their fundamentals. It&apos;s not a guarantee of integrity or skill, but it&apos;s a useful baseline.</p>
+          <p>Manufacturer training (Toyota, Ford, BMW, GM, etc.) is brand-specific expertise. A mechanic with current Toyota factory training will know hybrid system diagnostics that a generalist won&apos;t. Manufacturer-trained techs typically work at dealerships or at independents that have invested in OEM tooling. Look for posted certifications on the shop wall &mdash; legitimate ones are typically displayed prominently.</p>
+          <p>AAA-Approved Auto Repair is a third-party quality vetting program. AAA inspects the shop, verifies certifications, and requires customer-satisfaction standards. It&apos;s a useful tiebreaker when comparing two otherwise similar shops. RepairPal Certified is a similar program with broader coverage. Look for at least one of these credentials, especially for shops you haven&apos;t used before.</p>
+
+          <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mt-10 mb-3">Reading Reviews Critically: What Patterns to Look For</h2>
+          <p>One-star reviews tell you what a shop is bad at. Five-star reviews tell you what they&apos;re good at. The middle reviews &mdash; three and four stars &mdash; usually have the most useful information because they&apos;re written by customers who had a mixed experience and explain why.</p>
+          <p>Look for patterns across multiple reviews. A single one-star review describing rude treatment is one customer&apos;s experience. Five reviews over six months describing the same rudeness from the same staff member is a pattern. Same with hidden charges, misdiagnoses, or pressure tactics &mdash; patterns are signal, isolated complaints are noise.</p>
+          <p>Watch how the shop responds to negative reviews. A defensive or hostile response is a red flag &mdash; defensive shop owners tend to be defensive customers face-to-face too. A constructive response that acknowledges the issue and offers a specific remedy (&quot;please call us at the shop and ask for Dave so we can address this&quot;) is a positive signal. Generic &quot;please contact us so we can fix it&quot; responses that never actually address the issue are review-bait &mdash; they exist to dilute the negative review&apos;s prominence, not to fix the problem. Recent reviews (last 6-12 months) are more relevant than older ones.</p>
+
+          <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mt-10 mb-3">Questions to Ask Before Authorizing a Repair</h2>
+          <p>Get specific before you sign the work order. The questions below take a minute to ask and prevent most repair-shop disputes:</p>
+          <p>What exactly is broken, and what&apos;s the failure mode? A good shop can explain the symptom and the cause in plain language. &quot;Your alternator is putting out 11.8 volts under load instead of the spec&apos;d 13.8 &mdash; the regulator is failing&quot; is a real answer. &quot;Your alternator is bad&quot; is a partial answer that should prompt a follow-up question.</p>
+          <p>What parts brand are you using? OEM parts, aftermarket parts, and used parts have very different price points and warranties. OEM (made by the original manufacturer) is the highest cost but matches factory spec. Aftermarket from quality brands (Bosch, Denso, Moog) is typically 30-60% cheaper and works well for most repairs. Used parts on older vehicles can save significant money but come with limited or no warranty.</p>
+          <p>What&apos;s the labor warranty? 12 months / 12,000 miles is the industry standard for most repairs. Anything shorter on a major job (transmission, engine, electrical) is worth questioning. What does this fix not address that I should know about? Honest shops will tell you about adjacent issues they noticed but didn&apos;t include in the quoted repair. Will you call before any additional repairs? Should be a quick &quot;yes&quot; &mdash; if it&apos;s not, find another shop.</p>
+        </div>
+      </article>
 
       {/* POPULAR CITIES */}
       {topCities.length > 0 && (
@@ -282,23 +351,11 @@ export default function Home() {
       <section className="max-w-4xl mx-auto px-4 py-10">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "FAQPage",
-          mainEntity: [
-            { "@type": "Question", name: "How many auto repair shops does MechanicSeeker list?", acceptedAnswer: { "@type": "Answer", text: `MechanicSeeker lists ${unified.length.toLocaleString()}+ auto repair shops across all 50 states, including general repair, tire shops, body shops, quick lube, and transmission specialists.` } },
-            { "@type": "Question", name: "Is MechanicSeeker free?", acceptedAnswer: { "@type": "Answer", text: "Yes, completely free. No login, no account, no fees. Just find your mechanic and go." } },
-            { "@type": "Question", name: "How do I find a mechanic near me?", acceptedAnswer: { "@type": "Answer", text: "Click the 'Find Shops Near Me' button on the homepage. MechanicSeeker will use your location to show the closest auto repair shops sorted by distance." } },
-            { "@type": "Question", name: "Can I search by service type?", acceptedAnswer: { "@type": "Answer", text: "Yes. Browse by category including General Repair, Tire Shops, Body Shops, Quick Lube, and Transmission Shops. You can also search by brand like Jiffy Lube, Midas, or Firestone." } },
-            { "@type": "Question", name: "How do I claim my shop listing?", acceptedAnswer: { "@type": "Answer", text: "If you own an auto repair shop, visit our Claim page to update your hours, services, and contact information for free." } },
-          ],
+          mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
         }) }} />
         <h2 className="font-[Cabin] text-2xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
         <div className="space-y-2">
-          {[
-            { q: `How many auto repair shops does MechanicSeeker list?`, a: `MechanicSeeker lists ${unified.length.toLocaleString()}+ auto repair shops across all 50 states, including general repair, tire shops, body shops, quick lube, and transmission specialists.` },
-            { q: "Is MechanicSeeker free?", a: "Yes, completely free. No login, no account, no fees. Just find your mechanic and go." },
-            { q: "How do I find a mechanic near me?", a: "Click the \"Find Shops Near Me\" button on the homepage. MechanicSeeker will use your location to show the closest auto repair shops sorted by distance." },
-            { q: "Can I search by service type?", a: "Yes. Browse by category including General Repair, Tire Shops, Body Shops, Quick Lube, and Transmission Shops. You can also search by brand like Jiffy Lube, Midas, or Firestone." },
-            { q: "How do I claim my shop listing?", a: "If you own an auto repair shop, visit our Claim page to update your hours, services, and contact information for free." },
-          ].map((f, i) => (
+          {faqItems.map((f, i) => (
             <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
               <summary className="px-5 py-4 cursor-pointer font-semibold text-[#1A1A1A] text-sm hover:text-[#E67E22] transition list-none flex items-center justify-between">{f.q}<svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg></summary>
               <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{f.a}</div>
