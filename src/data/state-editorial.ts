@@ -258,6 +258,76 @@ export const STATE_EDITORIAL: Record<string, StateEditorial> = {
         a: "Independent shop labor rates in New York vary dramatically by region. NYC and Long Island: $130-220 per hour at independents, $180-280 at dealerships. Westchester and lower Hudson Valley: $120-180 at independents, $160-240 at dealerships. Upstate metros (Buffalo, Rochester, Syracuse, Albany): $90-140 at independents, $130-190 at dealerships. Rural upstate counties: $75-115 at independents, often the lowest rates in the state."
       }
     ]
+  },
+  "north-carolina": {
+    introOverride:
+      "North Carolina has 1,534 auto repair shops spanning the I-85/I-95 corridors connecting Charlotte, Raleigh-Durham, Greensboro, and Wilmington, the country's largest furniture and textile manufacturing legacy that built deep independent shop networks, and a regulatory environment that requires combined safety-and-emissions inspection in 19 counties. Whether you need a Toyota or Honda specialist in the Research Triangle, a diesel mechanic for a Charlotte-area logistics fleet, a hurricane-recovery body shop on the coast, or a 4WD shop for the Blue Ridge mountain communities, the directory below shows shops with verified addresses, ratings, and service categories.",
+    h2Blocks: [
+      {
+        heading: "North Carolina's Auto Repair Landscape",
+        body:
+          "North Carolina runs one of the fastest-growing auto repair markets in the Southeast, anchored by the Charlotte and Raleigh-Durham metros plus the Triad (Greensboro, Winston-Salem, High Point) along the I-40/I-85 corridor. The shop ecosystem reflects the state's manufacturing past and tech-corridor present: independent shops dominate the post-warranty market with deep talent pools in the Triad and Charlotte areas, while strong dealership networks line the major freeway corridors. Charlotte's role as a banking and logistics hub drives heavy commercial-fleet repair demand. The Research Triangle's tech corridor produces a market hungry for European specialists and EV service capacity in Raleigh, Cary, and Durham. Coastal North Carolina (Wilmington, Outer Banks, Morehead City) hosts hurricane-recovery body and frame work as a major industry. Western North Carolina (Asheville, Boone, the Blue Ridge corridor) supports a different shop mix — 4WD specialists, Subaru and outdoor-vehicle independents, plus hand-restoration and classic-car shops in the Asheville scene. Heavy-duty diesel work concentrates along I-40 and I-85, with major truck-stop service centers in Greensboro, Statesville, and Raleigh."
+      },
+      {
+        heading: "NC Inspection, Lemon Law, and Hurricane Season",
+        body:
+          "Three North Carolina-specific factors drive the repair market. Annual safety inspection is required statewide; emissions inspection is required in 19 counties (Alamance, Buncombe, Cabarrus, Cumberland, Davidson, Durham, Forsyth, Franklin, Gaston, Guilford, Iredell, Johnston, Lincoln, Mecklenburg, New Hanover, Onslow, Orange, Randolph, Rockingham, Rowan, Union, Wake) covering the major metros. Vehicles 1996 model year and newer with under 70,000 miles get OBD-II testing; older vehicles in covered counties get visual emissions checks. Failed inspections drive significant work in the Charlotte and Triangle metros. North Carolina's Lemon Law (the New Motor Vehicles Warranties Act) covers new vehicles for 24 months or 24,000 miles with a manufacturer's repurchase or replacement obligation if the vehicle has substantial defects unable to be fixed in four or more attempts (or out of service for 20+ business days cumulative). Hurricane season (June through November) reshapes coastal shop demand annually — Hurricanes Florence (2018), Matthew (2016), and others have generated multi-month body shop and frame backlogs. Coastal shops carry experience handling salt-water flood damage that inland shops typically don't."
+      },
+      {
+        heading: "Regional Patterns Across the State",
+        body:
+          "North Carolina's geography creates four distinct service markets. Charlotte and the Metrolina region (Mecklenburg, Cabarrus, Gaston, Union, York County SC bleed-over): largest metro market, highest labor rates ($110-170 at independents, $140-220 at dealerships), heavy commercial-fleet repair from logistics and banking presence, robust dealership clusters along I-77 and I-485. Research Triangle and the Triad (Wake, Durham, Orange, Guilford, Forsyth): tech-corridor commuter market, heavy import specialist density (Toyota, Honda, BMW, Mercedes), strong independent shop ecosystem, growing EV service capacity. Coastal North Carolina (Wilmington, Jacksonville, Morehead City, Outer Banks): hurricane-recovery body work as core industry, military presence at Camp Lejeune drives steady fleet and pre-deployment repair demand, salt-air corrosion shapes routine maintenance patterns. Western and mountain North Carolina (Asheville, Boone, Hendersonville, the Blue Ridge corridor): 4WD and Subaru specialist density, longer drive distances between shops, classic-car restoration scene in Asheville, ski-season demand spike December through March. The shop directory above includes coverage across all four zones."
+      }
+    ],
+    faqExtra: [
+      {
+        q: "Where in North Carolina is emissions inspection required?",
+        a: "Emissions inspection is required in 19 NC counties: Alamance, Buncombe, Cabarrus, Cumberland, Davidson, Durham, Forsyth, Franklin, Gaston, Guilford, Iredell, Johnston, Lincoln, Mecklenburg, New Hanover, Onslow, Orange, Randolph, Rockingham, Rowan, Union, and Wake. These cover Charlotte metro, Research Triangle, the Triad, Wilmington, Fayetteville, and Asheville. Vehicles 1996+ with under 70,000 miles get OBD-II testing. Outside these counties, only annual safety inspection is required."
+      },
+      {
+        q: "How does North Carolina's Lemon Law work?",
+        a: "North Carolina's New Motor Vehicles Warranties Act covers new vehicles for 24 months or 24,000 miles. If a substantial defect can't be repaired after four or more attempts (or one attempt for serious safety defects), or the vehicle is out of service for 20+ cumulative business days, the manufacturer must repurchase or replace the vehicle. Owners must give the manufacturer written notice and a final opportunity to repair before pursuing the claim. The NC Department of Justice handles complaints."
+      },
+      {
+        q: "What's the typical labor rate at a North Carolina auto repair shop?",
+        a: "Independent shop labor rates in North Carolina typically run $90-150 per hour in Charlotte and Research Triangle metros, $80-130 in the Triad and Wilmington, $70-115 in smaller cities and rural counties. Dealerships run $130-200 per hour, with luxury and import dealerships at the top. Asheville and the mountain region run roughly equal to the Triad. Diesel and heavy-duty truck shops charge premium rates ($120-180/hr)."
+      }
+    ]
+  },
+  illinois: {
+    introOverride:
+      "Illinois has 1,449 auto repair shops spanning the densest urban repair market in the Midwest (Chicago and Cook County), the I-55/I-57/I-80 freight corridors that move a quarter of the country's goods, the Mississippi and Illinois River downstate metros, and a road-salt program that destroys frames, brake lines, and exhaust systems on a predictable cycle. Whether you need a Chicago import specialist in Lincoln Park, a body shop near O'Hare for rental fleet damage, a diesel mechanic on the Joliet truck-corridor, or a rust-repair specialist in Peoria or Rockford, the directory below shows shops with verified addresses, ratings, and service categories.",
+    h2Blocks: [
+      {
+        heading: "Illinois's Auto Repair Landscape",
+        body:
+          "Illinois has the most freight-and-fleet-heavy repair market in the Midwest, anchored by Chicago metro (Cook, DuPage, Lake, Will, Kane, McHenry counties) but extending across one of the country's densest interstate networks. Chicago and the surrounding suburbs hold roughly 65% of the state's vehicle registrations and the highest dealership density in the Midwest, particularly along the Eisenhower (I-290), Edens (I-94), Stevenson (I-55), and Tri-State Tollway corridors. Independent shops dominate the post-warranty market in every part of the state, with strong specialist scenes in Chicago's North Side and West Loop neighborhoods (European, Japanese, EV-specific) and dense suburban independent coverage across DuPage and Lake counties. Heavy-duty diesel and commercial truck repair is a major Illinois industry — Joliet, Bolingbrook, and the I-80/I-55 junction host one of the country's largest concentrations of truck-stop and fleet-service shops. Downstate metros (Springfield, Peoria, Rockford, Champaign-Urbana, Bloomington-Normal, Quad Cities) each anchor independent regional repair markets with manufacturing and agricultural roots. Salvage-and-rebuilt-title work concentrates near Copart and IAA auction hubs in the Chicago metro."
+      },
+      {
+        heading: "Illinois Emissions, Lemon Law, and Road Salt",
+        body:
+          "Three Illinois-specific factors drive the repair market. Emissions inspection is required in the Chicago metro (Cook, DuPage, Kane, Kendall, Lake, McHenry, Will counties) and the Metro-East (Madison, Monroe, St. Clair counties) for vehicles four to 25 model years old. Vehicles 1996+ get OBD-II testing every two years at registration renewal; pre-1996 vehicles get tailpipe testing. Failed emissions tests drive significant repair work in covered counties; the rest of the state has no emissions inspection requirement. Illinois's Lemon Law (New Vehicle Buyer Protection Act) covers new vehicles for 12 months or 12,000 miles with a manufacturer's repurchase or replacement obligation if the vehicle has substantial defects unable to be fixed in four or more attempts (or out of service for 30+ business days cumulative). Road salt is the dominant climate factor: Illinois salts roads aggressively November through March across the entire state, with Chicago metro using calcium chloride and brine treatments that accelerate corrosion on brake lines, fuel lines, exhaust systems, and frames. Illinois shops, particularly in northern counties, are deeply experienced in rust repair and corrosion-driven brake-line work."
+      },
+      {
+        heading: "Regional Patterns Across the State",
+        body:
+          "Illinois's geography creates four distinct service markets. Chicago and the inner suburbs (Cook, near suburbs of DuPage and Lake): highest labor rates ($120-200 at independents, $160-260 at dealerships), heavy luxury and EV specialist scene, dense urban-driving body work demand, robust commercial-fleet service for rideshare, taxi, and food-delivery vehicles. Outer suburbs and exurbs (DuPage, Lake, Kane, McHenry, Will): suburban-market demand, dealership clusters along I-355 and I-90, strong independent and chain coverage. Joliet/Bolingbrook truck corridor and the I-80/I-55 junction: one of the country's largest commercial-truck repair markets, heavy diesel demand, fleet service for Amazon, FedEx, UPS, and major LTL carriers. Downstate metros (Springfield, Peoria, Rockford, Champaign-Urbana, Bloomington-Normal, Quad Cities): each supports its own independent shop ecosystem with manufacturing and agricultural roots. Rural southern and central Illinois: longer drive distances, more independents handling broader service ranges including farm-equipment and small-engine work. The shop directory above includes coverage across all four zones."
+      }
+    ],
+    faqExtra: [
+      {
+        q: "Where in Illinois is emissions inspection required?",
+        a: "Emissions inspection is required in two Illinois regions: Chicago metro (Cook, DuPage, Kane, Kendall, Lake, McHenry, Will counties) and Metro-East (Madison, Monroe, St. Clair counties). Vehicles four to 25 model years old must pass emissions testing every two years at registration renewal. Vehicles 1996+ get OBD-II testing; pre-1996 get tailpipe testing. Outside these counties, no emissions testing is required for vehicle registration."
+      },
+      {
+        q: "How does Illinois's Lemon Law work?",
+        a: "Illinois's New Vehicle Buyer Protection Act covers new vehicles for 12 months or 12,000 miles. If a substantial defect can't be repaired after four or more attempts (or one attempt for serious safety defects), or the vehicle is out of service for 30+ cumulative business days, the manufacturer must repurchase or replace the vehicle. Owners must provide written notice and a final repair opportunity. The Illinois Attorney General handles complaints; manufacturer arbitration is the typical first step."
+      },
+      {
+        q: "What's the typical labor rate at an Illinois auto repair shop?",
+        a: "Independent shop labor rates in Illinois vary dramatically by region. Chicago and inner suburbs: $120-200 per hour at independents, $160-260 at dealerships, with luxury and EV specialists at the top. Outer suburbs (DuPage, Lake, Kane, Will): $100-160 at independents, $140-220 at dealerships. Downstate metros (Springfield, Peoria, Rockford, Champaign): $80-130 at independents, $120-180 at dealerships. Rural counties: $70-110 at independents, often the lowest rates in the state."
+      }
+    ]
   }
 };
 
