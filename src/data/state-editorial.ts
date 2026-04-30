@@ -118,6 +118,76 @@ export const STATE_EDITORIAL: Record<string, StateEditorial> = {
         a: "Pennsylvania inspection rejects vehicles for structural rust on the frame, body mounts, sub-frame, or rocker panels — anywhere that affects vehicle integrity. Surface rust on body panels alone doesn't fail inspection. Rusted brake lines and rusted-through exhaust components are common rejection reasons. Many PA shops specialize in rust repair specifically because of how often inspections require it."
       }
     ]
+  },
+  washington: {
+    introOverride:
+      "Washington has 2,197 auto repair shops spanning Seattle's tech-corridor commute, the cross-Cascade weather divide, the Pacific Northwest's highest EV adoption rate per capita, and a regulatory environment shaped by some of the country's most stringent emissions standards. Whether you need a Subaru specialist on the rainy west side, a diesel mechanic for an east-side ranch truck, a Tesla service center in Bellevue, or a 4WD shop for Cascade ski commuter rigs, the directory below shows shops with verified addresses, ratings, and service categories.",
+    h2Blocks: [
+      {
+        heading: "Washington's Auto Repair Landscape",
+        body:
+          "Washington runs one of the most EV-skewed and weather-divided repair markets in the country. Tesla, Rivian, Lucid, and traditional brands' EV lines collectively make up over 25% of new vehicle sales statewide — the highest rate of any state outside California — and the service ecosystem reflects that with Tesla Service Centers in Bellevue, Seattle, Tukwila, and Spokane, plus growing dealership EV-service capacity along the I-5 and I-405 corridors. Subaru is the unofficial state vehicle: AWD demand from rain, mountain passes, and outdoor culture drives Subaru specialist density that's higher per capita than almost anywhere in the country, with shops clustered in Seattle, Bellevue, Tacoma, and the Cascade foothills. Independent shops dominate the post-warranty market, especially in West Seattle, Capitol Hill, Ballard, and the Eastside — these neighborhoods support specialty European, Japanese, and EV-focused independents in unusual concentration. East of the Cascades, the market shifts: heavy-duty diesel and pickup truck work in the Tri-Cities and Spokane Valley, agricultural-vehicle service throughout the Yakima and Walla Walla regions, and longer drive distances between shops in the rural counties."
+      },
+      {
+        heading: "Emissions Tests, Lemon Law, and Cascade Weather",
+        body:
+          "Three Washington-specific factors drive the repair market. Washington discontinued its statewide emissions testing program at the end of 2019, but the state still runs the country's most aggressive Clean Vehicle policy — the Advanced Clean Cars II rule requires that 100% of new passenger vehicles sold in Washington be zero-emission by 2035, which has shifted dealership investment heavily toward EV service infrastructure. Washington's Lemon Law (RCW 19.118) covers new vehicles for two years or 24,000 miles with a manufacturer's repurchase or replacement obligation if the vehicle has substantial defects unable to be fixed after a reasonable number of attempts — broader than most states' lemon laws. Cascade weather is the dominant climate factor: heavy rain accelerates rust on brake rotors, suspension components, and exhaust systems on the west side, while east-side temperature swings and winter sanding (rather than salting) on mountain passes drive different wear patterns. Studded tires are legal November through March; many shops handle tire-changeover seasonally."
+      },
+      {
+        heading: "Regional Patterns Across the State",
+        body:
+          "Washington's geography creates four distinct service markets divided by the Cascades. Seattle and Eastside (King and Snohomish counties): highest labor rates ($130-200 at independents, $160-230 at dealerships), heaviest EV penetration, strong specialist scenes for Subaru, Tesla, and European imports. Tacoma, Pierce County, and South Sound: military presence at Joint Base Lewis-McChord drives steady fleet, pre-deployment, and used-truck repair demand; lower labor rates than Seattle metro. Spokane and east-side metros: cross-state commercial market into Idaho and Montana, heavy diesel and pickup work, less EV penetration, more chain-shop coverage. Rural eastern Washington and the Olympic Peninsula: longer drive distances, agricultural and forestry vehicle work, fewer dealerships, more independents handling broader service ranges. The shop directory above includes coverage across all four zones."
+      }
+    ],
+    faqExtra: [
+      {
+        q: "Does Washington still require emissions testing?",
+        a: "No. Washington discontinued its statewide emissions testing program at the end of 2019. Vehicles registered in Washington no longer need an emissions test for registration. However, vehicles imported from other states with active emissions programs may still need to clear those states' programs before transferring registration. Washington's Clean Vehicle policy still influences which vehicles qualify for state EV rebates and HOV lane access."
+      },
+      {
+        q: "What's the typical labor rate at a Washington auto repair shop?",
+        a: "Independent shop labor rates in Washington typically run $110-180 per hour in Seattle metro, $90-140 in Spokane and east-side metros, $90-130 in smaller cities. Dealerships run $150-230 per hour, with luxury and EV-focused dealerships at the top of that range. Subaru specialists in Seattle metro often charge $130-180 per hour given specialized AWD diagnostic tooling."
+      },
+      {
+        q: "How does Washington's Lemon Law work?",
+        a: "Washington's Lemon Law (RCW 19.118) covers new vehicles for two years or 24,000 miles. If a substantial defect can't be repaired after a reasonable number of attempts (typically four or more for the same defect, or the vehicle is out of service for 30+ days cumulative), the manufacturer must repurchase or replace the vehicle. The law is administered through the Washington Attorney General's office; arbitration is the standard first step before a lawsuit."
+      }
+    ]
+  },
+  arizona: {
+    introOverride:
+      "Arizona has 1,934 auto repair shops spanning the Phoenix and Tucson metros, the country's largest snowbird population, and a desert climate that punishes batteries, cooling systems, tires, and paint at rates higher than any other state. Whether you need a battery and AC specialist in July, a lifted-truck builder in Mesa or Prescott, an RV mechanic for a winter-Texan rig, or a hail-damage body shop after a monsoon storm, the directory below shows shops with verified addresses, ratings, and service categories.",
+    h2Blocks: [
+      {
+        heading: "Arizona's Auto Repair Landscape",
+        body:
+          "Arizona has the most heat-driven and seasonal-fleet repair market in the country. Phoenix metro (Maricopa County) holds 60% of the state's vehicle registrations, with Tucson and the surrounding Pima County market a distant second. The shop ecosystem reflects two distinct customer bases: year-round Arizonans driving heat-aged commuter cars and trucks, and the seasonal snowbird population (estimated 300,000+ winter residents) bringing RVs, towed-behind vehicles, and second cars from cold-weather states. Independent shops dominate the post-warranty market in both metros, with strong dealership presence along the Loop 101, US-60, and I-10 corridors. Lifted truck and off-road builders cluster in Mesa, Gilbert, and the Prescott area — Arizona's off-road culture is among the strongest in the West. RV service is a major industry: Quartzsite, Yuma, and the I-10 corridor host RV-specialist shops that work on Class A motorhomes, fifth-wheels, and travel trailers at scale, especially November through March. Salvage and rebuilt-title work concentrates near major auction hubs (Copart, IAA) in Phoenix metro."
+      },
+      {
+        heading: "Heat, Monsoons, and Emissions Inspection",
+        body:
+          "Three Arizona-specific factors drive the repair market. Desert heat shortens battery life dramatically — typical battery replacement frequency in Phoenix runs every 2-3 years vs. the 4-5 year national average, and cooling system, AC compressor, hose, belt, and tire compound failures all spike from May through September. Most Phoenix shops keep extended hours during summer months specifically to handle the seasonal surge. Monsoon storms (July through September) bring sudden hail, flooding, and dust storms that drive insurance claim spikes for body work, water-damage diagnostics, and air-intake replacements. Emissions inspection is required in Maricopa and Pima counties for vehicles 1967 model year and newer (with some exemptions for newer vehicles). The test is required at registration renewal — every two years for newer vehicles, annually for older ones — and failed tests drive significant diagnostic and repair work. Outside Maricopa and Pima counties, no emissions testing is required, which keeps rural Arizona's repair market focused on mechanical rather than emissions work."
+      },
+      {
+        heading: "Regional Patterns Across the State",
+        body:
+          "Arizona's geography creates three distinct service markets. Phoenix metro (Maricopa County): largest market, highest labor rates ($110-170 at independents, $140-210 at dealerships), heavy seasonal fleet from snowbirds, robust dealership and chain coverage along all major freeway corridors. Tucson and Pima County: second-largest market, slightly lower labor rates ($90-150 at independents), University of Arizona presence drives a strong used-import service market and a robust independent shop scene around Speedway and Broadway. Northern Arizona and rim country (Flagstaff, Prescott, Sedona): mountain elevation creates cold-weather wear patterns unlike the rest of the state, fewer dealerships, more 4WD specialists for the surrounding Coconino and Yavapai county terrain, ski-season demand spike December through March. Yuma and the Colorado River corridor: highest concentration of RV-specialist shops, large seasonal snowbird flux, agricultural vehicle work in the surrounding Yuma County. The shop directory above includes coverage across all three zones."
+      }
+    ],
+    faqExtra: [
+      {
+        q: "How often do Arizona car batteries need replacement?",
+        a: "In Phoenix metro, expect to replace your battery every 2-3 years — desert heat dramatically shortens battery life. Tucson runs slightly better at 3-4 years. Northern Arizona (Flagstaff, Prescott) sees more typical 4-5 year battery life. Most Arizona shops carry heat-rated AGM batteries specifically for the Phoenix market. Have batteries load-tested annually starting at year two if you're in the Valley."
+      },
+      {
+        q: "Where in Arizona is emissions inspection required?",
+        a: "Arizona requires emissions inspection only in Maricopa County (Phoenix metro) and Pima County (Tucson area). Vehicles 1967 model year and newer must pass emissions testing at registration renewal — every two years for newer vehicles, annually for older ones. Some newer vehicles (typically those under five model years old) are exempt. Outside these two counties, no emissions inspection is required."
+      },
+      {
+        q: "When is monsoon season and how does it affect auto repair in Arizona?",
+        a: "Monsoon season runs roughly June 15 through September 30, peaking in July and August. Major monsoon storms generate hail damage, flash-flood water damage, and dust-storm air-intake clogging. After significant storms, body shops in Phoenix and Tucson often have 2-4 week backlogs. Wash undercarriage thoroughly after dust-storm exposure to prevent corrosion in the limited rainfall that follows."
+      }
+    ]
   }
 };
 
