@@ -328,6 +328,41 @@ export const STATE_EDITORIAL: Record<string, StateEditorial> = {
         a: "Independent shop labor rates in Illinois vary dramatically by region. Chicago and inner suburbs: $120-200 per hour at independents, $160-260 at dealerships, with luxury and EV specialists at the top. Outer suburbs (DuPage, Lake, Kane, Will): $100-160 at independents, $140-220 at dealerships. Downstate metros (Springfield, Peoria, Rockford, Champaign): $80-130 at independents, $120-180 at dealerships. Rural counties: $70-110 at independents, often the lowest rates in the state."
       }
     ]
+  },
+  colorado: {
+    introOverride:
+      "Colorado has 1,367 auto repair shops spanning the Front Range corridor that holds 80% of the state's population from Fort Collins to Pueblo, the country's most ski-and-outdoor-driven vehicle culture, an emissions program that's one of the strictest in the West, and high-altitude conditions that punish brakes, transmissions, and cooling systems unlike anywhere else. Whether you need a Subaru specialist in Boulder, a 4WD shop for Rocky Mountain trail access, a diesel mechanic for a Western Slope ranch truck, or a transmission specialist who understands altitude-derate, the directory below shows shops with verified addresses, ratings, and service categories.",
+    h2Blocks: [
+      {
+        heading: "Colorado's Auto Repair Landscape",
+        body:
+          "Colorado runs one of the most outdoor-and-altitude-driven repair markets in the country. The Front Range — Denver metro, Boulder, Fort Collins, Colorado Springs, Pueblo — holds roughly 80% of the state's vehicle registrations, with the rest scattered across the Western Slope (Grand Junction, Durango, Steamboat Springs, Aspen) and the eastern plains. The shop ecosystem reflects the state's identity: Subaru is the unofficial state vehicle and specialist density per capita is among the highest in the country, particularly in Boulder, Denver, and Fort Collins. Lifted-truck and 4WD builders cluster across the Front Range, especially in Castle Rock, Colorado Springs, and Loveland, supporting Colorado's deep off-road and overlanding culture. EV adoption is high — Tesla, Rivian, and other brands' EV lines all have growing service capacity in Denver metro. Independent shops dominate the post-warranty market, with strong dealership presence along I-25 from Fort Collins to Pueblo and along I-70 west of Denver. Heavy-duty diesel work concentrates around Greeley (oil-and-gas field service), the I-70 corridor (mountain freight), and the Western Slope ranching counties. Salvage-and-rebuilt-title shops cluster near Denver auction hubs."
+      },
+      {
+        heading: "Altitude, Emissions, and Mountain Weather",
+        body:
+          "Three Colorado-specific factors drive the repair market. Altitude affects every vehicle's mechanical performance: engines lose roughly 3% of horsepower per 1,000 feet of elevation gain, transmissions work harder on long climbs, brake systems heat dramatically on long descents (think I-70 west of Denver), and turbocharged vehicles run noticeably better than naturally aspirated ones. Front Range shops at 5,000-7,000 feet, mountain shops at 8,000-10,000 feet, and Western Slope shops in the 4,500-6,500 foot range all see different wear patterns and need to be diagnostic-tuned for the elevation. Emissions inspection is required in the Denver-Boulder metro AIR program area (Adams, Arapahoe, Boulder, Broomfield, Denver, Douglas, Jefferson counties, plus parts of Larimer and Weld) for vehicles seven model years old and newer at registration renewal — every two years. Vehicles 1982 and newer in the program area get OBD-II testing or tailpipe testing depending on age. Failed emissions tests drive significant repair work in the Front Range. Mountain weather is the dominant climate factor: Front Range chinook winds, mountain-pass snow, hail along the eastern plains, and rapid temperature swings all create distinct repair patterns. Hail Alley — eastern Colorado — is one of the most active hail regions in the country, generating major body-shop demand annually."
+      },
+      {
+        heading: "Regional Patterns Across the State",
+        body:
+          "Colorado's geography creates four distinct service markets. Denver metro and the Front Range corridor (Adams, Arapahoe, Boulder, Broomfield, Denver, Douglas, Jefferson, Larimer, Weld counties): largest market, highest labor rates ($110-180 at independents, $140-220 at dealerships), heaviest EV penetration, robust Subaru and 4WD specialist ecosystem, dense dealership coverage along I-25 and C-470. Colorado Springs and Pueblo: military-driven service market (Fort Carson, Peterson, Schriever, USAFA), slightly lower labor rates than Denver, strong chain and dealership coverage along I-25. Western Slope (Grand Junction, Durango, Glenwood Springs, Aspen, Steamboat): mountain-altitude wear patterns, ski-season demand spike November through April, longer drive distances between shops, more 4WD specialists for surrounding terrain. Eastern plains and northeastern Colorado (Greeley, Sterling, Fort Morgan, Limon): oil-and-gas field service drives heavy diesel demand, agricultural vehicle work, hail-belt body shops, fewer dealerships. The shop directory above includes coverage across all four zones."
+      }
+    ],
+    faqExtra: [
+      {
+        q: "Where in Colorado is emissions inspection required?",
+        a: "Emissions inspection is required in the Denver-Boulder metro AIR program area: Adams, Arapahoe, Boulder, Broomfield, Denver, Douglas, and Jefferson counties, plus parts of Larimer and Weld counties. Vehicles seven model years old and newer must pass emissions testing every two years at registration renewal. Vehicles 1982 and newer get OBD-II or tailpipe testing depending on age. Outside the AIR program area, no emissions inspection is required for vehicle registration."
+      },
+      {
+        q: "How does Colorado altitude affect my car?",
+        a: "Naturally aspirated engines lose roughly 3% of horsepower per 1,000 feet of elevation gain — at 8,000 feet, your engine is producing about 24% less power than at sea level. Turbocharged engines compensate much better. Brakes overheat on long descents like I-70 west of Denver; transmission fluid runs hotter on long climbs. Cooling systems and brake fluid should be in top condition before mountain trips. Many Colorado shops carry altitude-specific diagnostic experience that flatland shops don't."
+      },
+      {
+        q: "What's the typical labor rate at a Colorado auto repair shop?",
+        a: "Independent shop labor rates in Colorado typically run $110-180 per hour in Denver metro and Boulder, $90-150 in Colorado Springs and Fort Collins, $90-140 on the Western Slope (with Aspen and Vail running higher due to resort-area pricing), $80-120 on the eastern plains. Dealerships run $140-220 per hour, with luxury and EV-focused dealerships at the top. Subaru and 4WD specialists in Boulder and Denver often charge $130-180 per hour given specialized AWD diagnostic tooling and altitude expertise."
+      }
+    ]
   }
 };
 
