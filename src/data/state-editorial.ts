@@ -188,6 +188,76 @@ export const STATE_EDITORIAL: Record<string, StateEditorial> = {
         a: "Monsoon season runs roughly June 15 through September 30, peaking in July and August. Major monsoon storms generate hail damage, flash-flood water damage, and dust-storm air-intake clogging. After significant storms, body shops in Phoenix and Tucson often have 2-4 week backlogs. Wash undercarriage thoroughly after dust-storm exposure to prevent corrosion in the limited rainfall that follows."
       }
     ]
+  },
+  ohio: {
+    introOverride:
+      "Ohio has 1,757 auto repair shops spanning the I-75/I-71/I-77 corridor that connects Cleveland, Columbus, Cincinnati, Akron, Dayton, and Toledo, the rust-belt manufacturing legacy that built the country's largest concentration of independent repair shops, and a road-salt program that destroys frames, brake lines, and exhaust systems on a predictable cycle. Whether you need rust repair on a 12-year-old commuter car, an inspection-shop e-check station in seven Cleveland-area counties, a diesel mechanic for a Lake Erie work truck, or a transmission specialist near one of the state's eight major auto plants, the directory below shows shops with verified addresses, ratings, and service categories.",
+    h2Blocks: [
+      {
+        heading: "Ohio's Auto Repair Landscape",
+        body:
+          "Ohio has one of the most independent-shop-dominated repair markets in the country, anchored by a manufacturing legacy that produced generations of mechanics and a vehicle fleet that skews older than the national average. Honda, Ford, Stellantis, and General Motors all operate major assembly or component plants in Ohio (Marysville, Lordstown, Toledo, Avon Lake, Lordstown), and the surrounding counties support deep dealership networks plus the supplier-mechanic talent pool that feeds independent shops statewide. Cleveland, Columbus, Cincinnati, Akron, Dayton, and Toledo each anchor distinct metro repair markets with strong dealership presence along the major freeway corridors. Independents dominate the post-warranty market, particularly in the rust belt counties where a high percentage of the fleet is 8+ years old. Chain inspection-and-tire stations (Mavis, Monro, Tuffy, Goodyear) cover routine maintenance in suburban Ohio. Heavy-duty diesel work concentrates in the trucking corridors along I-70 and I-75, with major truck-stop service centers at Toledo, Lima, Dayton, and Springfield. Ohio's salvage-and-rebuilt-title market is significant given the climate-driven write-off rate."
+      },
+      {
+        heading: "Ohio E-Check, Lemon Law, and Road Salt",
+        body:
+          "Three Ohio-specific factors drive the repair market. E-Check (Ohio's emissions inspection program) is required in seven northeast Ohio counties: Cuyahoga, Geauga, Lake, Lorain, Medina, Portage, and Summit. Vehicles four to 25 model years old must pass E-Check every two years at registration renewal — newer and older vehicles are exempt. Failed E-Checks drive significant diagnostic and repair work in the Cleveland-Akron metro. Outside those seven counties, no emissions testing is required. Ohio's Lemon Law covers new vehicles for one year or 18,000 miles with a manufacturer's repurchase or replacement obligation if the vehicle has substantial defects unable to be fixed in three or more attempts (or one attempt for serious safety defects). Road salt is the dominant climate factor: Ohio salts roads aggressively November through March across the entire state, which destroys brake lines, fuel lines, exhaust systems, frames, body mounts, and rocker panels on a predictable schedule. Ohio shops are among the most rust-experienced in the country — many independents specialize specifically in brake-line and exhaust replacement on rust-belt vehicles."
+      },
+      {
+        heading: "Regional Patterns Across the State",
+        body:
+          "Ohio's geography creates four distinct service markets along the major metro corridors. Cleveland and northeast Ohio (Cuyahoga, Lake, Geauga, Summit, Portage, Lorain, Medina): heaviest rust-belt repair demand, E-Check program drives recurring shop visits, lake-effect snow extends the salt season, strong dealership presence along I-271 and I-77. Columbus and central Ohio: largest single metro by population, fast-growing market with strong chain and dealership coverage along I-270, I-70, and I-71; Honda Marysville and Stellantis Toledo proximity drives strong factory-trained mechanic pool. Cincinnati and southwest Ohio: I-75 corridor heavy commercial truck traffic, dealership clusters along I-275, less salt damage than northern Ohio, German specialist scene in suburban Cincinnati. Toledo, Dayton, and Akron metros: each anchors its own dense independent shop ecosystem with deep manufacturing-supplier roots. Rural Appalachian Ohio (southeast quadrant): longer drive distances, fewer dealerships, more independents handling broader service ranges including small-engine and farm-equipment work. The shop directory above includes coverage across all four zones."
+      }
+    ],
+    faqExtra: [
+      {
+        q: "Where in Ohio is E-Check required?",
+        a: "E-Check is required in seven northeast Ohio counties: Cuyahoga, Geauga, Lake, Lorain, Medina, Portage, and Summit. Vehicles four to 25 model years old must pass E-Check every two years at registration renewal. Newer vehicles (under four model years) and older vehicles (over 25 model years) are exempt. Outside these seven counties, no emissions testing is required for vehicle registration in Ohio."
+      },
+      {
+        q: "How does Ohio's Lemon Law work?",
+        a: "Ohio's Lemon Law covers new vehicles for one year or 18,000 miles. If a substantial defect can't be repaired after three or more attempts (one attempt for a serious safety defect), or if the vehicle is out of service for 30+ cumulative days during the warranty period, the manufacturer must repurchase or replace the vehicle. Ohio's Attorney General office handles complaints; manufacturer arbitration is the typical first step."
+      },
+      {
+        q: "What's the typical labor rate at an Ohio auto repair shop?",
+        a: "Independent shop labor rates in Ohio typically run $90-140 per hour in metro areas, $75-110 in smaller cities and rural counties. Dealerships run $130-190 per hour, with luxury and import dealerships at the top. Cleveland, Columbus, and Cincinnati run roughly 10-15% above Akron, Dayton, Toledo, and rural rates. Diesel and heavy-duty truck shops charge premium rates ($120-180/hr)."
+      }
+    ]
+  },
+  "new-york": {
+    introOverride:
+      "New York has 1,747 auto repair shops spanning the country's most rigorous vehicle inspection program, the densest urban repair market in North America, the I-87/I-90 corridors connecting upstate metros, and a regulatory environment shaped by some of the country's strongest consumer protection laws. Whether you need a Manhattan body shop for a parking-tap repair, a Subaru specialist in the Capital District, a diesel mechanic in the Hudson Valley, or a snow-belt suspension shop near Buffalo or Rochester, the directory below shows shops with verified addresses, ratings, and service categories.",
+    h2Blocks: [
+      {
+        heading: "New York's Auto Repair Landscape",
+        body:
+          "New York has the most regulated and most geographically split auto repair market in the country. New York City — where most residents don't own cars — has a uniquely small per-capita shop count but supports specialized urban-driving repair work (constant bumper, fender, and parking-damage body work; fleet service for taxis, livery, and rideshare) at a scale unmatched anywhere else. Long Island and Westchester drive heavy suburban-market demand with strong dealership presence along the LIE, Northern State Parkway, and I-684. Upstate, the market reverts to a more typical regional pattern: Buffalo, Rochester, Syracuse, Albany, and Binghamton each anchor independent metro repair markets along the I-90 and I-87 corridors, with snow-belt geographic pressures (lake-effect snow in Buffalo and Rochester, mountain weather in the Adirondacks and Catskills) shaping wear patterns. The Hudson Valley combines tech-corridor commuter demand with rural service patterns. Independent shops dominate the post-warranty market statewide, with specialty European service concentrated in NYC, Westchester, and the Capital District, and heavy-duty diesel and farm-equipment work spread across the rural counties."
+      },
+      {
+        heading: "NY Inspection, Lemon Law, and Snow Belt",
+        body:
+          "Three New York-specific factors drive the repair market. New York runs the most rigorous annual vehicle inspection program in the country — combined safety AND emissions inspection statewide (OBD-II for 1996-and-newer vehicles, plus visual emissions checks). Vehicles fail inspection for issues that pass in most other states: minor frame rust, marginal brake-line corrosion, exhaust leaks, and even tinted-window violations. Inspection drives recurring annual shop visits across the entire vehicle fleet. New York's Lemon Law (General Business Law §198-a) is one of the strongest in the country: covers new vehicles for two years or 18,000 miles with a manufacturer's repurchase or replacement obligation, plus a separate Used Car Lemon Law that's almost unique nationally — covering used vehicles bought from dealers (90 days or 4,000 miles for vehicles under 18,000 miles at sale, declining coverage for higher-mileage vehicles). Snow belt is the dominant climate factor: Buffalo and Rochester see the country's heaviest lake-effect snow, the Adirondacks and Catskills see mountain-weather patterns, and the entire state salts roads heavily November through March. Rust repair, brake-line replacement, and undercarriage work are routine across the upstate fleet."
+      },
+      {
+        heading: "Regional Patterns Across the State",
+        body:
+          "New York's geography creates five distinct service markets. NYC (five boroughs): smallest per-capita private vehicle market in the country, but heaviest concentration of body shops, fleet services for taxis/livery/rideshare, and specialty European/luxury shops in Manhattan, Brooklyn, and Queens. Long Island (Nassau, Suffolk): suburban-market demand, highest density of shops outside NYC, dealership clusters along the LIE. Westchester and Hudson Valley: tech-corridor commuter market, German specialist scene around White Plains, Hudson River corridor independents. Capital District (Albany, Schenectady, Troy): government-fleet and tech-corridor demand, Subaru specialist density driven by Adirondack outdoor culture. Upstate metros (Buffalo, Rochester, Syracuse, Binghamton): heavy snow-belt repair demand, rust-belt manufacturing legacy supports deep independent shop ecosystem. Rural Adirondacks, Catskills, North Country, and Southern Tier: longer drive distances, more 4WD specialists, fewer dealerships, more independents handling broader service ranges. The shop directory above includes coverage across all five zones."
+      }
+    ],
+    faqExtra: [
+      {
+        q: "What does New York vehicle inspection check?",
+        a: "New York requires annual safety and emissions inspection statewide. Safety checks include brakes (lines, calipers, rotors, pads), suspension and steering, lighting and electrical, exhaust system integrity, tires, frame and structural rust, seatbelts, and window tint compliance. Emissions inspection uses OBD-II testing for 1996-and-newer vehicles plus visual emissions component checks. The combined inspection sticker must be displayed and current; expired stickers are a primary traffic citation."
+      },
+      {
+        q: "Does New York have a used car lemon law?",
+        a: "Yes — New York is one of few states with a Used Car Lemon Law (General Business Law §198-b). Covers used vehicles bought from a dealer with substantial defects in covered systems. Coverage period depends on mileage at sale: 90 days or 4,000 miles for vehicles under 18,000 miles, scaling down for higher-mileage vehicles, with no coverage for vehicles over 100,000 miles or older than eight years. Private-party sales are not covered."
+      },
+      {
+        q: "What's the typical labor rate at a New York auto repair shop?",
+        a: "Independent shop labor rates in New York vary dramatically by region. NYC and Long Island: $130-220 per hour at independents, $180-280 at dealerships. Westchester and lower Hudson Valley: $120-180 at independents, $160-240 at dealerships. Upstate metros (Buffalo, Rochester, Syracuse, Albany): $90-140 at independents, $130-190 at dealerships. Rural upstate counties: $75-115 at independents, often the lowest rates in the state."
+      }
+    ]
   }
 };
 
