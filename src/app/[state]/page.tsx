@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { unified, stateList } from "@/data/all-mechanics";
 import { getStateRepairInfo } from "@/data/state-repair-info";
+import { getStateEditorial } from "@/data/state-editorial";
 import FeaturedArticle from "@/components/FeaturedArticle";
 import precomputedCities from "@/data/state-cities-prefiltered.json";
 import stateShopTotals from "@/data/state-shop-totals.json";
@@ -25,6 +26,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   const shops = unified.filter((s) => s.state === stateInfo.code);
 
   const repairInfo = getStateRepairInfo(stateInfo.code);
+  const editorial = getStateEditorial(state);
 
   // State-agnostic FAQs always render. State-specific ones are appended only when
   // we have real researched data for this state; otherwise the page is truthful
@@ -46,7 +48,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
       ]
     : [];
 
-  const faqs = [...stateFaqs, ...baseFaqs];
+  const faqs = [...stateFaqs, ...baseFaqs, ...(editorial?.faqExtra || [])];
 
   return (
     <div>
@@ -54,6 +56,20 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         "@context": "https://schema.org", "@type": "FAQPage",
         mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
       }) }} />
+      {editorial && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: `Auto Repair in ${stateInfo.name}: The Complete Guide`,
+          description: editorial.introOverride,
+          datePublished: "2026-04-29",
+          dateModified: "2026-04-29",
+          author: { "@type": "Organization", name: "MechanicSeeker Editorial" },
+          publisher: { "@type": "Organization", name: "MechanicSeeker" },
+          articleSection: "Auto Repair",
+          keywords: ["auto repair", stateInfo.name, "mechanics", "car maintenance"],
+        }) }} />
+      )}
       <section className="py-16 md:py-24 text-center px-4" style={{ background: "#FAF8F5" }}>
         <p className="text-[#E67E22] text-sm font-bold tracking-wider uppercase mb-3 font-[Cabin]">{stateInfo.name} Auto Repair</p>
         <h1 className="font-[Cabin] text-4xl md:text-5xl font-bold text-[#1A1A1A]">Auto Repair Shops in {stateInfo.name}</h1>
@@ -64,7 +80,9 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6">
           <h2 className="font-[Cabin] text-xl font-bold text-[#1A1A1A] mb-3">Auto Repair in {stateInfo.name}</h2>
           <p className="text-gray-600 leading-relaxed text-sm">
-            {stateInfo.name} is home to {stateTotal.toLocaleString()} auto repair shops listed on MechanicSeeker, from independent mechanics to national chains like Jiffy Lube, Firestone, and Midas. Whether you need an oil change, brake service, tire replacement, or a full engine rebuild, there&apos;s a shop near you. Browse by city below to find trusted mechanics in your area.
+            {editorial?.introOverride
+              ? editorial.introOverride
+              : `${stateInfo.name} is home to ${stateTotal.toLocaleString()} auto repair shops listed on MechanicSeeker, from independent mechanics to national chains like Jiffy Lube, Firestone, and Midas. Whether you need an oil change, brake service, tire replacement, or a full engine rebuild, there's a shop near you. Browse by city below to find trusted mechanics in your area.`}
           </p>
         </div>
 
@@ -135,6 +153,24 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
               </Link>
             ))}
           </div>
+        </section>
+      )}
+
+      {editorial && (
+        <section className="max-w-3xl mx-auto my-12 px-4">
+          <div className="text-xs uppercase tracking-wide text-gray-500 mb-6 text-center font-[Cabin]">
+            The Complete Guide
+          </div>
+          {editorial.h2Blocks.map((block, idx) => (
+            <div key={idx} className="mb-10">
+              <h2 className="font-[Cabin] text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-4">
+                {block.heading}
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-base">
+                {block.body}
+              </p>
+            </div>
+          ))}
         </section>
       )}
 
